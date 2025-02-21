@@ -1,0 +1,55 @@
+.bg {
+    background-color: #fff;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+.tab {
+    margin-bottom: 15rpx;
+    margin-right: 15rpx;
+    position: relative;
+}
+
+.tab image {
+    border-radius: 16rpx;
+}
+
+.tab .down {
+    background-color: rgba(0,0,0,.38);
+    border-radius: 0 0 16rpx 16rpx;
+    bottom: 10rpx;
+    height: 50rpx;
+    position: absolute;
+    width: 100%;
+}
+
+.top {
+    position: relative;
+}
+
+.top .title {
+    font-size: 22px;
+    font-weight: 550;
+}
+
+.kapian {
+    border-radius: 24rpx;
+    box-shadow: 0 9px 18px rgba(0,0,0,.3);
+    position: relative;
+}
+
+.bg-white {
+    border-bottom: 4rpx dashed #699;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.bg-white,.zhuyi {
+    background-color: #fff;
+}
+
+.zhuyi {
+    line-height: 48rpx;
+}

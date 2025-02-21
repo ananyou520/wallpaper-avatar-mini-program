@@ -1,0 +1,181 @@
+.menu {
+    width: calc(100% - 60rpx);
+}
+page{
+  background: #141414;
+}
+.menu,.menus {
+    background-color: #1d1d1d;
+    left: 0;
+    position: fixed;
+    z-index: 99;
+}
+
+.tags {
+    background-color: rgba(0,0,0,.21);
+    border-radius: 40rpx;
+    bottom: 20rpx;
+    color: #fff;
+    font-size: 28rpx;
+    line-height: 50rpx;
+    margin-left: 22rpx;
+    padding: 0 40rpx;
+    position: absolute;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.tag-active {
+    animation: tiaobig .8s ease-in-out infinite alternate;
+    animation-iteration-count: 1;
+    background-image: linear-gradient(100deg,#006450,#006450);
+    color: #fff;
+}
+
+@-webkit-keyframes tiaobig {
+    0% {
+        transform: scale(.98);
+    }
+
+    25% {
+        transform: scale(1.08);
+    }
+
+    50% {
+        transform: scale(.94);
+    }
+
+    75% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes tiaobig {
+    0% {
+        transform: scale(.98);
+    }
+
+    25% {
+        transform: scale(1.08);
+    }
+
+    50% {
+        transform: scale(.94);
+    }
+
+    75% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.topic {
+    background-color: hsla(0,0%,100%,.06);
+    margin: 20rpx 0;
+    width: 100%;
+}
+
+.tab,.topic {
+    border-radius: 16rpx;
+}
+
+.tab {
+    margin: 20rpx auto;
+    position: relative;
+    width: 92%;
+}
+
+.tab image {
+    border-radius: 16rpx;
+    display: block;
+}
+
+.tab .array {
+    background-color: rgba(0,0,0,.3);
+    border-radius: 20rpx 0 0 20rpx;
+    color: #fff;
+    font-size: 12px;
+    padding: 0rpx 12rpx 0 16rpx;
+    position: absolute;
+    right: 0rpx;
+    top: 18rpx;
+}
+
+.tab .texts {
+   
+    border-radius: 15rpx;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    line-height: 52rpx;
+    position: absolute;
+    width: 100%;
+}
+
+.tab .texts .title {
+    color: #fff;
+    font-family: title;
+    font-size: 46rpx;
+    padding-left: 24rpx;
+    padding-top: 20rpx;
+}
+
+.tab .texts .detail {
+    color: #ececec;
+    font-size: 28rpx;
+    padding-left: 24rpx;
+    padding-top: 10rpx;
+}
+
+.back {
+    border-radius: 50rpx;
+   
+    height: 80rpx;
+    padding: 8rpx;
+    position: fixed;
+    right: -80rpx;
+    transition-duration: .6s;
+    transition-property: right;
+    width: 80rpx;
+}
+
+.back image {
+    display: block;
+}
+
+.back .text {
+    font-size: 14px;
+}
+
+.backSearch {
+    background-color: rgba(33,34,35,.52);
+    bottom: 200rpx;
+}
+
+.backSearch .text {
+    color: #fff;
+}
+
+.backTop {
+    background-color: rgba(0,0,0,.3);
+    bottom: 100rpx;
+}
+
+.backTop .text {
+    color: #fff;
+}
+
+.backTop_show {
+    right: 20rpx!important;
+}
+
+.backTop_hide {
+    right: -80rpx!important;
+}

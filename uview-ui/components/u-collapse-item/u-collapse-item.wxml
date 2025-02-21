@@ -1,0 +1,17 @@
+<view class="u-collapse-item data-v-57fb359c" style="{{$root.s0}}">
+    <view catchtap="__e" class="u-collapse-head data-v-57fb359c" data-event-opts="{{[ [ 'tap',[ [ 'headClick',['$event'] ] ] ] ]}}" hoverClass="{{hoverClass}}" hoverStayTime="{{200}}" style="{{$root.s1}}">
+        <block wx:if="{{!$slots['title-all']}}">
+            <view class="u-collapse-title u-line-1 data-v-57fb359c" style="{{$root.s2}}" wx:if="{{!$slots['title']}}">{{''+title+''}}</view>
+            <slot name="title" wx:else></slot>
+            <view class="u-icon-wrap data-v-57fb359c">
+                <u-icon bind:__l="__l" class="{{['u-arrow-down-icon','data-v-57fb359c',isShow?'u-arrow-down-icon-active':'']}}" color="{{arrowColor}}" name="arrow-down" vueId="0d7db80e-1" wx:if="{{arrow}}"></u-icon>
+            </view>
+        </block>
+        <slot name="title-all" wx:else></slot>
+    </view>
+    <view class="u-collapse-body data-v-57fb359c" style="{{'height:'+(isShow?height+'px':'0')+';'}}">
+        <view class="u-collapse-content data-v-57fb359c" id="{{elId}}" style="{{$root.s3}}">
+            <slot></slot>
+        </view>
+    </view>
+</view>

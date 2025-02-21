@@ -1,0 +1,14 @@
+
+<view class="containe">  <ad unit-id="adunit-293bcaaf2bfb1f20" ad-type="video" ad-theme="white"></ad>
+    <view bindtap="onWrapper" class="imageWrapper">
+        <image binderror="onLoadError" bindload="onLoadFinish" class="main" mode="aspectFit" src="{{imagePath}}"></image>
+    </view>  
+    <image bindtap="onNext" class="next" hidden="{{!showCtrl}}" mode="aspectFill" src="../images/next2.png"></image>
+    <image bindtap="onPre" class="pre" hidden="{{!showCtrl}}" mode="aspectFill" src="../images/pre2.png"></image>
+
+    <view class="actionView" hidden="{{!showCtrl}}">
+        <div bindtap="onSave" class="save">下载原图</div>
+        <image bindtap="onCopy" class="copy" mode="aspectFit" src="../images/lianjie.png"></image>
+        <image bindtap="onBack" class="backkk" mode="aspectFit" src="../images/fanhui.png"></image>
+    </view>
+</view>

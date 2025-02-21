@@ -1,0 +1,130 @@
+page{
+    background: #141414;
+  }
+  .vtop.data-v-be140f20 {
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999999;
+  }
+  
+  .vtop .title.data-v-be140f20 {
+      color: #303030;
+      font-size: 20px;
+      line-height: 80rpx;
+      position: relative;
+  }
+  
+  .vtop .fenxiang.data-v-be140f20 {
+      margin-left: -20rpx;
+      margin-top: -10px;
+  }
+  
+  .vtop .search.data-v-be140f20 {
+      background: #202020;
+      border-radius: 50px;
+      height: 60rpx;
+      margin: 1px 20rpx 20rpx;
+      padding-left: 20rpx;
+      width: 25%;
+  }
+  
+  .vtop .search text.data-v-be140f20 {
+      color: #fff;
+      font-size: 14px;
+  }
+  
+  .vtop .div1.data-v-be140f20 {
+      background: #fff;
+      border-radius: 30px 30px 0 0;
+      bottom: 0;
+      height: 50rpx;
+      position: absolute;
+      width: 100%;
+  }
+  
+  .vtop .div2.data-v-be140f20 {
+      background: #656762;
+      bottom: 5px;
+      left: 4%;
+      right: 6%;
+      width: 92%;
+  }
+  
+  .vtop .div2.data-v-be140f20,.vtop .div3.data-v-be140f20 {
+      border-radius: 10px 10px 0 0;
+      height: 50rpx;
+      position: absolute;
+  }
+  
+  .vtop .div3.data-v-be140f20 {
+      background: #484547;
+      bottom: 10px;
+      left: 6%;
+      right: 8%;
+      width: 88%;
+  }
+  
+  .tab.data-v-be140f20 {
+      border-radius: 16rpx;
+      margin: 20rpx auto;
+      position: relative;
+      width: 100%;
+  }
+  
+  .tab image.data-v-be140f20 {
+      border-radius: 14rpx;
+      display: block;
+  }
+  
+  .tab .array.data-v-be140f20 {
+      background-color: #006450;
+      border-radius: 20rpx 0 0 20rpx;
+      color: #fff;
+      font-size: 12px;
+      padding: 0rpx 12rpx 0 16rpx;
+      position: absolute;
+      right: 0rpx;
+      top: 18rpx;
+  }
+  
+  .tab .texts.data-v-be140f20 {
+    
+      border-radius: 15rpx;
+      bottom: 0;
+      height: 100%;
+      left: 0;
+      line-height: 52rpx;
+      position: absolute;
+      width: 100%;
+  }
+  
+  .tab .texts .title.data-v-be140f20 {
+      color: #000;
+      font-family: title;
+      font-size: 46rpx;
+      padding-left: 24rpx;
+      padding-top: 40rpx;
+  }
+  
+  .tab .texts .detail.data-v-be140f20 {
+      color: #000;
+      font-size: 28rpx;
+      padding-left: 24rpx;
+      padding-top: 10rpx;
+  }
+  
+  .tags.data-v-be140f20 {
+    background: rgb(181 180 180 / 30%);
+      border-radius: 40rpx;
+      bottom: 40rpx;
+      color: #000;
+      font-size: 28rpx;
+      line-height: 50rpx;
+      margin-left: 22rpx;
+      padding: 0 25rpx;
+      position: absolute;
+      white-space: nowrap;
+      width: fit-content;
+  }

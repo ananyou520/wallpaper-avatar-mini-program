@@ -1,0 +1,80 @@
+page{
+  background: #141414;
+}.menu {
+    background-color: #fff;
+    left: 0;
+    position: fixed;
+    width: calc(100% - 60rpx);
+    z-index: 99;
+}
+
+.tags {
+    background-color: #f5f6f8;
+    border-radius: 40rpx;
+    color: #909399;
+    font-size: 14px;
+    line-height: 60rpx;
+    padding: 0 40rpx;
+}
+
+.tag-active {
+    animation: tiaobig .8s ease-in-out infinite alternate;
+    animation-iteration-count: 1;
+    background-image: linear-gradient(100deg,#fcfc44,#f8c93c);
+    box-shadow: 0 0 10px #fff8ab;
+    color: #333;
+}
+
+@-webkit-keyframes tiaobig {
+    0% {
+        transform: scale(.98);
+    }
+
+    25% {
+        transform: scale(1.08);
+    }
+
+    50% {
+        transform: scale(.94);
+    }
+
+    75% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes tiaobig {
+    0% {
+        transform: scale(.98);
+    }
+
+    25% {
+        transform: scale(1.08);
+    }
+
+    50% {
+        transform: scale(.94);
+    }
+
+    75% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.tab {
+    margin-bottom: 15rpx;
+    margin-right: 15rpx;
+    position: relative;
+}
+
+.tab image {
+    border-radius: 16rpx;
+}

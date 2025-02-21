@@ -1,0 +1,55 @@
+<view>
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" isBack="{{true}}" title="动态壁纸" titleSize="32" titleWidth="325" vueId="260d55b4-1"></u-navbar>
+    <view class="tab-container" wx:if="{{!vuex_isShenHe}}">
+        <view bindtap="__e" class="tab-item" data-event-opts="{{[ [ 'tap',[ [ 'searchTap',['$event'] ] ] ] ]}}">
+            <view class="img-container1">
+                <image class="img" src="/static/images/item_search.png"></image>
+            </view>
+            <text>搜索</text>
+        </view>
+        <view bindtap="__e" class="tab-item" data-event-opts="{{[ [ 'tap',[ [ 'dayTap',['$event'] ] ] ] ]}}">
+            <view class="img-container2">
+                <image class="img" src="/static/images/item_hot.png"></image>
+            </view>
+            <text>每日精选</text>
+        </view>
+        <view bindtap="__e" class="tab-item" data-event-opts="{{[ [ 'tap',[ [ 'chaoQingTap',['$event'] ] ] ] ]}}">
+            <view class="img-container3">
+                <image class="img" src="/static/images/item_sixty.png"></image>
+            </view>
+            <text>60帧超清</text>
+        </view>
+        <view bindtap="__e" class="tab-item" data-event-opts="{{[ [ 'tap',[ [ 'QLTap',['$event'] ] ] ] ]}}">
+            <view class="img-container4">
+                <image class="img" src="/static/images/item_couple.png"></image>
+            </view>
+            <text>情侣壁纸</text>
+        </view>
+    </view>
+    <ad unitId="{{vuex_bannerAd}}" wx:if="{{vuex_bannerAd}}"></ad>
+    <scroll-view class="scroll-body" lowerThreshold="{{350}}" scrollY="true" scrollTop="{{scrollTop}}" showScrollbar="false" style="{{'height:'+scrollH}}">
+        <block wx:for="{{videos}}" wx:key="index">
+            <view bindtap="__e" class="grid-item" data-event-opts="{{[ [ 'tap',[ [ 'preview',['$event'] ] ] ] ]}}" data-item="{{item}}">
+                <view class="g">
+                    <image class="photo" mode="aspectFill" src="{{item.thumb_img}}"></image>
+                    <view class="info">
+                        <text class="title">{{item.title}}</text>
+                        <view class="count-container">
+                            <image class="iv" src="/static/images/play_num.png"></image>
+                            <text class="count">{{item.play_num}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="grid-item-ad g data-v-3b73e478" wx:if="{{index!=0&&(index+1)%8==0&&vuex_bannerAd!=0}}">
+                <ad bind:__l="__l" class="data-v-3b73e478" unitId="{{vuex_bannerAd}}" vueId="{{'75d854fe-2-'+index}}" wx:if="{{vuex_bannerAd}}"></ad>
+            </view>
+        </block>
+    </scroll-view>
+    <view bindtap="__e" class="{{['back','backTop','u-flex','u-flex-col','u-row-center','u-col-center',backShow?'backTop_show':'backTop_hide']}}" data-event-opts="{{[ [ 'tap',[ [ 'backTop',['$event'] ] ] ] ]}}">
+        <image src="/static/backtop.png" style="width:36rpx;height:36rpx;"></image>
+    </view>
+    <view bindtap="__e" class="{{['back','backRefresh','u-flex','u-flex-col','u-row-center','u-col-center','backTop_show',backShow?'backTop_show':'backTop_hide']}}" data-event-opts="{{[ [ 'tap',[ [ 'refresh',['$event'] ] ] ] ]}}">
+        <image src="/static/refresh.png" style="width:30rpx;height:30rpx;"></image>
+    </view>
+</view>

@@ -1,0 +1,148 @@
+<view>
+    <view hidden="{{!(!loadShow)}}">
+        <view style="{{'margin-top:'+(menuButtonInfo.top+(menuButtonInfo.bottom-menuButtonInfo.top)/2+'px')+';'}}"></view>
+        <view class="menu u-m-l-40 u-m-r-40 u-m-t-40">
+            <view class="users">
+                <view data-event-opts="{{[['tap',[['loginClick',['$event']]]]]}}" class="user u-col-center ggg" bindtap="__e">
+                    <!-- <image class="avatar" src="{{vuex_user?vuex_user.avatar:'/static/icon/home.png'}}"></image>
+                    <view>
+                        <view class="name u-font-18">{{vuex_user?vuex_user.name:'登录/注册'}}</view>
+                    </view> -->
+                </view>
+            </view>
+        </view>
+        
+        <view class="menu u-m-l-40 u-m-r-40 u-m-t-40 my">
+            <view class="u-row-between center" hover-stay-time="50" data-event-opts="{{[['tap',[['recordClick',['$event']]]]]}}" bindtap="__e">
+                <view class="img">
+                    <image src="/static/icon/jinbi1.png"></image>
+                </view>
+                <view class="munber">{{vuex_user?vuex_user.integral:0}}</view>
+                <view class="myzf">当前可用能量</view>
+            </view>
+        </view>
+        <view class="jifen u-flex u-row-left u-p-l-30 u-p-r-30 margin10">
+            <view class="tab u-flex-col u-row-center u-col-center u-p-t-40 u-p-b-40 border-box" hover-class="hover-class" hover-stay-time="50">
+                <view class="icon u-flex u-row-center u-col-center">
+                    <u-icon vue-id="380011e0-1" name="/static/icon/weixin.png" size="50" bind:__l="__l"></u-icon>
+                </view>
+                <view class="title u-main-color u-p-t-10 u-font-12">邀请好友</view>
+                <view class="cont u-light-color u-p-t-10 u-font-12">{{"+"+inviteIntegral+"能量/位"}}</view><button style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;" open-type="share"></button>
+            </view>
+            <view class="tab u-flex-col u-row-center u-col-center u-p-t-40 u-p-b-40 border-box" hover-class="hover-class" hover-stay-time="50" data-event-opts="{{[['tap',[['signClick',['$event']]]]]}}" bindtap="__e">
+                <view class="{{['icon','u-flex','u-row-center','u-col-center',isSign?'icons':'']}}">
+                    <u-icon vue-id="380011e0-2" name="/static/icon/rw.png" size="50" bind:__l="__l"></u-icon>
+                </view>
+                <view class="title u-main-color u-p-t-10 u-font-12">每日签到</view>
+                <view class="cont u-light-color u-p-t-10 u-font-12">{{"+"+signIntegral+"能量/天"}}</view>
+            </view>
+            <view class="tab u-flex-col u-row-center u-col-center u-p-t-40 u-p-b-40 border-box" hover-class="hover-class" hover-stay-time="50" data-event-opts="{{[['tap',[['adClick',['$event']]]]]}}" bindtap="__e">
+                <view class="icon u-flex u-row-center u-col-center">
+                    <u-icon vue-id="380011e0-3" name="/static/icon/sj.png" size="50" bind:__l="__l"></u-icon>
+                </view>
+                
+                <view class="title u-main-color u-p-t-10 u-font-12">观看广告</view>
+                <view class="cont u-light-color u-p-t-10 u-font-12">{{"+"+adIntegral+"能量/次"}}</view>
+            </view>
+            <view class="tab u-flex-col u-row-center u-col-center u-p-t-40 u-p-b-40 border-box" hover-class="hover-class" hover-stay-time="50" data-event-opts="{{[['tap',[['recordClick',['$event']]]]]}}" bindtap="__e">
+                <view class="icon u-flex u-row-center u-col-center">
+                    <u-icon vue-id="380011e0-4" name="/static/icon/jf.png" size="50" bind:__l="__l"></u-icon>
+                </view>
+                <view class="title u-main-color u-p-t-10 u-font-12">能量明细</view>
+                <view class="cont u-light-color u-p-t-10 u-font-12">使用情况</view>
+            </view>
+        </view>
+        <view class="jifen u-flex u-row-left u-p-l-30 u-p-r-30 margin10">
+            <view class="tab u-flex-col u-row-center u-col-center u-p-t-40 u-p-b-40 border-box" hover-class="hover-class" hover-stay-time="50">
+                <view class="icon u-flex u-row-center u-col-center">
+                    <u-icon vue-id="380011e0-5" name="/static/icon/kf.png" size="50" bind:__l="__l"></u-icon>
+                </view>
+                <view class="title u-main-color u-p-t-10 u-font-12">联系我们</view><button style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;" open-type="contact"></button>
+            </view>
+            <view class="tab u-flex-col u-row-center u-col-center u-p-t-40 u-p-b-40 border-box" hover-class="hover-class" hover-stay-time="50" data-event-opts="{{[['tap',[['collectClick',['$event']]]]]}}" bindtap="__e">
+                <view class="{{['icon','u-flex','u-row-center','u-col-center',isSign?'icons':'']}}">
+                    <u-icon vue-id="380011e0-6" name="/static/icon/xh.png" size="50" bind:__l="__l"></u-icon>
+                </view>
+                <view class="title u-main-color u-p-t-10 u-font-12">我的收藏</view>
+            </view>
+            <view class="tab u-flex-col u-row-center u-col-center u-p-t-40 u-p-b-40 border-box" hover-class="hover-class" hover-stay-time="50" data-event-opts="{{[['tap',[['orderClick',['$event']]]]]}}" bindtap="__e">
+                <view class="icon u-flex u-row-center u-col-center">
+                    <u-icon vue-id="380011e0-7" name="/static/icon/xz.png" size="50" bind:__l="__l"></u-icon>
+                </view>
+                <view class="title u-main-color u-p-t-10 u-font-12">我的下载</view>
+            </view>
+            <view class="tab u-flex-col u-row-center u-col-center u-p-t-40 u-p-b-40 border-box" hover-class="hover-class" hover-stay-time="50" data-event-opts="{{[['tap',[['aboutClick',['$event']]]]]}}" bindtap="__e">
+                <view class="icon u-flex u-row-center u-col-center">
+                    <u-icon vue-id="380011e0-8" name="/static/icon/home.png" size="70" bind:__l="__l"></u-icon>
+                </view>
+                <view class="title u-main-color u-p-t-10 u-font-12">关于我们</view>
+            </view>
+        </view>
+        <view class="menu u-m-l-40 u-m-r-40 u-m-t-20">
+            <view class="u-flex u-row-between u-p-30 border" hover-class="hover-class1" hover-stay-time="50" data-event-opts="{{[['tap',[['gonggaoClick',['$event']]]]]}}" bindtap="__e">
+                <view class="u-flex u-row-left">
+                    <image src="/static/icon/gg.png"></image>
+                    <view class="u-p-l-20 white">常见问题</view>
+                </view>
+                <view class="u-flex u-row-right">
+                    <view class="arror-right"></view>
+                </view>
+            </view>
+        </view>
+        <!-- <view class="menu u-m-l-40 u-m-r-40 u-m-t-20">
+            <view class="u-flex u-row-between u-p-30 border" hover-class="hover-class1" hover-stay-time="50" data-event-opts="{{[['tap',[['gzhClick',['$event']]]]]}}" bindtap="__e">
+                <view class="u-flex u-row-left">
+                    <image src="/static/icon/weixin.png"></image>
+                    <view class="u-p-l-20 white">订阅更新</view>
+                </view>
+                <view class="u-flex u-row-right">
+                    <view class="arror-right"></view>
+                </view>
+            </view>
+        </view> -->
+        <view class="menu u-m-t-40 border-box" style="width:80%;margin:0 auto;">
+            <block wx:if="{{vuex_user.system==1}}">
+                <view class="u-flex u-row-between u-p-30 border" hover-class="hover-class1" hover-stay-time="50" data-event-opts="{{[['tap',[['writeClick',['$event']]]]]}}" bindtap="__e">
+                    <view class="u-flex u-row-left">
+                        <image src="/static/icon/t.png"></image>
+                        <view class="u-p-l-20 white">上传作品</view>
+                    </view>
+                    <view class="u-flex u-row-right">
+                        <view class="u-light-color u-font-12 u-p-r-10 cont">壁纸 / 头像一键上传</view>
+                        <view class="arror-right"></view>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <view class="menu u-m-t-40 border-box" style="width:80%;margin:0 auto;">
+            <block wx:if="{{vuex_user.system==1}}">
+                <view class="u-flex u-row-between u-p-30 border" hover-class="hover-class1" hover-stay-time="50" data-event-opts="{{[['tap',[['systemClick',['$event']]]]]}}" bindtap="__e" >
+                    <view class="u-flex u-row-left">
+                        <image src="/static/icon/gl.png"></image>
+                        <view class="u-p-l-20 white">管理后台</view>
+                    </view>
+                    <view class="u-flex u-row-right">
+                        <view class="u-light-color u-font-12 u-p-r-10 cont">后台管理中心</view>
+                        <view class="arror-right"></view>
+                    </view>
+                </view>
+            </block>
+        </view>
+       
+      
+        <block wx:if="{{vuex_user}}">
+            <view data-event-opts="{{[['tap',[['exitClick',['$event']]]]]}}" class="quit u-text-center u-p-t-40" bindtap="__e">退出登录</view>
+        </block>
+        <view style="height:180rpx;"></view>
+    </view>
+    <view hidden="{{!(loadShow)}}" class="loading_page">
+        <image src="/static/icon/load.gif"></image>
+    </view>
+    <foo-bar vue-id="380011e0-12" home="{{3}}" data-event-opts="{{[['^toIndex',[['toIndex']]]]}}" bind:toIndex="__e" bind:__l="__l"></foo-bar>
+    <block wx:if="{{loginShow}}">
+        <models vue-id="380011e0-13" title="为了更好的体验·快去授权登录吧" btnText="授权登录" data-event-opts="{{[['^getUserInfo',[['getUserInfo']]],['^close',[['e0']]]]}}" bind:getUserInfo="__e" bind:close="__e" bind:__l="__l"></models>
+    </block>
+    <block wx:if="{{signShow}}">
+        <models vue-id="380011e0-14" authorize="{{false}}" title="{{signTitle}}" btnText="知道了" closeText=" " data-event-opts="{{[['^save',[['e1']]]]}}" bind:save="__e" bind:__l="__l"></models>
+    </block>
+</view>

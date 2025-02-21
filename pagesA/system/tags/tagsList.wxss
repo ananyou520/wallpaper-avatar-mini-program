@@ -1,0 +1,57 @@
+.add {
+    background-color: #fff;
+    border-radius: 120rpx;
+    bottom: 150rpx;
+    box-shadow: 0 1px 8px #c8c8c8;
+    right: 30rpx;
+    position: fixed;
+}
+
+.add,.add image {
+    height: 80rpx;
+    width: 80rpx;
+}
+
+@-webkit-keyframes tiaobig {
+    0% {
+        transform: scale(.92);
+    }
+
+    25% {
+        transform: scale(1.08);
+    }
+
+    50% {
+        transform: scale(.96);
+    }
+
+    75% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(.94);
+    }
+}
+
+@keyframes tiaobig {
+    0% {
+        transform: scale(.92);
+    }
+
+    25% {
+        transform: scale(1.08);
+    }
+
+    50% {
+        transform: scale(.96);
+    }
+
+    75% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(.94);
+    }
+}

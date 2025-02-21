@@ -1,0 +1,44 @@
+<view>
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" isBack="{{true}}" title="编辑轮播图" titleSize="32" titleWidth="325" vueId="6f582e14-1"></u-navbar>
+    <view class="u-p-40">
+        <u-form bind:__l="__l" class="vue-ref" data-ref="uForm" model="{{banner}}" vueId="6f582e14-2" vueSlots="{{['default']}}">
+            <view class="u-p-b-20 u-flex u-row-left u-col-top">
+                <u-upload action autoUpload="{{false}}" bind:__l="__l" class="vue-ref" data-ref="uUpload" delBgColor="#ff7c7c" delColor="#FFFFFF" delIcon="close" fileList="{{bannerId!='-1'?imgList:''}}" height="166" limitType="{{['png','jpg','gif','jpeg']}}" maxCount="1" maxSize="{{5760*3240}}" multiple="{{false}}" showProgress="{{false}}" sizeType="{{['compressed']}}" sourceType="{{['album']}}" uploadText="上传图片" vueId="{{'6f582e14-3'+','+'6f582e14-2'}}" width="400"></u-upload>
+                <view class="u-p-l-20 u-p-t-20">
+                    <view class="u-font-12">注意事项：</view>
+                    <view class="u-font-12 u-tips-color u-p-t-15">比例：750 x 314</view>
+                    <view class="u-font-12 u-tips-color u-p-t-15">大小：500kb</view>
+                </view>
+            </view>
+            <view class="content-border">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="类型" vueId="{{'6f582e14-4'+','+'6f582e14-2'}}" vueSlots="{{['default']}}">
+                    <u-radio-group bind:__l="__l" bind:change="__e" bind:input="__e" data-event-opts="{{[ [ '^change',[ ['radioGroupChange'] ] ],[ '^input',[ [ '__set_model',[ '','bannerType','$event',[] ] ] ] ] ]}}" value="{{bannerType}}" vueId="{{'6f582e14-5'+','+'6f582e14-4'}}" vueSlots="{{['default']}}">
+                        <u-radio bind:__l="__l" name="{{0}}" size="50" vueId="{{'6f582e14-6'+','+'6f582e14-5'}}" vueSlots="{{['default']}}">链接</u-radio>
+                        <u-radio bind:__l="__l" name="{{1}}" size="50" vueId="{{'6f582e14-7'+','+'6f582e14-5'}}" vueSlots="{{['default']}}">小程序</u-radio>
+                    </u-radio-group>
+                </u-form-item>
+            </view>
+            <view class="content-border" wx:if="{{bannerType===0}}">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="链接" vueId="{{'6f582e14-8'+','+'6f582e14-2'}}" vueSlots="{{['default']}}">
+                    <u-input bind:__l="__l" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','url','$event',[] ],['banner'] ] ] ] ]}}" height="{{60}}" placeholder="跳转链接（不跳转填写/）" type="textarea" value="{{banner.url}}" vueId="{{'6f582e14-9'+','+'6f582e14-8'}}"></u-input>
+                </u-form-item>
+            </view>
+            <view class="content-border" wx:if="{{bannerType===1}}">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="appid" vueId="{{'6f582e14-10'+','+'6f582e14-2'}}" vueSlots="{{['default']}}">
+                    <u-input bind:__l="__l" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','appid','$event',[] ],['banner'] ] ] ] ]}}" height="{{60}}" placeholder="小程序ID（不跳转填写/）" type="textarea" value="{{banner.appid}}" vueId="{{'6f582e14-11'+','+'6f582e14-10'}}"></u-input>
+                </u-form-item>
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="路径" vueId="{{'6f582e14-12'+','+'6f582e14-2'}}" vueSlots="{{['default']}}">
+                    <u-input bind:__l="__l" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','path','$event',[] ],['banner'] ] ] ] ]}}" height="{{90}}" placeholder="跳转路径（不跳转填写/）" type="textarea" value="{{banner.path}}" vueId="{{'6f582e14-13'+','+'6f582e14-12'}}"></u-input>
+                </u-form-item>
+            </view>
+            <view>
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="排序" vueId="{{'6f582e14-14'+','+'6f582e14-2'}}" vueSlots="{{['default']}}">
+                    <u-input bind:__l="__l" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','sort','$event',[] ],['banner'] ] ] ] ]}}" height="{{40}}" placeholder="排序，数字越大越靠前" type="number" value="{{banner.sort}}" vueId="{{'6f582e14-15'+','+'6f582e14-14'}}"></u-input>
+                </u-form-item>
+            </view>
+        </u-form>
+        <view class="u-p-t-40">
+            <view bindtap="__e" class="btn" data-event-opts="{{[ [ 'tap',[ [ 'submit',['$event'] ] ] ] ]}}" hoverClass="hover-class" hoverStayTime="50">发 布</view>
+        </view>
+    </view>
+</view>

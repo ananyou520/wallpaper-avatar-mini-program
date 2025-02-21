@@ -1,0 +1,9 @@
+<view class="page-body data-v-3fc7e54b">
+    <uni-interval bind:__l="__l" class="data-v-3fc7e54b" height="1px" vueId="33e5c97c-1"></uni-interval>
+    <button bindchooseavatar="__e" class="avatar-wrapper data-v-3fc7e54b" data-event-opts="{{[ [ 'chooseavatar',[ [ 'onChooseAvatar',['$event'] ] ] ] ]}}" openType="chooseAvatar">
+        <image class="avatar data-v-3fc7e54b" mode="aspectFill" src="{{avatarUrl||userInfo.avatar}}"></image>
+    </button>
+    <view class="username data-v-3fc7e54b">昵称<input bindblur="__e" bindinput="__e" class="input data-v-3fc7e54b" data-event-opts="{{[ [ 'input',[ [ 'getInput',['$event'] ] ] ],[ 'blur',[ [ 'getInput',['$event'] ] ] ] ]}}" maxlength="{{10}}" placeholder="请输入昵称" type="nickname" value="{{inputValue||userInfo.name}}"></input>
+    </view>
+    <view bindtap="__e" class="base-btn data-v-3fc7e54b" data-event-opts="{{[ [ 'tap',[ [ 'tapTo',['$event'] ] ] ] ]}}">更新资料</view>
+</view>

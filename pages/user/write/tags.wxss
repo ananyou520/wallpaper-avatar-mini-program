@@ -1,0 +1,47 @@
+.tag {
+    background-color: rgba(0,0,0,.3);
+    color: #fff;
+    font-size: 14px;
+    line-height: 52rpx;
+    margin-bottom: 20rpx;
+    margin-right: 20rpx;
+    padding: 0 42rpx;
+}
+
+.btn,.tag {
+    border-radius: 40rpx;
+    text-align: center;
+}
+
+.btn {
+    font-size: 16px;
+    line-height: 86rpx;
+    width: 100%;
+}
+
+.btn,.tag-active {
+    background-image: linear-gradient(100deg,rgba(0,0,0,.3),rgba(0,0,0,.94));
+    color: #fff;
+}
+
+.tag-active {
+    box-shadow: 0 0 10px #e9ffe4;
+}
+
+.bottom {
+    background-color: #fff;
+    border-radius: 24rpx 24rpx 0 0;
+    bottom: 0;
+    box-shadow: 0 0 16px rgba(0,0,0,.3);
+    position: fixed;
+    width: 100vw;
+}
+
+.hover-class {
+    transform: scale(.92);
+    transition: all .2s;
+}
+
+.u-size-default {
+    padding: 15rpx 30rpx!important;
+}

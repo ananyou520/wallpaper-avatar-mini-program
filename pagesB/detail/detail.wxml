@@ -1,0 +1,90 @@
+<view class="data-v-69b24e2f">
+    <view class="data-v-69b24e2f" hidden="{{!!loadFlag}}">
+        <view class="data-v-69b24e2f">
+            <swiper bindchange="__e" circular="{{true}}" class="data-v-69b24e2f" current="{{activeCurrent}}" data-event-opts="{{[ [ 'change',[ [ 'swiperChange',['$event'] ] ] ] ]}}" style="height:100vh;width:100vw;">
+                <swiper-item class="data-v-69b24e2f" wx:for="{{detail.images}}" wx:key="index">
+                    <image bindtap="__e" class="data-v-69b24e2f" data-event-opts="{{[ [ 'tap',[ [ 'cssClick',['$event'] ] ] ] ]}}" mode="aspectFill" src="{{vuex_compressPicture?item+'?x-oss-process=image/quality,q_80/interlace,1':item}}" style="height:100vh;width:100vw;display:flex;" wx:if="{{detail.mode==0}}"></image>
+                    <block wx:else>
+                        <image bindtap="__e" class="yangshi1 data-v-69b24e2f" data-event-opts="{{[ [ 'tap',[ [ 'cssClick',['$event'] ] ] ] ]}}" mode="aspectFill" src="{{vuex_compressPicture?item+'?x-oss-process=image/resize,w_600/quality,q_100':item}}" wx:if="{{detail.mode==1}}"></image>
+                        <image bindtap="__e" class="yangshi2 data-v-69b24e2f" data-event-opts="{{[ [ 'tap',[ [ 'cssClick',['$event'] ] ] ] ]}}" mode="aspectFill" src="{{vuex_compressPicture?item+'?x-oss-process=image/resize,w_600/quality,q_100':item}}" wx:else></image>
+                    </block>
+                </swiper-item>
+            </swiper>
+            <view class="tag-box data-v-69b24e2f" wx:if="{{detail.tags&&detail.tags!=null}}">
+                <view class="tag-box-item data-v-69b24e2f" wx:for="{{tags}}" wx:key="index">{{'# '+item}}</view>
+            </view>
+            <view class="u-p-l-30 u-p-t-20 u-p-r-30 data-v-69b24e2f" wx:if="{{vuex_userAd!=0}}">
+                <ad-custom bind:__l="__l" class="data-v-69b24e2f" unitId="{{vuex_userAd}}" vueId="3db16520-1" wx:if="{{vuex_userAd}}"></ad-custom>
+            </view>
+            <view class="wallpaper-info-box data-v-69b24e2f">
+                <view class="wallpaper-info-item data-v-69b24e2f">
+                    <image class="wallpaper-info-item-icon data-v-69b24e2f" mode="aspectFit" src="/static/detail/time.png"></image>
+                    <text class="wallpaper-info-item-text data-v-69b24e2f">{{'发布于'+$root.g0}}</text>
+                </view>
+                <view class="wallpaper-info-item data-v-69b24e2f">
+                    <image class="wallpaper-info-item-icon data-v-69b24e2f" mode="aspectFit" src="/static/detail/see.png"></image>
+                    <text class="wallpaper-info-item-text data-v-69b24e2f">{{'被查看'+detail.view+'次'}}</text>
+                </view>
+                <view class="wallpaper-info-item data-v-69b24e2f">
+                    <image class="wallpaper-info-item-icon data-v-69b24e2f" mode="aspectFit" src="/static/detail/upuser.png"></image>
+                    <text class="wallpaper-info-item-text data-v-69b24e2f">由用户：<text class="user-name data-v-69b24e2f">{{updetail.name}}</text>上传</text>
+                </view>
+                <view class="wallpaper-info-item data-v-d1cba71c data-v-69b24e2f">
+                    <image class="wallpaper-info-item-icon data-v-d1cba71c data-v-69b24e2f" mode="aspectFit" src="/static/detail/source.png"></image>
+                    <text class="wallpaper-info-item-text data-v-d1cba71c data-v-69b24e2f">来源于互联网</text>
+                </view>
+            </view>
+           
+            <view class="u-p-t-40 data-v-69b24e2f" wx:if="{{randomList.images&&randomList.images.length>0}}">
+                <view class="u-p-l-40 u-p-r-40 u-p-b-20 data-v-69b24e2f">
+                    <u-section bind:__l="__l" bold="{{false}}" class="data-v-69b24e2f" fontSize="{{36}}" showLine="{{true}}" subTitle=" " title="为你推荐" vueId="3db16520-3"></u-section>
+                </view>
+                <!-- <view class="u-flex u-row-left u-flex-wrap u-p-l-40 u-p-t-15 data-v-69b24e2f">
+                    <view bindtap="__e" class="tab data-v-69b24e2f" data-event-opts="{{[ [ 'tap',[ [ 'goDetail',['$0',index_,'$1'],['randomList._id','randomList.images'] ] ] ] ]}}" wx:for="{{randomList.images}}" wx:for-index="index_" wx:for-item="item_" wx:key="index_">
+                        <image class="data-v-69b24e2f" lazyLoad="{{true}}" mode="aspectFill" src="{{item_+'?x-oss-process=image/resize,m_lfit,w_200,m_lfit/quality,q_80'}}" style="width:215rpx;height:350rpx;"></image>
+                    </view>
+                </view> --> 
+               
+            </view><ad-custom unitId="{{vuex_gridAd}}" wx:if="{{vuex_gridAd}}"></ad-custom>
+            <view class="data-v-69b24e2f" style="padding-top:180rpx;"></view>
+        </view>
+        <view class="date-container data-v-69b24e2f">
+            <text class="time data-v-69b24e2f">{{time}}</text>
+            <text class="date data-v-69b24e2f">{{date}}</text>
+            <view class="num data-v-69b24e2f">{{indexCurrent+' / '+detail.images.length}}</view>
+        </view>
+        <image bindtap="__e" class="top-home data-v-69b24e2f" data-event-opts="{{[ [ 'tap',[ [ 'homeClick',['$event'] ] ] ] ]}}" src="/static/icon/home.png" style="{{'top:'+menuButtonInfo.top+'px'+';width:'+menuButtonInfo.height+'px;height:'+menuButtonInfo.height+'px;'}}"></image>
+        <view class="{{['bottom','data-v-69b24e2f',cssTran?'closeCss':'openCss']}}" wx:if="{{!loadFlag}}">
+            <view class="nav-box data-v-69b24e2f">
+                <view bindtap="__e" class="nav-tab data-v-69b24e2f" data-event-opts="{{[ [ 'tap',[ [ 'backClick',['$event'] ] ] ] ]}}">
+                    <u-icon bind:__l="__l" class="data-v-69b24e2f nav-box1" name="/static/icon/fh.png" size="{{60}}" vueId="3db16520-4"></u-icon>
+
+                </view>
+                <view bindtap="__e" class="nav-tab data-v-69b24e2f" data-event-opts="{{[ [ 'tap',[ ['collectClick'] ] ] ]}}">
+                    <u-icon bind:__l="__l" class="data-v-69b24e2f" name="{{isColl?'/static/icon/sc.png':'/static/icon/sc_art.png'}}" size="{{60}}" vueId="3db16520-5"></u-icon>
+                   
+                </view>
+                <view bindtap="__e" class="nav-tab data-v-69b24e2f" data-event-opts="{{[ [ 'tap',[ [ 'winClick',['$0'],['detail._id'] ] ] ] ]}}">
+                    <u-icon bind:__l="__l" class="data-v-69b24e2f xz" name="/static/icon/xz.png" size="{{100}}" vueId="3db16520-6"></u-icon>
+                  
+                </view>
+                <view bindtap="__e" class="nav-tab data-v-69b24e2f" data-event-opts="{{[ [ 'tap',[ [ 'zanClick',['$0'],['isZan'] ] ] ] ]}}">
+                    <u-icon bind:__l="__l" class="data-v-69b24e2f" name="{{isZan?'/static/icon/dz.png':'/static/icon/dz_art.png'}}" size="{{isZan?54:54}}" vueId="3db16520-7"></u-icon>
+
+                </view>
+                <view class="nav-tab data-v-69b24e2f">
+                    <u-icon bind:__l="__l" class="data-v-69b24e2f nav-box1" name="/static/icon/fx.png" size="{{52}}" vueId="3db16520-8"></u-icon>
+                   
+                    <button class="data-v-69b24e2f" openType="share" style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;"></button>
+                </view>
+            </view>
+        </view>
+        <models bind:__l="__l" bind:close="__e" bind:getUserInfo="__e" btnText="授权登录" class="data-v-69b24e2f" data-event-opts="{{[ [ '^getUserInfo',[ ['getUserInfo'] ] ],[ '^close',[ ['e0'] ] ] ]}}" title="为了更好体验，快去授权登录吧" vueId="3db16520-9" wx:if="{{loginShow}}"></models>
+        <models authorize="{{false}}" bind:__l="__l" bind:close="__e" bind:save="__e" btnText="{{'看广告领 '+adIntegral+' 能量'}}" class="data-v-69b24e2f" data-event-opts="{{[ [ '^close',[ ['e1'] ] ],[ '^save',[ ['adClick'] ] ] ]}}" title="{{downTitle}}" vueId="3db16520-10" wx:if="{{downShow}}"></models>
+        <models authorize="{{false}}" bind:__l="__l" bind:save="__e" btnText="知道了" class="data-v-69b24e2f" closeText=" " data-event-opts="{{[ [ '^save',[ ['e2'] ] ] ]}}" title="{{signTitle}}" vueId="3db16520-11" wx:if="{{signShow}}"></models>
+        <models ad="{{true}}" authorize="{{false}}" bind:__l="__l" bind:close="__e" bind:save="__e" btnText="分享给好友" class="data-v-69b24e2f" closeText="暂时不用" data-custom-hidden="{{!adShow}}" data-event-opts="{{[ [ '^save',[ ['e3'] ] ],[ '^close',[ ['e4'] ] ] ]}}" title="已成功保存到相册，别忘了分享给朋友哦！" vueId="3db16520-12"></models>
+    </view>
+    <view class="loading_page data-v-69b24e2f" hidden="{{!loadFlag}}">
+        <image class="data-v-69b24e2f" src="/static/loading/loading.gif"></image>
+    </view>
+</view>

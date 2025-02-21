@@ -1,0 +1,31 @@
+<view>
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" isBack="{{true}}" title="我的上传" titleSize="32" titleWidth="325" vueId="d31505bc-1"></u-navbar>
+    <view>
+        <view class="u-p-l-40 u-p-t-20 u-p-r-40" wx:if="{{vuex_bannerAd!=0}}">
+           
+        </view>
+        <view class="u-flex u-row-left u-flex-wrap u-p-l-40 u-p-t-20">
+            <view bindlongpress="__e" bindtap="__e" class="tab u-skeleton-fillet" data-event-opts="{{[ [ 'longpress',[ [ 'moreClick',['$0',true],[ [ ['coverList','',index,'_id'] ] ] ] ] ],[ 'tap',[ [ 'detail',['$0'],[ [ ['coverList','',index,'_id'] ] ] ] ] ] ]}}" wx:for="{{coverList}}" wx:key="index">
+                <image mode="aspectFill" src="{{item.image+'?x-oss-process=image/resize,w_200/quality,q_60'}}" style="width:215rpx;height:350rpx;"></image>
+                <view class="array">{{item.images.length}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="u-flex u-flex-col u-col-center" style="width:100vw;height:50vh;padding-top:200rpx;" wx:if="{{noData}}">
+        <view>
+            <image src="/static/nodata.png" style="width:300rpx;height:300rpx;"></image>
+        </view>
+        <view class="u-tips-color u-font-12 u-p-t-30">没有数据哦~</view>
+    </view>
+    <view bindtap="__e" class="add" data-event-opts="{{[ [ 'tap',[ ['editClick'] ] ] ]}}">
+        <image src="/static/icon/add.png"></image>
+    </view>
+    <view wx:if="{{!noData}}">
+        <u-loadmore bind:__l="__l" color="#B8B8B8" fontSize="{{24}}" marginBottom="{{30}}" marginTop="{{30}}" status="{{loadStatus}}" vueId="d31505bc-3"></u-loadmore>
+    </view>
+    <view class="safe-area-inset-bottom">
+        <view style="height:1px;"></view>
+    </view>
+    <u-action-sheet bind:__l="__l" bind:click="__e" bind:input="__e" data-event-opts="{{[ [ '^click',[ ['sheetClick'] ] ],[ '^input',[ [ '__set_model',[ '','sheetShow','$event',[] ] ] ] ] ]}}" list="{{sheetList}}" safeAreaInsetBottom="{{true}}" value="{{sheetShow}}" vueId="d31505bc-4"></u-action-sheet>
+    <models authorize="{{false}}" bind:__l="__l" bind:close="__e" bind:save="__e" btnText="立即删除" closeText="再想想" data-event-opts="{{[ [ '^close',[ ['e0'] ] ],[ '^save',[ ['delClick'] ] ] ]}}" title="将永久删除当前作品，确定继续删除吗？" vueId="d31505bc-5" wx:if="{{modelShow}}"></models>
+</view>

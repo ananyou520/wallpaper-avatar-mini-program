@@ -1,0 +1,16 @@
+<view class="bottom data-v-497bd8ed">
+    <view class="nav-box data-v-497bd8ed">
+        <view bindtap="__e" class="{{['nav-tab','data-v-497bd8ed',home===0?'nav-tab-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'toIndex',[0] ] ] ] ]}}">
+            <u-icon bind:__l="__l" class="data-v-497bd8ed" name="{{home===0?'/static/tabbar/sy_art.png':'/static/tabbar/sy.png'}}" size="70" vueId="3d12d9e2-1"></u-icon>
+        </view>
+        <view bindtap="__e" class="{{['nav-tab','data-v-497bd8ed',home===1?'nav-tab-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'toIndex',[1] ] ] ] ]}}">
+            <u-icon bind:__l="__l" class="data-v-497bd8ed" name="{{home===1?'/static/tabbar/center_art.png':'/static/tabbar/center.png'}}" size="70" vueId="3d12d9e2-2"></u-icon>
+        </view>
+        <view bindtap="__e" class="{{['nav-tab','data-v-497bd8ed',home===2?'nav-tab-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'toIndex',[2] ] ] ] ]}}">
+            <u-icon bind:__l="__l" class="data-v-497bd8ed" name="{{home===2?'/static/tabbar/find_art.png':'/static/tabbar/find.png'}}" size="70" vueId="3d12d9e2-3"></u-icon>
+        </view>
+        <view bindtap="__e" class="{{['nav-tab','data-v-497bd8ed',home===3?'nav-tab-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'toIndex',[3] ] ] ] ]}}">
+            <u-icon bind:__l="__l" class="data-v-497bd8ed" name="{{home===3?'/static/tabbar/wd_art.png':'/static/tabbar/wd.png'}}" size="70" vueId="3d12d9e2-4"></u-icon>
+        </view>
+    </view>
+</view>

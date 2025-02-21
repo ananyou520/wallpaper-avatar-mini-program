@@ -1,0 +1,34 @@
+.bottom.data-v-497bd8ed {
+    backdrop-filter: blur(3px);
+    background: rgba(0,0,0,.3);
+    border-radius: 50rpx;
+    bottom: 3%;
+    left: 5%;
+    position: fixed;
+    right: 5%;
+    width: 90%;
+}
+
+.nav-tab.data-v-497bd8ed {
+    align-items: center;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: 400;
+    height: 50px;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-tab-active text.data-v-497bd8ed {
+    color: #000;
+}
+
+.nav-box.data-v-497bd8ed {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}

@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+      "bzlist": "../../components/txlist/txlist"
+    },
+    "navigationBarTitleText": "万能表情包",
+    "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#fff",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark"
+}

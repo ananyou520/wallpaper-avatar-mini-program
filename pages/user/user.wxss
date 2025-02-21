@@ -1,0 +1,172 @@
+page {
+  background: #141414
+}
+
+.users {
+  margin-top: 50px;
+  border-radius: 20px;
+  width: 100%;
+  height: 260rpx;
+  background: url("http://101.200.56.131:19714/down/Yz7Z9hFDT8W6.png");
+  background-size: 100% 100%;
+}
+
+.ggg {
+  text-align: center
+}
+
+.margin10 {
+  margin-top: 10px
+}
+
+.user .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-top: 10px
+}
+
+.user .name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff
+}
+
+.user .addr {
+  color: #fff;
+  margin-top: 5px;
+  font-size: 14px
+}
+
+.my {
+  height: 105px;
+  border: 1px solid #222;
+  border-radius: 20px;
+  background: #222223
+}
+
+.my .munber {
+  text-align: center;
+  display: block;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700
+}
+
+.my .img {
+  margin-top: 20px;
+  color: #ff8a01;
+  text-align: center
+}
+
+.my .myzf {
+  display: block;
+  margin-top: 8px;
+  color: #ccc;
+  font-size: 12px;
+  text-align: center
+}
+
+.border {
+  border-radius: 15px;
+  background: #222
+}
+
+.white {
+  color: #fff;
+  font-weight: 700
+}
+
+.u-m-t-20 {
+  margin-top: 25rpx !important
+}
+
+.jifen .tab {
+  position: relative;
+  background-color: #222;
+  width: 165rpx;
+  margin-right: 10rpx;
+  margin-left: 10rpx;
+  border-radius: 15px
+}
+
+.jifen .tab .icon {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 80rpx
+}
+
+.jifen .tab:nth-child(1) .icon {
+  background: #222;
+  margin-right: 10rpx
+}
+
+.jifen .tab:nth-child(2) .icon {
+  background: #222;
+  margin-right: 10rpx
+}
+
+.jifen .tab:nth-child(2) .icons {
+  background: #222
+}
+
+.jifen .tab:nth-child(3) .icon {
+  background: #222
+}
+
+.border-box {
+  border-radius: 16rpx
+}
+
+.menu image {
+  color: #141414;
+  width: 38rpx;
+  height: 38rpx
+}
+
+.border-bottom {
+  border-bottom: 1rpx solid #f6f6f6
+}
+
+.hover-class {
+  -webkit-transform: scale(.95);
+  transform: scale(.95);
+  transition: all .2s
+}
+
+.hover-class1 {
+  background-color: #181818
+}
+
+.arror-right {
+  width: 15rpx;
+  height: 15rpx;
+  border-top: 3rpx solid #a9acb3;
+  border-right: 3rpx solid #a9acb3;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg)
+}
+
+.quit {
+  color: #fa6868
+}
+
+.tab1 {
+  position: relative;
+  background-color: #222;
+  width: 183rpx;
+  margin: 0 auto;
+  margin-right: 10rpx;
+  margin-left: 10rpx;
+  border-radius: 15px;
+  margin-top: 10px
+}
+
+.cont {
+  color: #ccc
+}
+
+.title {
+  color: #fff;
+  font-weight: 700
+}

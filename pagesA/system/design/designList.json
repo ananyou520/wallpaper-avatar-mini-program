@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "刘海管理",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#fff",
+    "usingComponents": {
+        
+        "u-loadmore": "/uview-ui/components/u-loadmore/u-loadmore"
+    }
+}

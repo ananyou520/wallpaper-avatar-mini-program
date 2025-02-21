@@ -1,0 +1,163 @@
+page{
+  background: #141414;
+}
+.menu {
+    width: calc(100% - 60rpx);
+}
+
+.menu,.menus {
+  width: 100%;
+    background-color: #141414;
+    left: 0;
+    position: fixed;
+    z-index: 99;
+}
+
+.tags {
+    background-color: #252525;
+    color: #fff;
+}
+
+.c-tags,.tags {
+    border-radius: 40rpx;
+    font-size: 14px;
+    line-height: 50rpx;
+    margin-right: 20rpx;
+    padding: 0 40rpx;
+    white-space: nowrap;
+}
+
+.c-tags {
+    background-color: #909399;
+    color: rgba(0,100,80,0);
+}
+
+.tag-active {
+    background-image: linear-gradient(100deg,#434343,#383838 45%,#2f2f2f);
+    color: #fff;
+   
+}
+
+.color-active,.tag-active {
+    animation: tiaobig .8s ease-in-out infinite alternate;
+    animation-iteration-count: 1;
+    color: #fff;
+}
+
+@-webkit-keyframes tiaobig {
+    0% {
+        transform: scale(.98);
+    }
+
+    25% {
+        transform: scale(1.08);
+    }
+
+    50% {
+        transform: scale(.94);
+    }
+
+    75% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes tiaobig {
+    0% {
+        transform: scale(.98);
+    }
+
+    25% {
+        transform: scale(1.08);
+    }
+
+    50% {
+        transform: scale(.94);
+    }
+
+    75% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.tab {
+   
+    height: 350rpx;
+    margin-bottom: 30rpx;
+    margin-right: 30rpx;
+    position: relative;
+    width: 215rpx;
+}
+
+.tab,.tab image {
+    border-radius: 16rpx;
+}
+
+.tab image {
+    display: block;
+}
+
+.tab .array {
+    background-color: rgba(0,0,0,.4);
+    border-radius: 20rpx 0 0 20rpx;
+    color: #fff;
+    font-size: 12px;
+    padding: 0rpx 12rpx 0 16rpx;
+    position: absolute;
+    right: 0rpx;
+    top: 18rpx;
+}
+
+.back {
+    border-radius: 50rpx;
+  
+    height: 80rpx;
+    padding: 8rpx;
+    position: fixed;
+    right: -80rpx;
+    transition-duration: .6s;
+    transition-property: right;
+    width: 80rpx;
+}
+
+.back image {
+    display: block;
+}
+
+.back .text {
+    font-size: 14px;
+}
+
+.backSearch {
+    background-color: rgba(33,34,35,.52);
+    bottom: 200rpx;
+}
+
+.backSearch .text {
+    color: #fff;
+}
+
+.backTop {
+    background-color: rgba(0,0,0,.3);
+    bottom: 100rpx;
+}
+
+.backTop .text {
+    color: #fff;
+}
+
+.backTop_show {
+    right: 20rpx!important;
+}
+
+.backTop_hide {
+    right: -80rpx!important;
+}

@@ -1,0 +1,39 @@
+.binglie {
+    display: flex;
+    font-size: 24rpx;
+    justify-content: center;
+    margin-bottom: 10rpx;
+    padding: 0 20rpx;
+}
+
+.binglie,.btn {
+    text-align: center;
+}
+
+.btn {
+    background-image: linear-gradient(100deg,#dceaf4,#83c5bb);
+    border-radius: 15rpx;
+    color: #fff;
+    font-size: 16px;
+    line-height: 86rpx;
+    width: 111px;
+}
+
+.hover-class {
+    transform: scale(.92);
+    transition: all .2s;
+}
+
+.u-delete-icon {
+    align-items: center;
+    background-color: hsla(0,0%,100%,.35);
+    border-radius: 100rpx;
+    display: flex;
+    height: 44rpx;
+    justify-content: center;
+    position: absolute;
+    right: 20rpx;
+    top: 20rpx;
+    width: 44rpx;
+    z-index: 10;
+}

@@ -1,0 +1,18 @@
+.title {
+    font-size: 32rpx;
+    font-weight: 550;
+    padding-bottom: 30rpx;
+}
+
+.cont {
+    color: #606266;
+}
+
+.cont,.dcont {
+    line-height: 50rpx;
+    padding-bottom: 40rpx;
+}
+
+.dcont {
+    color: #df0003;
+}

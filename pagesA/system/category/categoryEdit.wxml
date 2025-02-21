@@ -1,0 +1,40 @@
+<view>
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" isBack="{{true}}" title="编辑分类" titleSize="32" titleWidth="325" vueId="3358e1d8-1"></u-navbar>
+    <view class="u-p-40">
+        <u-form bind:__l="__l" class="vue-ref" data-ref="uForm" model="{{category}}" vueId="3358e1d8-2" vueSlots="{{['default']}}">
+            <view class="u-flex u-row-left u-col-top u-p-b-20">
+                <u-upload action autoUpload="{{false}}" bind:__l="__l" class="vue-ref" data-ref="uUpload" delBgColor="#ff7c7c" delColor="#FFFFFF" delIcon="close" fileList="{{categoryId!='-1'?imgList:''}}" height="197" limitType="{{['png','jpg','gif','jpeg']}}" maxCount="1" maxSize="{{5760*3240}}" multiple="{{false}}" showProgress="{{false}}" sizeType="{{['compressed']}}" sourceType="{{['album']}}" uploadText="上传封面图" vueId="{{'3358e1d8-3'+','+'3358e1d8-2'}}" width="400"></u-upload>
+                <view class="u-p-l-20 u-p-t-20">
+                    <view class="u-font-12" style="color: #000;">注意事项：</view>
+                    <view class="u-font-12 u-tips-color u-p-t-15">比例：500 x 250</view>
+                    <view class="u-font-12 u-tips-color u-p-t-15">大小：200kb</view>
+                </view>
+            </view>
+            <view class="content-border">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="名称" vueId="{{'3358e1d8-4'+','+'3358e1d8-2'}}" vueSlots="{{['default']}}">
+                    <u-input bind:__l="__l" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','name','$event',[] ],['category'] ] ] ] ]}}" placeholder="填写分类名称" value="{{category.name}}" vueId="{{'3358e1d8-5'+','+'3358e1d8-4'}}"></u-input>
+                </u-form-item>
+            </view>
+            <view class="content-border">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="排序" vueId="{{'3358e1d8-6'+','+'3358e1d8-2'}}" vueSlots="{{['default']}}">
+                    <u-input bind:__l="__l" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','sort','$event',[] ],['category'] ] ] ] ]}}" height="{{40}}" placeholder="排序，数字越大越靠前" type="number" value="{{category.sort}}" vueId="{{'3358e1d8-7'+','+'3358e1d8-6'}}"></u-input>
+                </u-form-item>
+            </view>
+            <view class="content-border">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="类别" vueId="{{'3358e1d8-8'+','+'3358e1d8-2'}}" vueSlots="{{['default']}}">
+                    <radio-group bindchange="__e" class="content-type" data-event-opts="{{[ [ 'change',[ [ 'radioChange',['$event'] ] ] ] ]}}">
+                        <label class="uni-list-cell uni-list-cell-pd" wx:for="{{option}}" wx:key="mode">
+                            <view>
+                                <radio checked="{{index===current}}" style="transform:scale(0.6);" value="{{item.mode}}"></radio>
+                            </view>
+                            <view style="color: #000;">{{item.name}}</view>
+                        </label>
+                    </radio-group>
+                </u-form-item>
+            </view>
+        </u-form>
+        <view class="u-p-t-40">
+            <view bindtap="__e" class="btn" data-event-opts="{{[ [ 'tap',[ [ 'submit',['$event'] ] ] ] ]}}" hoverClass="hover-class" hoverStayTime="50">保 存</view>
+        </view>
+    </view>
+</view>

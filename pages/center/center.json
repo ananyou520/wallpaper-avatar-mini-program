@@ -1,0 +1,10 @@
+{
+    "navigationBarTitleText": "",
+    "enablePullDownRefresh": false,
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "u-icon": "/uview-ui/components/u-icon/u-icon",
+        "u-section": "/uview-ui/components/u-section/u-section",
+        "foo-bar": "/components/fooBar/fooBar"
+    }
+}

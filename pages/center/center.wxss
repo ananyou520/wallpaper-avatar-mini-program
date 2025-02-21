@@ -1,0 +1,211 @@
+
+page{
+    background: #141414;
+}
+.vtop.data-v-583914fe {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999999;
+}
+
+.vtop .title.data-v-583914fe {
+    color: #303030;
+    font-size: 20px;
+    line-height: 80rpx;
+    position: relative;
+}
+
+.vtop .fenxiang.data-v-583914fe {
+    margin-left: -20rpx;
+    margin-top: -10px;
+}
+
+.vtop .search.data-v-583914fe {
+    background: #202020;
+    border-radius: 50px;
+    height: 60rpx;
+    margin: 1px 20rpx 20rpx;
+    padding-left: 20rpx;
+    width: 25%;
+}
+
+.vtop .search text.data-v-583914fe {
+    color: #a6a7a8;
+    font-size: 14px;
+}
+
+.vtop .div1.data-v-583914fe {
+    background: #fff;
+    border-radius: 30px 30px 0 0;
+    bottom: 0;
+    height: 50rpx;
+    position: absolute;
+    width: 100%;
+}
+
+.vtop .div2.data-v-583914fe {
+    background: #656762;
+    bottom: 5px;
+    left: 4%;
+    right: 6%;
+    width: 92%;
+}
+
+.vtop .div2.data-v-583914fe,.vtop .div3.data-v-583914fe {
+    border-radius: 10px 10px 0 0;
+    height: 50rpx;
+    position: absolute;
+}
+
+.vtop .div3.data-v-583914fe {
+    background: #484547;
+    bottom: 10px;
+    left: 6%;
+    right: 8%;
+    width: 88%;
+}
+
+.ranking .tab.data-v-583914fe {
+    border-radius: 15rpx;
+   
+    color: #fff;
+    font-family: title;
+    height: 100rpx;
+    width: 225rpx;
+}
+
+.ranking .tab .eng.data-v-583914fe {
+    color: #f5f5f5;
+    font-size: 11px;
+}
+
+.ranking .tab.data-v-583914fe:nth-child(1) {
+    background-image: linear-gradient(to bottom right,#414141,#393939 30%,#333);
+    margin-right: 10rpx;
+    border-radius: 15px;
+}
+
+.ranking .tab.data-v-583914fe:nth-child(2) {
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom right,#414141,#393939 30%,#333);
+    margin-right: 10rpx;
+}
+
+.ranking .tab.data-v-583914fe:nth-child(3) {
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom right,#414141,#393939 30%,#333);
+}
+
+.tags .tag.data-v-583914fe {
+    background-color: hsla(0,0%,100%,.06);
+    border-radius: 40rpx;
+    box-shadow: 0 2rpx 16rpx 0 rgba(0,0,0,.3);
+    color: #fff;
+    font-family: title;
+    font-size: 14px;
+    line-height: 60rpx;
+    margin-bottom: 12rpx;
+    margin-right: 7rpx;
+    padding: 0 20rpx;
+    text-align: center;
+    width: 24%;
+}
+.bold {
+   
+    font-size: 20px;
+}
+.eng{
+  font-family: none;
+    color: #f5f5f5;
+}
+.tags .tag.data-v-583914fe:nth-child(1) {
+    color: #1aa9fb;
+}
+
+.tags .tag.data-v-583914fe:nth-child(2) {
+    color: #3ab14a;
+}
+
+.tags .tag.data-v-583914fe:nth-child(3) {
+    color: #f67c23;
+}
+
+.tags .tag.data-v-583914fe:nth-child(4) {
+    color: #a123db;
+}
+
+.tags .tag.data-v-583914fe:nth-child(5) {
+    color: #04839d;
+}
+
+.tags .tag.data-v-583914fe:nth-child(6) {
+    color: #e84f4f;
+}
+
+.tags .tag.data-v-583914fe:nth-child(7) {
+    color: #3ab14a;
+}
+
+.tags .tag.data-v-583914fe:nth-child(8) {
+    color: #1aa9fb;
+}
+
+.tags .tag.data-v-583914fe:nth-child(9) {
+    color: #e84f4f;
+}
+
+.tags .tag.data-v-583914fe:nth-child(10) {
+    color: #a123db;
+}
+
+.tags .tag.data-v-583914fe:nth-child(11) {
+    color: #f67c23;
+}
+
+.tags .tag.data-v-583914fe:nth-child(12) {
+    color: #04839d;
+}
+
+.tags .tag.data-v-583914fe:nth-child(13) {
+    color: #3ab14a;
+}
+
+.tags .tag.data-v-583914fe:nth-child(14) {
+    color: #e84f4f;
+}
+
+.tags .tag.data-v-583914fe:nth-child(15) {
+    color: #3ab14a;
+}
+
+.category .cate.data-v-583914fe {
+    font-family: title;
+    margin-bottom: 30rpx;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+    position: relative;
+}
+
+.category .cate image.data-v-583914fe {
+    border-radius: 12rpx;
+    background: linear-gradient(60deg,#2a2a2a,#353535 45%,#303030);
+    border-radius: 13px;
+    display: block;
+    height: 160rpx;
+    width: 325rpx;
+}
+
+.category .cate .texts.data-v-583914fe {
+    bottom: 6rpx;
+    color: #fff;
+    font-size: 15px;
+    left: 20rpx;
+    position: absolute;
+}
+
+.cate-active.data-v-583914fe {
+    transform: scale(.95);
+    transition: all .2s;
+}

@@ -1,0 +1,12 @@
+{
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "管理后台",
+    "enablePullDownRefresh": false,
+    "navigationBarBackgroundColor": "#1d1d1d",
+    "backgroundColor": "#1d1d1d",
+    "usingComponents": {
+        "u-navbar": "/uview-ui/components/u-navbar/u-navbar",
+        "u-icon": "/uview-ui/components/u-icon/u-icon"
+    }
+}

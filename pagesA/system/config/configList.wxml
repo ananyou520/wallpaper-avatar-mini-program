@@ -1,0 +1,46 @@
+<view class="data-v-7b45e234">
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" class="data-v-7b45e234" isBack="{{true}}" title="基本配置" titleSize="32" titleWidth="325" vueId="4500b4c0-1"></u-navbar>
+    <view class="menu data-v-7b45e234">
+        <u-tabs bind:__l="__l" bind:change="__e" class="data-v-7b45e234" current="{{tagCurrent}}" data-event-opts="{{[ [ '^change',[ ['cateClick'] ] ] ]}}" isScroll="{{false}}" list="{{tagList}}" vueId="4500b4c0-2"></u-tabs>
+    </view>
+    <view class="u-p-l-20 u-p-r-20 data-v-7b45e234" style="padding-top:80rpx;background:#f7f7f7;">
+        <view class="tab u-m-t-20 data-v-7b45e234" wx:if="{{item.key!='access_token'}}" wx:for="{{configList}}" wx:key="index">
+            <view class="u-p-l-30 u-p-r-30 u-p-t-30 u-p-b-30 border-bottom u-flex u-row-between data-v-7b45e234">
+                <view class="title data-v-7b45e234">{{item.name}}</view>
+                <view class="yes data-v-7b45e234">{{item.key}}</view>
+            </view>
+            <view class="u-font-12 u-tips-color u-p-l-30 u-p-r-30 u-p-t-15 u-p-b-15 u-flex u-row-between data-v-7b45e234">
+                <view class="data-v-7b45e234" style="width:80%;">{{'当前：'+item.val}}</view>
+                <view class="data-v-7b45e234">
+                    <view class="data-v-7b45e234" wx:if="{{item.val===true||item.val===false}}">
+                        <u-switch bind:__l="__l" bind:change="__e" bind:input="__e" class="data-v-7b45e234" data-event-opts="{{[ [ '^change',[ [ 'switchChange',['$0',index],[ [ ['configList','',index,'_id'] ] ] ] ] ],[ '^input',[ [ '__set_model',[ '$0','val','$event',[] ],[ [ ['configList','',index] ] ] ] ] ] ]}}" inactiveColor="#F8F8F8" size="28" value="{{item.val}}" vueId="{{'4500b4c0-3-'+index}}"></u-switch>
+                    </view>
+                    <view bindtap="__e" class="u-flex u-row-right data-v-7b45e234" data-event-opts="{{[ [ 'tap',[ [ 'sheetClick',['$0',index],[ [ ['configList','',index,'_id'] ] ] ] ] ] ]}}" wx:else>
+                        <view class="u-p-r-10 data-v-7b45e234">操作</view>
+                        <view class="arror-right data-v-7b45e234"></view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="u-flex u-flex-col u-col-center data-v-7b45e234" style="width:100vw;height:50vh;padding-top:200rpx;" wx:if="{{noData}}">
+        <view class="data-v-7b45e234">
+            <image class="data-v-7b45e234" src="/static/nodata.png" style="width:300rpx;height:300rpx;"></image>
+        </view>
+        <view class="u-tips-color u-font-12 u-p-t-30 data-v-7b45e234">没有数据哦~</view>
+    </view>
+    <view class="safe-area-inset-bottom data-v-7b45e234">
+        <view class="data-v-7b45e234" style="height:10rpx;"></view>
+    </view>
+    <u-modal asyncClose="{{true}}" bind:__l="__l" bind:confirm="__e" bind:input="__e" class="data-v-7b45e234" confirmText="保存" content="content" data-event-opts="{{[ [ '^confirm',[ ['editChange'] ] ],[ '^input',[ [ '__set_model',[ '','editShow','$event',[] ] ] ] ] ]}}" negativeTop="280" showCancelButton="{{true}}" title="配置" value="{{editShow}}" vueId="4500b4c0-4" vueSlots="{{['default']}}">
+        <view class="u-p-40 data-v-7b45e234">
+            <view class="data-v-7b45e234">
+                <u-input bind:__l="__l" bind:input="__e" border="{{true}}" class="data-v-7b45e234" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','name','$event',[] ],['config'] ] ] ] ]}}" disabled="{{true}}" height="{{80}}" placeholder="配置项名称" value="{{config.name}}" vueId="{{'4500b4c0-5'+','+'4500b4c0-4'}}"></u-input>
+            </view>
+            <view class="u-p-t-15 data-v-7b45e234">
+                <u-input bind:__l="__l" bind:input="__e" border="{{true}}" class="data-v-7b45e234" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','val','$event',[] ],['config'] ] ] ] ]}}" height="{{80}}" placeholder="配置项值" value="{{config.val}}" vueId="{{'4500b4c0-6'+','+'4500b4c0-4'}}"></u-input>
+            </view>
+        </view>
+    </u-modal>
+    <u-action-sheet bind:__l="__l" bind:click="__e" bind:input="__e" class="data-v-7b45e234" data-event-opts="{{[ [ '^click',[ ['sheetChange'] ] ],[ '^input',[ [ '__set_model',[ '','sheetShow','$event',[] ] ] ] ] ]}}" list="{{sheetList}}" safeAreaInsetBottom="{{true}}" value="{{sheetShow}}" vueId="4500b4c0-7"></u-action-sheet>
+</view>

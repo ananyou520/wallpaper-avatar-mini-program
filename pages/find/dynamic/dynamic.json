@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "动态壁纸",
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "u-navbar": "/uview-ui/components/u-navbar/u-navbar"
+    }
+}

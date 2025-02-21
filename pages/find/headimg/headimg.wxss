@@ -1,0 +1,210 @@
+.content.data-v-29fef08e {
+    background-size: 100% 100%;
+}
+
+.content .all-back.data-v-29fef08e {
+    bottom: 0;
+    left: 0;
+    min-height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 750rpx;
+}
+
+.content .top-content.data-v-29fef08e {
+    background-color: #fff;
+    border-radius: 50rpx;
+    margin: 30rpx auto;
+    padding: 0 40rpx 30rpx;
+    position: relative;
+    width: 90%;
+}
+
+.content .top-content .top-title.data-v-29fef08e {
+    align-items: center;
+    display: flex;
+}
+
+.content .top-content .top-title .title-unit.data-v-29fef08e {
+    color: #000;
+    font-size: 30rpx;
+    padding: 40rpx 20rpx;
+}
+
+.content .top-content .top-title .title-select.data-v-29fef08e {
+    color: #ff4500;
+    font-size: 30rpx;
+    font-weight: 700;
+}
+
+.content .top-content .image-div.data-v-29fef08e {
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    padding-bottom: 20rpx;
+    padding-left: 20rpx;
+}
+
+.content .top-content .image-div image.data-v-29fef08e {
+    border: 1rpx solid #f8f8f8;
+    box-shadow: 0 -5px 15px 0 hsla(0,0%,88%,.4);
+    flex-shrink: 0;
+    height: 120rpx;
+    width: 120rpx;
+}
+
+.content .top-content .image-div .image-margin.data-v-29fef08e {
+    margin: 0 20rpx;
+}
+
+.content .image-card.data-v-29fef08e {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.content .image-card .iconfont.data-v-29fef08e {
+    color: #f7f8fa;
+    font-size: 80rpx;
+    font-weight: 700;
+}
+
+.title.data-v-29fef08e {
+    color: #8f8f94;
+    font-size: 36rpx;
+}
+
+.avatar-div.data-v-29fef08e {
+    height: 380rpx;
+    margin-right: 40rpx;
+    position: relative;
+    width: 380rpx;
+}
+
+.avatar-div.data-v-29fef08e,.empty-view.data-v-29fef08e {
+    -webkit-box-pack: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+
+.empty.data-v-29fef08e {
+    height: 100px;
+    margin-bottom: 24px;
+    width: 100px;
+}
+
+.img.data-v-29fef08e {
+    background-color: #fff;
+    border-radius: 48rpx;
+    height: 360rpx;
+    position: absolute;
+    width: 360rpx;
+    z-index: 0;
+}
+
+.avatar-default.data-v-29fef08e {
+    border-radius: 48rpx;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.container.data-v-29fef08e {
+    background-color: #fbebe1;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.photo-main-view.data-v-29fef08e {
+    display: flex;
+    justify-content: space-between;
+    margin: 30rpx auto;
+    width: 90%;
+}
+
+.icon-div.data-v-29fef08e {
+    height: 80rpx;
+    position: relative;
+}
+
+.icon-div .icon-zuo.data-v-29fef08e {
+    left: 0;
+    position: absolute;
+}
+
+.icon-div .icon-you.data-v-29fef08e {
+    position: absolute;
+    right: 0;
+}
+
+.action-btn.data-v-29fef08e {
+    background: #fff;
+    border: 1rpx solid #efefef;
+    border-radius: 48rpx;
+    box-shadow: 0 12rpx 16rpx -8rpx rgba(0,0,0,.1);
+    color: #4d4d4d;
+    font-size: 30rpx;
+    font-weight: bolder;
+    height: 90rpx;
+    line-height: 90rpx;
+    padding: 0 60rpx;
+}
+
+.btn-margin.data-v-29fef08e {
+    margin-bottom: 50rpx;
+}
+
+.btn-primary.data-v-29fef08e {
+    background: linear-gradient(97.71deg,#ffa462,#ff4d42 88.36%);
+    border: 1rpx solid #ff7852;
+    border-radius: 48rpx;
+    box-shadow: 0 12rpx 16rpx -8rpx rgba(255,88,35,.6);
+    color: #fff;
+}
+
+.btn-card.data-v-29fef08e {
+    box-sizing: border-box;
+    padding: 30rpx;
+    width: 750rpx;
+}
+
+.btn-card .primary-btn.data-v-29fef08e {
+    background: linear-gradient(97.71deg,#ffa462,#ff4d42 88.36%);
+    margin-right: 30rpx;
+}
+
+.btn-card .primary-btn.data-v-29fef08e,.btn-card .share-btn.data-v-29fef08e {
+    border: 1rpx solid #ff7852;
+    border-radius: 48rpx;
+    box-shadow: 0 12rpx 16rpx -8rpx rgba(255,88,35,.6);
+    color: #fff;
+    display: inline-block;
+    font-size: 30rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    padding: 0;
+    width: 330rpx;
+}
+
+.btn-card .share-btn.data-v-29fef08e {
+    background: linear-gradient(97.71deg,#ffd01e,#ff8917 60%);
+}
+
+.hideCanvasView.data-v-29fef08e {
+    position: relative;
+}
+
+.hideCanvas.data-v-29fef08e {
+    left: -99999rpx;
+    position: fixed;
+    top: -99999rpx;
+    z-index: -99999;
+}

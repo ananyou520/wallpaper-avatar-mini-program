@@ -1,0 +1,31 @@
+<view class="data-v-3b73e478">
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" class="data-v-3b73e478" isBack="{{true}}" title="动态壁纸搜索" titleSize="32" titleWidth="325" vueId="75d854fe-1"></u-navbar>
+    <view class="search-container data-v-3b73e478">
+        <image class="search data-v-3b73e478" src="/static/icon/search.png"></image>
+        <input bindconfirm="__e" class="data-v-3b73e478" confirmType="search" data-event-opts="{{[ [ 'confirm',[ [ 'handleConfirm',['$event'] ] ] ] ]}}" maxlength="-1" placeholder="搜索视频" value="{{keyword}}"></input>
+    </view>
+    <scroll-view bindscrolltolower="__e" class="scroll-body data-v-3b73e478" data-event-opts="{{[ [ 'scrolltolower',[ [ 'onScrollToLower',['$event'] ] ] ] ]}}" enhanced="true" lowerThreshold="{{100}}" scrollY="true" scrollTop="{{scrollTop}}" showScrollbar="false">
+        <block wx:for="{{videos}}" wx:key="index">
+            <view bindtap="__e" class="grid-item data-v-3b73e478" data-event-opts="{{[ [ 'tap',[ [ 'preview',['$event'] ] ] ] ]}}" data-url="{{item.video_preview_url}}">
+                <view class="g data-v-3b73e478">
+                    <image class="photo data-v-3b73e478" mode="aspectFill" src="{{item.thumb_img}}"></image>
+                    <view class="info data-v-3b73e478">
+                        <view class="count-container data-v-3b73e478">
+                            <image class="iv data-v-3b73e478" src="/static/images/play_num.png"></image>
+                            <text class="count data-v-3b73e478">{{item.play_num}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="grid-item-ad g data-v-3b73e478" wx:if="{{index!=0&&(index+1)%8==0&&vuex_bannerAd!=0}}">
+                <ad bind:__l="__l" class="data-v-3b73e478" unitId="{{vuex_bannerAd}}" vueId="{{'75d854fe-2-'+index}}" wx:if="{{vuex_bannerAd}}"></ad>
+            </view>
+        </block>
+    </scroll-view>
+    <view bindtap="__e" class="{{['back','backTop','u-flex','u-flex-col','u-row-center','u-col-center','data-v-3b73e478',backShow?'backTop_show':'backTop_hide']}}" data-event-opts="{{[ [ 'tap',[ [ 'backTop',['$event'] ] ] ] ]}}">
+        <image class="data-v-3b73e478" src="/static/backtop.png" style="width:36rpx;height:36rpx;"></image>
+    </view>
+    <view bindtap="__e" class="{{['back','backRefresh','u-flex','u-flex-col','u-row-center','u-col-center','backTop_show','data-v-3b73e478',backShow?'backTop_show':'backTop_hide']}}" data-event-opts="{{[ [ 'tap',[ [ 'refresh',['$event'] ] ] ] ]}}">
+        <image class="data-v-3b73e478" src="/static/refresh.png" style="width:30rpx;height:30rpx;"></image>
+    </view>
+</view>

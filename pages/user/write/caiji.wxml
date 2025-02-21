@@ -1,0 +1,64 @@
+<view>
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" isBack="{{true}}" title="采集" titleColor="#fff" titleSize="28" titleWidth="325" vueId="c3fb4cd2-1"></u-navbar>
+    <view class="u-p-40">
+        <u-form bind:__l="__l" class="vue-ref" data-ref="uForm" model="{{cover}}" vueId="c3fb4cd2-2" vueSlots="{{['default']}}">
+            <view class="u-p-b-20">
+                <u-upload fileList action autoUpload="{{false}}" bind:__l="__l" class="vue-ref" data-ref="uUpload" delBgColor="#ff7c7c" delColor="#FFFFFF" delIcon="close" height="{{cover.mode==0?325:203}}" limitType="{{['png','jpg','jpeg']}}" maxCount="200" maxSize="{{10*5760*3240}}" multiple="{{true}}" showProgress="{{false}}" sizeType="{{['original']}}" sourceType="{{['album']}}" uploadText="{{cover.mode==0?'上传壁纸':'上传图片'}}" vueId="{{'c3fb4cd2-3'+','+'c3fb4cd2-2'}}" width="{{cover.mode==0?203:203}}"></u-upload>
+            </view>
+            <view style="border-bottom:1rpx solid #F4F4F4;border-top:1rpx solid #F4F4F4;">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="链接" vueId="{{'c3fb4cd2-4'+','+'c3fb4cd2-2'}}" vueSlots="{{['default']}}">
+                    <u-input bind:__l="__l" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','url','$event',[] ],['cover'] ] ] ] ]}}" placeholder="请输入链接" value="{{cover.url}}" vueId="{{'c3fb4cd2-5'+','+'c3fb4cd2-4'}}"></u-input>
+                </u-form-item>
+            </view>
+            <view style="border-bottom:1rpx solid #F4F4F4;border-top:1rpx solid #F4F4F4;">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="主题" vueId="{{'c3fb4cd2-6'+','+'c3fb4cd2-2'}}" vueSlots="{{['default']}}">
+                    <u-input bind:__l="__l" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','name','$event',[] ],['cover'] ] ] ] ]}}" placeholder="设置主题更容易被搜索到" value="{{cover.name}}" vueId="{{'c3fb4cd2-7'+','+'c3fb4cd2-6'}}"></u-input>
+                </u-form-item>
+            </view>
+            <view style="border-bottom:1rpx solid #F4F4F4;">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="类型" vueId="{{'c3fb4cd2-8'+','+'c3fb4cd2-2'}}" vueSlots="{{['default']}}">
+                    <u-radio-group bind:__l="__l" bind:change="__e" bind:input="__e" data-event-opts="{{[ [ '^change',[ ['radioGroupChange'] ] ],[ '^input',[ [ '__set_model',[ '$0','mode','$event',[] ],['cover'] ] ] ] ]}}" value="{{cover.mode}}" vueId="{{'c3fb4cd2-9'+','+'c3fb4cd2-8'}}" vueSlots="{{['default']}}">
+                        <u-radio activeColor="#81c2b2" bind:__l="__l" name="{{0}}" size="50" vueId="{{'c3fb4cd2-10'+','+'c3fb4cd2-9'}}" vueSlots="{{['default']}}">壁纸</u-radio>
+                        <u-radio activeColor="#444dfc" bind:__l="__l" name="{{1}}" size="50" vueId="{{'c3fb4cd2-11'+','+'c3fb4cd2-9'}}" vueSlots="{{['default']}}">头像</u-radio>
+                        <u-radio activeColor="#444dfc" bind:__l="__l" name="{{3}}" size="50" vueId="{{'c3fb4cd2-12'+','+'c3fb4cd2-9'}}" vueSlots="{{['default']}}">电脑壁纸</u-radio>
+                    </u-radio-group>
+                </u-form-item>
+            </view>
+            <view style="border-bottom:1rpx solid #F4F4F4;">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="分类" rightIcon="arrow-right" rightIconStyle="{{iconStyle}}" vueId="{{'c3fb4cd2-13'+','+'c3fb4cd2-2'}}" vueSlots="{{['default']}}">
+                    <u-input bind:__l="__l" bind:click="__e" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^click',[ ['cateClick'] ] ],[ '^input',[ [ '__set_model',[ '$0','category_name','$event',[] ],['cover'] ] ] ] ]}}"  placeholder="选择分类" value="{{cover.category_name}}" vueId="{{'c3fb4cd2-14'+','+'c3fb4cd2-13'}}"></u-input>
+                </u-form-item>
+            </view>
+            <view style="border-bottom:1rpx solid #F4F4F4;">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="标签" rightIcon="arrow-right" rightIconStyle="{{iconStyle}}" vueId="{{'c3fb4cd2-15'+','+'c3fb4cd2-2'}}" vueSlots="{{['default']}}">
+                    <u-input bind:__l="__l" bind:click="__e" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^click',[ ['tagsClick'] ] ],[ '^input',[ [ '__set_model',[ '$0','tags','$event',[] ],['cover'] ] ] ] ]}}" placeholder="选择标签（可选）" value="{{cover.tags}}" vueId="{{'c3fb4cd2-16'+','+'c3fb4cd2-15'}}"></u-input>
+                </u-form-item>
+            </view>
+        </u-form>
+        <view class="binglie">
+            <view class="u-p-t-40">
+                <view bindtap="__e" class="btn" data-event-opts="{{[ [ 'tap',[ [ 'caiji',['$event'] ] ] ] ]}}" hoverClass="hover-class" hoverStayTime="50">开始采集</view>
+            </view>
+            <view id="akun1" style="padding:0 36rpx;"></view>
+            <view wx:if="{{cover.url==''}}">
+                <view class="u-p-t-40">
+                    <view bindtap="__e" class="btn" data-event-opts="{{[ [ 'tap',[ [ 'zhantie',['$event'] ] ] ] ]}}" hoverClass="hover-class" hoverStayTime="50">一键粘贴</view>
+                </view>
+            </view>
+            <view wx:else>
+                <view class="u-p-t-40">
+                    <view bindtap="__e" class="btn" data-event-opts="{{[ [ 'tap',[ [ 'qingkong',['$event'] ] ] ] ]}}" hoverClass="hover-class" hoverStayTime="50">一键清空</view>
+                </view>
+            </view>
+        </view>
+        <view class="binglie">
+            <view class="u-p-t-40">
+                <view bindtap="__e" class="btn" data-event-opts="{{[ [ 'tap',[ [ 'submit',['$event'] ] ] ] ]}}" hoverClass="hover-class" hoverStayTime="50">一键上传</view>
+            </view>
+            <view id="akun1" style="padding:0 36rpx;"></view>
+            <view class="u-p-t-40">
+                <view bindtap="__e" class="btn" data-event-opts="{{[ [ 'tap',[ [ 'baocun',['$event'] ] ] ] ]}}" hoverClass="hover-class" hoverStayTime="50">一键保存</view>
+            </view>
+        </view>
+    </view>
+</view>

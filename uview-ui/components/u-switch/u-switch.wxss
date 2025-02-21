@@ -1,0 +1,45 @@
+.u-switch.data-v-cb2f05ee {
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 1em;
+    box-sizing: initial;
+    display: inline-block;
+    font-size: 50rpx;
+    height: 1em;
+    position: relative;
+    transition: background-color .3s;
+    width: 2em;
+}
+
+.u-switch__node.data-v-cb2f05ee {
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 0 3px 1px 0 rgba(0,0,0,.05),0 2px 2px 0 rgba(0,0,0,.1),0 3px 3px 0 rgba(0,0,0,.05);
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: transform .3s cubic-bezier(.3,1.05,.4,1.05),-webkit-transform .3s cubic-bezier(.3,1.05,.4,1.05);
+    transition: transform cubic-bezier(.3,1.05,.4,1.05);
+    transition: transform cubic-bezier(.3,1.05,.4,1.05),-webkit-transform cubic-bezier(.3,1.05,.4,1.05);
+    transition: transform .3s cubic-bezier(.3,1.05,.4,1.05);
+    z-index: 1;
+}
+
+.u-switch__loading.data-v-cb2f05ee,.u-switch__node.data-v-cb2f05ee {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.u-switch--on.data-v-cb2f05ee {
+    background-color: rgba(0,0,0,.3);
+}
+
+.u-switch--on .u-switch__node.data-v-cb2f05ee {
+    transform: translateX(100%);
+}
+
+.u-switch--disabled.data-v-cb2f05ee {
+    opacity: .4;
+}

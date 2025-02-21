@@ -1,0 +1,88 @@
+.menu {
+    background-color: #fff;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+
+.tags_ {
+    border: 1rpx solid #b8b8b8;
+    border-radius: 8rpx;
+    color: #909399;
+    font-size: 12px;
+    line-height: 46rpx;
+    padding: 0 20rpx;
+}
+
+.tag-active_ {
+    animation: tiaobig .8s ease-in-out infinite alternate;
+    animation-iteration-count: 1;
+    background-image: linear-gradient(90deg,rgba(0,0,0,.3),rgba(0,0,0,.94));
+    border: none;
+    color: #fff;
+}
+
+.avatar {
+    border-radius: 90rpx;
+    height: 90rpx;
+    width: 90rpx;
+}
+
+.btns {
+    width: 580rpx;
+}
+
+.btns .title {
+    color: #000;
+    font-weight: 550;
+}
+
+.border-bottom {
+    border-bottom: 1rpx solid #699;
+    position: relative;
+}
+
+@-webkit-keyframes tiaobig {
+    0% {
+        transform: scale(.92);
+    }
+
+    25% {
+        transform: scale(1.08);
+    }
+
+    50% {
+        transform: scale(.96);
+    }
+
+    75% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(.94);
+    }
+}
+
+@keyframes tiaobig {
+    0% {
+        transform: scale(.92);
+    }
+
+    25% {
+        transform: scale(1.08);
+    }
+
+    50% {
+        transform: scale(.96);
+    }
+
+    75% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(.94);
+    }
+}

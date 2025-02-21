@@ -1,0 +1,8 @@
+{
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "充值能量",
+    "enablePullDownRefresh": false,
+    "navigationBarBackgroundColor": "#1d1d1d",
+    "backgroundColor": "#1d1d1d",
+    "usingComponents": {}
+}

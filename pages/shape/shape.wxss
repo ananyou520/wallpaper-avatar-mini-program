@@ -1,0 +1,85 @@
+/* pages/shape/shape.wxss */
+
+page {
+  height: 100%;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  background-image: linear-gradient(180deg, #89f7fe 0%, #66a6ff 100%);
+  z-index: 100;
+  padding: 40rpx 0 0;
+  box-sizing: border-box;
+}
+
+.top {
+  height: 80rpx;
+  align-items: center;
+  margin: 0 auto 30rpx;
+  width: 315px;
+}
+
+.top-text {
+  color: #fff;
+  line-height: 80rpx;
+  font-size: 36rpx;
+}
+
+.phcolor {
+  color: #fff;
+}
+
+/* 设置按钮 */
+
+.set {
+  margin-right: 0;
+  color: #fff;
+  background: #fd4966;
+  border-radius: 80rpx;
+  line-height: 80rpx;
+  font-size: 36rpx;
+}
+
+.fl {
+  display: flex;
+  height: 80rpx;
+  align-items: center;
+  justify-content: space-between;
+  margin: 60rpx auto;
+  width: 315px;
+}
+
+/* 保存按钮 */
+
+.save {
+  margin: 0;
+  border-radius: 10rpx;
+  background: #f5576c;
+  color: #fff;
+}
+
+/* 清除按钮 */
+
+.clear {
+  margin: 0;
+  border-radius: 10rpx;
+  background: #009efd;
+  color: #fff;
+}
+
+.set::after, .save::after, .clear::after {
+  border: 0;
+}
+
+.container {
+  width: 315px;
+  height: 315px;
+  margin: 20rpx auto;
+  background: #fff;
+}
+
+ad {
+  margin: 0 auto;
+}

@@ -1,0 +1,23 @@
+<view class="data-v-1fb8ecb1">
+    <view class="{{['u-navbar','data-v-1fb8ecb1',isFixed?'u-navbar-fixed':'',borderBottom?'u-border-bottom':'']}}" style="{{$root.s0}}">
+        <view class="u-status-bar data-v-1fb8ecb1" style="height: 20px;width: 100%;"></view>
+        <view class="u-navbar-inner data-v-1fb8ecb1" style="height: 78px;margin-right: 94px;">
+            <view bindtap="__e" class="u-back-wrap data-v-1fb8ecb1" data-event-opts="{{[ [ 'tap',[ [ 'goBack',['$event'] ] ] ] ]}}" wx:if="{{isBack}}">
+                <view class="u-icon-wrap data-v-1fb8ecb1">
+                    <u-icon bind:__l="__l" class="data-v-1fb8ecb1" color="{{backIconColor}}" name="{{backIconName}}" size="{{backIconSize}}" vueId="21022e74-1"></u-icon>
+                </view>
+                <view class="u-icon-wrap u-back-text u-line-1 data-v-1fb8ecb1" style="{{$root.s2}}" wx:if="{{backText}}">{{backText}}</view>
+            </view>
+            <view class="u-navbar-content-title data-v-1fb8ecb1" style="{{$root.s3}}" wx:if="{{title}}">
+                <view class="u-title u-line-1 data-v-1fb8ecb1" style="{{'color:'+titleColor+';'+'font-size:'+titleSize+'rpx'+';'+'font-weight:'+(titleBold?'bold':'normal')+';'}}">{{''+title+''}}</view>
+            </view>
+            <view class="u-slot-content data-v-1fb8ecb1">
+                <slot></slot>
+            </view>
+            <view class="u-slot-right data-v-1fb8ecb1">
+                <slot name="right"></slot>
+            </view>
+        </view>
+    </view>
+    <view class="u-navbar-placeholder data-v-1fb8ecb1"  style="width: 100%;height: 68px;margin-top: 24px;"></view>
+</view>

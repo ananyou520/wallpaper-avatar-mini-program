@@ -1,0 +1,55 @@
+<view bindtap="hideSave" class="saveBox" wx:if="{{showSave}}">
+    <view class="closeSave">×</view>
+    <view>添加到我的小程序</view>
+    <view>随时玩随时测</view>
+</view>
+<view class="show-nan">
+    <image class="image-show" src="{{xzList[indexNan].image}}"></image>
+    <image class="shadow" src="../res/images/shadow.png"></image>
+    <view bindtap="showPopup" class="name-show">{{util.replace(xzList[indexNan].name,'座','男')}} ⇌</view>
+</view>
+<image class="love" src="../res/images/love.png"></image>
+<view class="show-nv">
+    <image class="image-show" src="{{xzList[indexNv].image}}"></image>
+    <image class="shadow" src="../res/images/shadow.png"></image>
+    <view bindtap="showPopup" class="name-show">{{util.replace(xzList[indexNv].name,'座','女')}} ⇌</view>
+</view>
+<navigator class="link" url="../detail/detail?indexNan={{indexNan}}&&indexNv={{indexNv}}">星座配对</navigator>
+<view bindtap="hidePopup" class="model-mask" wx:if="{{showPopup}}"></view>
+<view animation="{{animationData}}" class="choose-model" wx:if="{{showPopup}}">
+    <view class="image-title">
+        <image src="../res/images/popup.png"></image>
+        <view bindtap="hidePopup" class="close-popup">确认</view>
+    </view>
+    <view class="popup-title">选择星座</view>
+    <view class="flex side-title">
+        <view class="flex-item">男生</view>
+        <view class="flex-item">女生</view>
+    </view>
+    <view class="flex scroll-container">
+        <view class="scroll-fa">
+            <scroll-view bindscroll="scrollNan" class="scroll-box" scrollTop="{{scrollTopNan}}" scrollWithAnimation="true" scrollX="false" scrollY="true">
+                <view class="scroll-item"></view>
+                <view bindtap="changeNan" class="scroll-item {{index==indexNan?'active nan':''}}" data-index="{{index}}" wx:for="{{nanList}}" wx:key="{{item}}">
+                    <image class="xz-image" src="{{item.image}}"></image>
+                    <view class="xz-name">{{item.name}}</view>
+                </view>
+                <view class="scroll-item"></view>
+            </scroll-view>
+        </view>
+        <view class="peidui-image">
+            <image class="peidui" src="../res/images/match.png"></image>
+        </view>
+        <view class="scroll-fa">
+            <scroll-view bindscroll="scrollNv" class="scroll-box" scrollTop="{{scrollTopNv}}" scrollWithAnimation="true" scrollX="false" scrollY="true">
+                <view class="scroll-item"></view>
+                <view bindtap="changeNv" class="scroll-item {{index==indexNv?'active nv':''}}" data-index="{{index}}" wx:for="{{nvList}}" wx:key="{{item}}">
+                    <image class="xz-image" src="{{item.image}}"></image>
+                    <view class="xz-name">{{item.name}}</view>
+                </view>
+                <view class="scroll-item"></view>
+            </scroll-view>
+        </view>
+    </view>
+</view>
+<wxs module="util" src="../../utils/util.wxs" />

@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "动态壁纸搜索",
+    "enablePullDownRefresh": false,
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "u-navbar": "/uview-ui/components/u-navbar/u-navbar"
+    }
+}

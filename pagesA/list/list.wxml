@@ -1,0 +1,83 @@
+<view>
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" isBack="{{true}}" title="{{title}}" titleSize="32" titleWidth="325" vueId="2e637200-1"></u-navbar>
+    <view class="query"></view>
+    <view class="menu u-m-l-30 u-m-r-30 u-p-b-15 u-p-t-15 u-flex u-row-around" style="{{'top:'+navbarTop+'px'+';'}}" wx:if="{{modelType=='ranking'}}">
+        <view bindtap="__e" class="{{['tags',modelId=='hot'?'tag-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'cateClick',['ranking','hot'] ] ] ] ]}}">热门榜</view>
+        <view bindtap="__e" class="{{['tags',modelId=='zan'?'tag-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'cateClick',['ranking','zan'] ] ] ] ]}}">点赞榜</view>
+        <view bindtap="__e" class="{{['tags',modelId=='coll'?'tag-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'cateClick',['ranking','coll'] ] ] ] ]}}">收藏榜</view>
+    </view>
+    <scroll-view class="menus" scrollIntoView="{{rolldistance}}" scrollWithAnimation="{{true}}" scrollX="{{true}}" style="{{'top:'+navbarTop+'px'+';'}}" wx:if="{{modelType=='category'}}">
+        <view class="u-p-b-15 u-p-t-15 u-flex u-row-left">
+            <view id="akun1" style="padding:0 16rpx;"></view>
+            <view bindtap="__e" class="{{['tags',-1==modelId?'tag-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'cateClick',['category',-1,'akun1'] ] ] ] ]}}" id="akun2">最新</view>
+            <view bindtap="__e" class="{{['tags',-2==modelId?'tag-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'cateClick',['category',-2,'akun1'] ] ] ] ]}}" id="akun3">热门</view>
+            <view bindtap="__e" class="{{['tags',item._id==modelId?'tag-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'cateClick',['category','$0','akun'+index+2],[ [ ['categoryList','',index,'_id'] ] ] ] ] ] ]}}" id="{{'akun'+index+4}}" wx:for="{{categoryList}}" wx:key="index">{{item.name}}</view>
+            <view style="width:40rpx;">ㅤ</view>
+        </view>
+    </scroll-view>
+    <scroll-view class="menus" scrollIntoView="{{rolldistance}}" scrollWithAnimation="{{true}}" scrollX="{{true}}" style="{{'top:'+navbarTop+'px'+';'}}" wx:if="{{modelType=='color'}}">
+        <view class="u-p-b-15 u-p-t-15 u-flex u-row-left">
+            <view id="akun1" style="padding:0 16rpx;"></view>
+            <view bindtap="__e" class="{{['tags',-1==modelId?'tag-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'cateClick',['category',-1,'akun1'] ] ] ] ]}}" id="akun2">全部</view>
+            <view bindtap="__e" class="{{['c-tags',item._id==modelId?'color-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'cateClick',['color','$0','akun'+index],[ [ ['categoryList','',index,'_id'] ] ] ] ] ] ]}}" id="{{'akun'+index+1}}" style="{{item._id==modelId?'background-color:'+item.color+';box-shadow: 0px 0px 15px '+item.color+';':'background-color:'+item.color+';'}}" wx:for="{{categoryList}}" wx:key="index">
+                <view style="width:40rpx;">ㅤ</view>
+            </view>
+            <view style="width:40rpx;">ㅤ</view>
+        </view>
+    </scroll-view>
+    <view class="u-skeleton" style="background: #141414;">
+        <view class="menu u-m-l-30 u-m-r-30 u-p-b-20 u-p-t-20 u-flex u-row-around" wx:if="{{skeletonLoad&&modelType!='search'&&modelType!='tags'}}">
+            <view class="tags u-skeleton-circle">加载中</view>
+            <view class="tags u-skeleton-circle">加载中</view>
+            <view class="tags u-skeleton-circle">加载中</view>
+        </view>
+        <view style="height:80rpx;" wx:if="{{modelType!='search'&&modelType!='tags'}}"></view>
+      
+        <view>
+            <view class="u-flex u-row-left u-flex-wrap u-p-l-40 u-p-t-20" wx:if="{{modeFilter!=3}}">
+                <block wx:for="{{coverList}}" wx:key="index">
+                    <block wx:for="{{item.images}}" wx:for-index="index_" wx:for-item="item_" wx:key="index_">
+                        <view class="tab u-flex u-row-center u-col-center" hidden="{{!adFlag}}" style="{{'width:'+'205rpx'+';'+'height:'+(modeFilter==1||modeFilter==3?'215rpx':'444rpx')+';'}}" wx:if="{{index!=0&&index%2===0&&index_===0&&vuex_sgridAd!=0}}">
+                            <ad-custom bind:__l="__l" bind:close="__e" bind:error="__e" bind:load="__e" data-event-opts="{{[ [ '^load',[ ['adLoad'] ] ],[ '^error',[ ['adError'] ] ],[ '^close',[ ['adClose'] ] ] ]}}" unitId="{{vuex_sgridAd}}" vueId="{{'2e637200-2-'+index+'-'+index_}}" wx:if="{{vuex_sgridAd!=0}}"></ad-custom>
+                        </view>
+                        <view bindtap="__e" class="tab u-skeleton-fillet" data-event-opts="{{[ [ 'tap',[ [ 'detail',['$0',index_,'$1'],[ [ ['coverList','',index,'_id'] ],[ ['coverList','',index,'images'] ] ] ] ] ] ]}}" style="{{'width:'+'320rpx'+';'+'height:'+(modeFilter==1||modeFilter==3?'320rpx':'644rpx')+';'}}">
+                            <image mode="aspectFill" src="{{item_+'?x-oss-process=image/resize,w_600/quality,q_100'}}" style="{{'width:'+'320rpx'+';'+'height:'+(modeFilter==1||modeFilter==3?'320rpx':'644rpx')+';'}}"></image>
+                        </view>
+                    </block>
+                </block>
+            </view>
+            <view class="u-flex u-row-left u-flex-wrap u-p-l-40 u-p-t-20" wx:else>
+                <block wx:for="{{coverList}}" wx:key="index">
+                    <block wx:for="{{item.images}}" wx:for-index="index_" wx:for-item="item_" wx:key="index_">
+                        <view class="tab u-flex u-row-center u-col-center" hidden="{{!adFlag}}" style="{{'width:'+'327rpx'+';'+'height:'+(modeFilter==1||modeFilter==3?'215rpx':'350rpx')+';'}}" wx:if="{{index!=0&&index%2===0&&index_===0&&vuex_sgridAd!=0}}">
+                            <ad-custom bind:__l="__l" bind:close="__e" bind:error="__e" bind:load="__e" data-event-opts="{{[ [ '^load',[ ['adLoad'] ] ],[ '^error',[ ['adError'] ] ],[ '^close',[ ['adClose'] ] ] ]}}" unitId="{{vuex_sgridAd}}" vueId="{{'2e637200-3-'+index+'-'+index_}}" wx:if="{{vuex_sgridAd!=0}}"></ad-custom>
+                        </view>
+                        <view bindtap="__e" class="tab u-skeleton-fillet" data-event-opts="{{[ [ 'tap',[ [ 'detail',['$0',index_,'$1'],[ [ ['coverList','',index,'_id'] ],[ ['coverList','',index,'images'] ] ] ] ] ] ]}}" style="{{'width:'+'670rpx'+';'+'height:'+(modeFilter==1||modeFilter==3?'315rpx':'350rpx')+';'}}">
+                            <image mode="aspectFill" src="{{item_+'?x-oss-process=image/resize,w_600/quality,q_100'}}" style="{{'width:'+'670rpx'+';'+'height:'+(modeFilter==1||modeFilter==3?'315rpx':'350rpx')+';'}}"></image>
+                            <!-- 电脑 -->
+                        </view>
+                    </block>
+                </block>
+            </view>
+        </view>
+        <view class="u-flex u-flex-col u-col-center" style="width:100vw;height:50vh;padding-top:200rpx;" wx:if="{{noData}}">
+            <view>
+                <image src="/static/nodata.png" style="width:300rpx;height:300rpx;"></image>
+            </view>
+            <view bindtap="__e" class="u-tips-color u-font-12 u-p-t-30" data-event-opts="{{[ [ 'tap',[ [ 'search',['$event'] ] ] ] ]}}">没有数据哦~点击这里试试全网搜</view>
+        </view>
+    </view>
+    <view wx:if="{{!noData}}">
+        <u-loadmore bind:__l="__l" color="#B8B8B8" fontSize="{{24}}" marginBottom="{{30}}" marginTop="{{30}}" status="{{loadStatus}}" vueId="2e637200-4"></u-loadmore>
+    </view><ad unit-id="{{vuex_adAd}}" ad-type="video" wx:if="{{vuex_adAd}}"></ad>
+    <view class="safe-area-inset-bottom">
+        <view style="height:1px;"></view>
+    </view>
+    <u-skeleton animation="{{true}}" bind:__l="__l" loading="{{skeletonLoad}}" vueId="2e637200-5"></u-skeleton>
+    <view bindtap="__e" class="{{['back','backTop','u-flex','u-flex-col','u-row-center','u-col-center',backShow?'backTop_show':'backTop_hide']}}" data-event-opts="{{[ [ 'tap',[ [ 'backTop',['$event'] ] ] ] ]}}">
+        <image src="/static/backtop.png" style="width:36rpx;height:36rpx;"></image>
+    </view>
+    <view bindtap="__e" class="{{['back','backSearch','u-flex','u-flex-col','u-row-center','u-col-center',backShow?'backTop_show':'backTop_hide']}}" data-event-opts="{{[ [ 'tap',[ [ 'search',['$event'] ] ] ] ]}}">
+        <image src="/static/search.png" style="width:30rpx;height:30rpx;"></image>
+    </view>
+</view>

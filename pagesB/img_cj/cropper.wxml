@@ -1,0 +1,9 @@
+<view style="z-index:10;z-index: 10;position: absolute;width:100%">
+    <ad unit-id="adunit-2c019f53e6a1ee8c"></ad>
+</view>
+<image-cropper angle="{{angle}}" bindimageload="loadimage" bindload="cropperload" disable_height="{{disable_height}}" disable_ratio="{{disable_ratio}}" disable_rotate="{{disable_rotate}}" disable_width="{{disable_width}}" height="{{height}}" id="image-cropper" imgSrc="{{src}}" limit_move="{{limit_move}}" max_height="{{max_height}}" max_width="{{max_width}}" width="{{width}}"></image-cropper>
+<text class="hint"></text>
+<view class="bottom">
+    <button catchtap="upload">重新选择</button>
+    <button bindtap="submit">确定上传</button>
+</view>

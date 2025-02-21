@@ -1,0 +1,45 @@
+page{
+  background: #141414;
+}
+.bottom {
+    bottom: 40rpx;
+    position: fixed;
+}
+
+.name {
+  color: #fff;
+    font-weight: 550;
+}
+
+image {
+   
+    height: 120rpx;
+    width: 120rpx;
+}
+
+.border-box {
+    background-color: #fff;
+    border-radius: 16rpx;
+}
+
+.menu image {
+    height: 38rpx;
+    width: 38rpx;
+}
+
+.border-bottom {
+    border-bottom: 1rpx solid #fff;
+    position: relative;
+}
+
+.hover-class1 {
+    background-color: #f8f8f8;
+}
+
+.arror-right {
+    border-right: 3rpx solid #a9acb3;
+    border-top: 3rpx solid #a9acb3;
+    height: 15rpx;
+    transform: rotate(45deg);
+    width: 15rpx;
+}

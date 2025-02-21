@@ -1,0 +1,10 @@
+{
+    "navigationBarTitleText": "首页菜单",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#fff",
+    "usingComponents": {
+      
+        "u-switch": "/uview-ui/components/u-switch/u-switch",
+        "u-action-sheet": "/uview-ui/components/u-action-sheet/u-action-sheet"
+    }
+}

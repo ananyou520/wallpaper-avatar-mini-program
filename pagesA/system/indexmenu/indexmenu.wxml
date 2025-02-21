@@ -1,0 +1,33 @@
+<view class="data-v-2965c258">
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" class="data-v-2965c258" isBack="{{true}}" title="首页菜单" titleSize="32" titleWidth="325" vueId="eab4aa4c-1"></u-navbar>
+    <view class="u-p-l-20 u-p-r-20 u-flex-wrap data-v-2965c258">
+        <view class="tab u-m-t-20 data-v-2965c258" wx:for="{{indexMenu}}" wx:key="index">
+            <view class="u-flex u-row-between data-v-2965c258">
+                <image class="banner_img data-v-2965c258" src="{{item.image}}"></image>
+            </view>
+            <view class="u-p-l-20 u-p-r-20 u-p-t-20 u-p-b-25 u-flex u-row-between data-v-2965c258" style="color: #000;">
+                <view class="data-v-2965c258">{{item.name}}</view>
+                <view class="data-v-2965c258">{{item.url}}</view>
+            </view>
+            <view class="u-p-l-20 u-p-r-20 u-p-t-20 u-p-b-25 u-flex u-row-between data-v-2965c258">
+                <view class="data-v-2965c258">
+                    <u-switch bind:__l="__l" bind:change="__e" bind:input="__e" class="data-v-2965c258" data-event-opts="{{[ [ '^change',[ [ 'switchChange',['$0',index],[ [ ['indexMenu','',index,'_id'] ] ] ] ] ],[ '^input',[ [ '__set_model',[ '$0','show','$event',[] ],[ [ ['indexMenu','',index] ] ] ] ] ] ]}}" inactiveColor="#F8F8F8" size="34" value="{{item.show}}" vueId="{{'eab4aa4c-2-'+index}}"></u-switch>
+                </view>
+                <view bindtap="__e" class="tags_ tag-active_ data-v-2965c258" data-event-opts="{{[ [ 'tap',[ [ 'sheetClick',['$0',index],[ [ ['indexMenu','',index,'_id'] ] ] ] ] ] ]}}">操作</view>
+            </view>
+        </view>
+    </view>
+    <view class="u-flex u-flex-col u-col-center data-v-2965c258" style="width:100vw;height:50vh;padding-top:200rpx;" wx:if="{{noData}}">
+        <view class="data-v-2965c258">
+            <image class="data-v-2965c258" src="/static/nodata.png" style="width:300rpx;height:300rpx;"></image>
+        </view>
+        <view class="u-tips-color u-font-12 u-p-t-30 data-v-2965c258">没有数据哦~</view>
+    </view>
+    <view bindtap="__e" class="add data-v-2965c258" data-event-opts="{{[ [ 'tap',[ [ 'addClick',['$event'] ] ] ] ]}}">
+        <image class="data-v-2965c258" src="/static/icon/add.png"></image>
+    </view>
+    <view class="safe-area-inset-bottom data-v-2965c258">
+        <view class="data-v-2965c258" style="height:10rpx;"></view>
+    </view>
+    <u-action-sheet bind:__l="__l" bind:click="__e" bind:input="__e" class="data-v-2965c258" data-event-opts="{{[ [ '^click',[ ['sheetChange'] ] ],[ '^input',[ [ '__set_model',[ '','sheetShow','$event',[] ] ] ] ] ]}}" list="{{sheetList}}" safeAreaInsetBottom="{{true}}" value="{{sheetShow}}" vueId="eab4aa4c-3"></u-action-sheet>
+</view>

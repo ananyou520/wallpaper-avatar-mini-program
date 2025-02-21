@@ -1,0 +1,23 @@
+<view>
+    <view class="userModel u-flex u-row-center u-col-center">
+        <view class="cont u-flex-col u-col-center" style="{{'width:'+(ad?'300px':'520rpx')+';'}}">
+            <image src="https://img.zcool.cn/community/01958a59c21deba801218e1869effc.gif"></image>
+            <view class="text u-text-center u-content-color u-p-l-60 u-p-r-60">
+                <rich-text nodes="{{title}}"></rich-text>
+            </view>
+            <view class="btn u-text-center" hoverClass="hover-class" hoverStayTime="50" wx:if="{{authorize}}">{{''+btnText+''}}<button bindtap="__e" data-event-opts="{{[ [ 'tap',[ [ 'getUserProfile',['$event'] ] ] ] ]}}" openType="getUserProfile" style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;"></button>
+            </view>
+            <block wx:else>
+                <view wx:if="{{ad}}">
+                    <view class="u-p-t-20" style="width:300px;">
+                        <ad unitId="{{vuex_bannerAd}}" wx:if="{{vuex_bannerAd}}"></ad>
+                    </view>
+                    <view class="btn u-text-center adClass" hoverClass="hover-class" hoverStayTime="50" style="margin-left:20%;margin-top:30rpx;">{{''+btnText+''}}<button openType="share" style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;"></button>
+                    </view>
+                </view>
+                <view bindtap="__e" class="btn u-text-center" data-event-opts="{{[ [ 'tap',[ [ 'save',['$event'] ] ] ] ]}}" hoverClass="hover-class" hoverStayTime="50" wx:else>{{''+btnText+''}}</view>
+            </block>
+            <view bindtap="__e" class="no u-text-center u-p-t-30" data-event-opts="{{[ [ 'tap',[ [ 'close',['$event'] ] ] ] ]}}" wx:if="{{closeText!=' '}}">{{closeText}}</view>
+        </view>
+    </view>
+</view>

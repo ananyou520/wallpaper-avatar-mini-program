@@ -1,0 +1,48 @@
+<view>
+  <u-navbar vue-id="32bf19bb-1" is-back="{{true}}" title="能量明细" title-width="325" title-color="#fff" title-size="28" border-bottom="{{false}}" bind:__l="__l"></u-navbar>
+  <view class="top">
+    <view class="icon u-flex u-row-center u-col-center u-p-t-20">
+      <image src="/static/icon/home.png"></image>
+    </view>
+    <view class="kapian u-flex-col u-row-center u-col-center u-p-t-30">
+      <view class="price">{{vuex_user.integral}}</view>
+      <view class="shuom u-font-12 u-tips-color u-p-t-10">当前可用能量</view>
+    </view>
+  </view>
+  <view class="u-p-l-40 u-p-r-40">
+    <view class="u-font-18 u-m-t-80 u-m-b-30 title">能量明细</view>
+    <ad-custom vue-id="32bf19bb-2" unit-id="adunit-cdd449f4b761a422" bind:__l="__l"></ad-custom>
+    <view class="safe-area-inset-bottom">
+      <block wx:for="{{$root.l0}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+        <view class="u-flex u-row-between u-col-center border-bottom u-p-t-30 u-p-b-30">
+          <view>
+            <view>{{item.$orig.name}}</view>
+            <view class="u-font-12 u-light-color u-p-t-10">{{item.g0}}</view>
+          </view>
+          <block wx:if="{{item.$orig.mode==1}}">
+            <view class="yesNum">{{"+ "+item.$orig.integral}}</view>
+          </block>
+          <block wx:else>
+            <view class="noNum">{{"- "+item.$orig.integral}}</view>
+          </block>
+        </view>
+      </block>
+    </view>
+    <block wx:if="{{noData}}">
+      <view class="u-flex u-flex-col u-col-center" style="width:100vw;height:50vh;padding-top:40rpx;background-color:#141414;">
+        <view>
+          <image style="width:300rpx;height:300rpx;" src="/static/icon/nodata.png"></image>
+        </view>
+        <view class="u-tips-color u-font-12 u-p-t-30" style="color:#fff;">没有数据哦~</view>
+      </view>
+    </block>
+  </view>
+  <block wx:if="{{!noData}}">
+    <view>
+      <u-loadmore vue-id="32bf19bb-3" status="{{loadStatus}}" font-size="{{24}}" margin-top="{{30}}" margin-bottom="{{30}}" color="#B8B8B8" bind:__l="__l"></u-loadmore>
+    </view>
+  </block>
+  <view class="safe-area-inset-bottom">
+    <view style="height:1px;"></view>
+  </view>
+</view>

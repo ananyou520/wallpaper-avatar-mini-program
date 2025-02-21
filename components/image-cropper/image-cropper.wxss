@@ -1,0 +1,139 @@
+.image-cropper {
+    background: hsla(0,4%,5%,.8);
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+}
+
+.main {
+    overflow: hidden;
+}
+
+.content,.main {
+    height: 100vh;
+    position: absolute;
+    width: 100vw;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    z-index: 9;
+}
+
+.bg_black {
+    background: rgba(0,0,0,.8)!important;
+}
+
+.bg_gray {
+    background: rgba(0,0,0,.45);
+    transition-duration: .35s;
+}
+
+.content>.content_top {
+    pointer-events: none;
+}
+
+.content>.content_middle {
+    display: flex;
+    height: 200px;
+    width: 100%;
+}
+
+.content_middle_middle {
+    box-sizing: border-box;
+    position: relative;
+    transition-duration: .3s;
+    width: 200px;
+}
+
+.content>.content_bottom,.content_middle_right {
+    flex: auto;
+}
+
+.image-cropper .img {
+    backface-visibility: hidden;
+    border: none;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform-origin: center;
+    width: 100%;
+    z-index: 2;
+}
+
+.image-cropper-canvas {
+    background: #fff;
+    height: 150px;
+    pointer-events: none;
+    position: fixed;
+    top: -200%;
+    width: 150px;
+    z-index: 10;
+}
+
+.border {
+    background: #fff;
+    pointer-events: auto;
+    position: absolute;
+}
+
+.border-top-left {
+    left: -2.5px;
+}
+
+.border-top-left,.border-top-right {
+    height: 2.5px;
+    top: -2.5px;
+    width: 33rpx;
+}
+
+.border-top-right {
+    right: -2.5px;
+}
+
+.border-right-top {
+    height: 30rpx;
+    right: -2.5px;
+    top: -1px;
+    width: 2.5px;
+}
+
+.border-right-bottom {
+    bottom: -1px;
+    height: 30rpx;
+    right: -2.5px;
+    width: 2.5px;
+}
+
+.border-bottom-left {
+    bottom: -2.5px;
+    height: 2.5px;
+    left: -2.5px;
+    width: 33rpx;
+}
+
+.border-bottom-right {
+    bottom: -2.5px;
+    height: 2.5px;
+    right: -2.5px;
+    width: 33rpx;
+}
+
+.border-left-top {
+    height: 30rpx;
+    left: -2.5px;
+    top: -1px;
+    width: 2.5px;
+}
+
+.border-left-bottom {
+    bottom: -1px;
+    height: 30rpx;
+    left: -2.5px;
+    width: 2.5px;
+}

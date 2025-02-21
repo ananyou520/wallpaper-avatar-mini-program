@@ -1,0 +1,27 @@
+<view>
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" isBack="{{true}}" title="标签管理" titleSize="32" titleWidth="325" vueId="acc6eac0-1"></u-navbar>
+    <view class="u-p-40">
+        <view class="u-flex u-row-left u-flex-wrap">
+            <view class="u-p-r-20 u-p-b-40" wx:for="{{tagsList}}" wx:key="index">
+                <u-tag bind:__l="__l" bind:close="__e" closeable="{{true}}" data-event-opts="{{[ [ '^close',[ [ 'removeClick',['$0'],[ [ ['tagsList','',index,'_id'] ] ] ] ] ] ]}}" mode="dark" shape="circle" text="{{item.name}}" type="primary" vueId="{{'acc6eac0-2-'+index}}"></u-tag>
+            </view>
+        </view>
+        <view class="u-flex u-flex-col u-col-center" style="width:100vw;height:50vh;padding-top:200rpx;" wx:if="{{noData}}">
+            <view>
+                <image src="/static/nodata.png" style="width:300rpx;height:300rpx;"></image>
+            </view>
+            <view class="u-tips-color u-font-12 u-p-t-30">没有数据哦~</view>
+        </view>
+    </view>
+    <view class="safe-area-inset-bottom">
+        <view style="height:1px;"></view>
+    </view>
+    <view bindtap="__e" class="add" data-event-opts="{{[ [ 'tap',[ [ 'addClick',['$event'] ] ] ] ]}}">
+        <image src="/static/icon/add.png"></image>
+    </view>
+    <u-modal asyncClose="{{true}}" bind:__l="__l" bind:confirm="__e" bind:input="__e" class="vue-ref" confirmText="添加" content="content" data-event-opts="{{[ [ '^confirm',[ ['tagsChange'] ] ],[ '^input',[ [ '__set_model',[ '','tagsShow','$event',[] ] ] ] ] ]}}" data-ref="uModal" showCancelButton="{{true}}" title="添加标签" value="{{tagsShow}}" vueId="acc6eac0-3" vueSlots="{{['default']}}">
+        <view class="u-p-40">
+            <u-input bind:__l="__l" bind:input="__e" border="{{true}}" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','tagsName','$event',[] ] ] ] ] ]}}" height="{{80}}" placeholder="填写标签名称" value="{{tagsName}}" vueId="{{'acc6eac0-4'+','+'acc6eac0-3'}}"></u-input>
+        </view>
+    </u-modal>
+</view>

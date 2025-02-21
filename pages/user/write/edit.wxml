@@ -1,0 +1,37 @@
+<view>
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" isBack="{{true}}" title="上传" titleSize="32" titleWidth="325" vueId="3126f711-1"></u-navbar>
+    <view class="u-p-40">
+        <u-form bind:__l="__l" class="vue-ref" data-ref="uForm" model="{{cover}}" vueId="3126f711-2" vueSlots="{{['default']}}">
+            <view class="u-p-b-20">
+                <u-upload fileList action autoUpload="{{false}}" bind:__l="__l" class="vue-ref" data-ref="uUpload" delBgColor="#ff7c7c" delColor="#FFFFFF" delIcon="close" height="{{cover.mode==0?325:203}}" limitType="{{['png','jpg','jpeg']}}" maxCount="100" maxSize="{{10*5760*3240}}" multiple="{{true}}" showProgress="{{false}}" sizeType="{{['original']}}" sourceType="{{['album']}}" uploadText="{{cover.mode==0?'上传壁纸':'上传图片'}}" vueId="{{'3126f711-3'+','+'3126f711-2'}}" width="{{cover.mode==0?203:203}}"></u-upload>
+            </view>
+            <view style="border-bottom:1rpx solid #F4F4F4;border-top:1rpx solid #F4F4F4;">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="主题" vueId="{{'3126f711-4'+','+'3126f711-2'}}" vueSlots="{{['default']}}">
+                    <u-input bind:__l="__l" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','name','$event',[] ],['cover'] ] ] ] ]}}" placeholder="设置主题更容易被搜索到" value="{{cover.name}}" vueId="{{'3126f711-5'+','+'3126f711-4'}}"></u-input>
+                </u-form-item>
+            </view>
+            <view style="border-bottom:1rpx solid #F4F4F4;">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="类型" vueId="{{'3126f711-6'+','+'3126f711-2'}}" vueSlots="{{['default']}}">
+                    <u-radio-group bind:__l="__l" bind:change="__e" bind:input="__e" data-event-opts="{{[ [ '^change',[ ['radioGroupChange'] ] ],[ '^input',[ [ '__set_model',[ '$0','mode','$event',[] ],['cover'] ] ] ] ]}}" value="{{cover.mode}}" vueId="{{'3126f711-7'+','+'3126f711-6'}}" vueSlots="{{['default']}}">
+                        <u-radio bind:__l="__l" name="{{0}}" size="50" vueId="{{'3126f711-8'+','+'3126f711-7'}}" vueSlots="{{['default']}}">壁纸</u-radio>
+                        <u-radio bind:__l="__l" name="{{1}}" size="50" vueId="{{'3126f711-9'+','+'3126f711-7'}}" vueSlots="{{['default']}}">头像</u-radio>
+                        <u-radio bind:__l="__l" name="{{3}}" size="50" vueId="{{'3126f711-10'+','+'3126f711-7'}}" vueSlots="{{['default']}}">电脑壁纸</u-radio>
+                    </u-radio-group>
+                </u-form-item>
+            </view>
+            <view style="border-bottom:1rpx solid #F4F4F4;">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="分类" rightIcon="arrow-right" rightIconStyle="{{iconStyle}}" vueId="{{'3126f711-11'+','+'3126f711-2'}}" vueSlots="{{['default']}}">
+                    <u-input bind:__l="__l" bind:click="__e" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^click',[ ['cateClick'] ] ],[ '^input',[ [ '__set_model',[ '$0','category_name','$event',[] ],['cover'] ] ] ] ]}}"  placeholder="选择分类" value="{{cover.category_name}}" vueId="{{'3126f711-12'+','+'3126f711-11'}}"></u-input>
+                </u-form-item>
+            </view>
+            <view style="border-bottom:1rpx solid #F4F4F4;">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="标签" rightIcon="arrow-right" rightIconStyle="{{iconStyle}}" vueId="{{'3126f711-13'+','+'3126f711-2'}}" vueSlots="{{['default']}}">
+                    <u-input bind:__l="__l" bind:click="__e" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^click',[ ['tagsClick'] ] ],[ '^input',[ [ '__set_model',[ '$0','tags','$event',[] ],['cover'] ] ] ] ]}}"  placeholder="选择标签（可选）" value="{{cover.tags}}" vueId="{{'3126f711-14'+','+'3126f711-13'}}"></u-input>
+                </u-form-item>
+            </view>
+        </u-form>
+        <view class="u-p-t-40">
+            <view bindtap="__e" class="btn" data-event-opts="{{[ [ 'tap',[ [ 'submit',['$event'] ] ] ] ]}}" hoverClass="hover-class" hoverStayTime="50">上 传</view>
+        </view>
+    </view>
+</view>

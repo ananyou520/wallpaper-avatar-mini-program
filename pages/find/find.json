@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "发现",
+    "enablePullDownRefresh": false,
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "u-icon": "/uview-ui/components/u-icon/u-icon",
+        "u-loadmore": "/uview-ui/components/u-loadmore/u-loadmore",
+        "foo-bar": "/components/fooBar/fooBar",
+        "models": "/components/model/model"
+    }
+}

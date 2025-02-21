@@ -1,0 +1,15 @@
+<view class="u-section data-v-fd044562">
+    <view class="{{['u-section__title','data-v-fd044562',showLine?'u-section--line':'']}}" style="{{'font-weight:'+(bold?'bold':'normal')+';'+'color:'+color+';'+'font-size:'+fontSize+'rpx'}}">
+        <!-- <view class="u-section__title__icon-wrap u-flex data-v-fd044562" style="{{$root.s0}}" wx:if="{{showLine}}">
+            <u-icon bind:__l="__l" bold="{{true}}" class="line-color data-v-fd044562" color="{{lineColor?lineColor:color}}" name="column-line" size="{{fontSize*1.25}}" top="0" vueId="e27ed1ac-1"></u-icon>
+        </view> -->
+        <text class="u-flex u-section__title__text data-v-fd044562">{{title}}</text>
+    </view>
+    <view bindtap="__e" class="u-section__right-info data-v-fd044562 ll" data-event-opts="{{[ [ 'tap',[ [ 'rightClick',['$event'] ] ] ] ]}}" style="{{'color:'+subColor+';'}}" wx:if="{{right||$slots.right}}">
+        <slot name="right" wx:if="{{$slots.right}}"></slot>
+        <block wx:else>{{''+subTitle+''}}<view class="u-section__right-info__icon-arrow u-flex data-v-fd044562" wx:if="{{arrow}}">
+                <u-icon bind:__l="__l" class="data-v-fd044562" color="{{subColor}}" name="arrow-right" size="24" vueId="e27ed1ac-2"></u-icon>
+            </view>
+        </block>
+    </view>
+</view>

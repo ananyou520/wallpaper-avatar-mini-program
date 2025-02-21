@@ -1,0 +1,5 @@
+<view bindtap="__e" class="{{['u-switch','data-v-cb2f05ee',value==true?'u-switch--on':'',disabled?'u-switch--disabled':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'onClick',['$event'] ] ] ] ]}}" style="{{$root.s0}}">
+    <view class="u-switch__node node-class data-v-cb2f05ee" style="{{'width:'+$root.g0+';'+'height:'+$root.g1+';'}}">
+        <u-loading bind:__l="__l" class="u-switch__loading data-v-cb2f05ee" color="{{loadingColor}}" show="{{loading}}" size="{{size*0.6}}" vueId="1945f046-1"></u-loading>
+    </view>
+</view>

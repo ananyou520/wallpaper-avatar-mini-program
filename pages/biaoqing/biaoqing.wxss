@@ -1,0 +1,57 @@
+.item .tip {
+    z-index: 0;
+    top: 0;
+    width: 100%;
+    color: #999;
+    line-height: 180px;
+    display: inline-block;
+    position: absolute;
+}
+
+.color_item {
+    margin: 0 15px;
+    height: 35px;
+    box-sizing: border-box;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+    white-space: normal;
+    color: #000;
+}
+
+.color_item_sel {
+    border-bottom: 3px solid #3dc2d5;
+    color: #3dc2d5;
+    font-weight: bolder;
+}
+
+.xxx {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #dedede;
+    top: 0;
+}
+
+.searchWrapper,.xxx {
+    position: fixed;
+    background-color: #fff;
+}
+
+.searchWrapper {
+    width: 40px;
+    height: 40px;
+    bottom: 30px;
+    right: 10px;
+    padding: 16px;
+    border-radius: 25px;
+    opacity: .9;
+    box-shadow: 0 6rpx 10rpx 20rpx rgba(15,15,14,.6);
+}
+
+.searchWrapper image {
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "微信公众号",
+  "enablePullDownRefresh": false,
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#fff",
+  "backgroundColor": "#FFFFFF",
+  "usingComponents": {}
+}

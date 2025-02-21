@@ -1,0 +1,152 @@
+.menu {
+    background-color: #fff;
+    left: 0;
+    position: fixed;
+    width: calc(100% - 60rpx);
+    z-index: 99;
+}
+page{
+    background: #141414;
+}
+.tags {
+    background-color: #f5f6f8;
+    border-radius: 40rpx;
+    color: #909399;
+    font-size: 14px;
+    line-height: 60rpx;
+    padding: 0 40rpx;
+}
+
+.tag-active {
+    animation: tiaobig .8s ease-in-out infinite alternate;
+    animation-iteration-count: 1;
+    background-image: linear-gradient(90deg,#bed0ba,#bed0ba);
+    box-shadow: 0 0 10px #bed0ba;
+    color: #333;
+}
+
+.tags_ {
+    border: 1rpx solid #b8b8b8;
+    border-radius: 8rpx;
+    color: #909399;
+    font-size: 12px;
+    line-height: 46rpx;
+    padding: 0 20rpx;
+}
+
+.tag-active_ {
+    background-image: linear-gradient(90deg,#bed0ba,#bed0ba);
+    border: none;
+    box-shadow: 0 0 10px #bed0ba;
+    color: #333;
+}
+
+@-webkit-keyframes tiaobig {
+    0% {
+        transform: scale(.98);
+    }
+
+    25% {
+        transform: scale(1.08);
+    }
+
+    50% {
+        transform: scale(.94);
+    }
+
+    75% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.tab {
+    margin-bottom: 15rpx;
+    margin-right: 15rpx;
+    position: relative;
+}
+
+.tab image {
+    border-radius: 16rpx;
+}
+
+.tab .array {
+    background-color: rgba(0,0,0,.4);
+    border-radius: 8rpx;
+    color: #fff;
+    font-size: 12px;
+    padding: 4rpx 16rpx;
+    position: absolute;
+    right: 15rpx;
+    top: 15rpx;
+}
+
+.btns {
+    height: 250rpx;
+    width: 475rpx;
+}
+
+.btns .title {
+    font-weight: 550;
+}
+
+.border-bottom {
+    border-bottom: 1rpx solid #f3f4f6;
+    position: relative;
+}
+
+.add {
+    animation: tiaobig 1.5s ease-in-out infinite alternate;
+    background-color: #fff;
+    color: #141414;
+    border-radius: 120rpx;
+    bottom: 140rpx;
+    box-shadow: 0 1px 8px #c8c8c8;
+    position: fixed;
+    right: 30rpx;
+}
+
+.add,.add image {
+    height: 90rpx;
+    width: 90rpx;
+}
+
+@keyframes tiaobig {
+    0% {
+        transform: scale(.92);
+    }
+
+    25% {
+        transform: scale(1.08);
+    }
+
+    50% {
+        transform: scale(.96);
+    }
+
+    75% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(.94);
+    }
+}
+
+.shzt {
+    position: absolute;
+    right: 20rpx;
+    top: 110rpx;
+}
+
+.shzt image {
+    height: 120rpx;
+    width: 120rpx;
+}
+
+.bohui {
+    color: #ff4741;
+}

@@ -1,0 +1,79 @@
+.content.data-v-9af855d8 {
+    background-image: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-08ecbb66-149e-4d2b-93a0-fa6bc6e0e894/618f991c-21c7-43b1-8e57-d9c8f64c734c.png);
+    background-size: 100% 100%;
+    height: 100vh;
+    left: 0;
+    padding-top: 160rpx;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.content .icon-xiangzuo.data-v-9af855d8 {
+    color: #ffa462;
+    font-size: 40rpx;
+    font-weight: 700;
+    left: 30rpx;
+    position: fixed;
+    top: 6vh;
+}
+
+.content .image-div.data-v-9af855d8 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content .image-div .icon-xiazai.data-v-9af855d8 {
+    color: #ffa462;
+    font-size: 120rpx;
+    margin-bottom: 40rpx;
+}
+
+.content .image-div .tip-div.data-v-9af855d8 {
+    background-color: #ffa462;
+    border-radius: 30rpx;
+    color: #8b4513;
+    font-size: 30rpx;
+    margin-bottom: 40rpx;
+    padding: 8rpx 30rpx;
+}
+
+.content .image-div .image-card.data-v-9af855d8 {
+    border: 8rpx solid #f8f8f8;
+    border-radius: 20rpx;
+    box-shadow: 0 -5px 15px 0 hsla(0,0%,88%,.4);
+    width: 340rpx;
+}
+
+.content .btn-card.data-v-9af855d8 {
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 80rpx;
+    padding: 10rpx 30rpx 30rpx;
+}
+
+.content .btn-card .action-btn.data-v-9af855d8 {
+    background: #fff;
+    border: 1rpx solid #efefef;
+    border-radius: 48rpx;
+    box-shadow: 0 12rpx 16rpx -8rpx rgba(0,0,0,.1);
+    color: #4d4d4d;
+    font-size: 36rpx;
+    font-weight: 700;
+    padding: 0;
+    width: 320rpx;
+}
+
+.content .btn-card .primary-btn.data-v-9af855d8 {
+    background: linear-gradient(97.71deg,#ffa462,#ff4d42 88.36%);
+    border: 1rpx solid #ff7852;
+    border-radius: 48rpx;
+    box-shadow: 0 12rpx 16rpx -8rpx rgba(255,88,35,.6);
+    color: #fff;
+    font-size: 36rpx;
+    font-weight: 700;
+    padding: 0;
+    width: 320rpx;
+}

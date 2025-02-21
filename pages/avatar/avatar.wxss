@@ -1,0 +1,68 @@
+page {
+    padding-bottom: 90px;
+}
+
+.center,.cover {
+    text-align: center;
+}
+
+.cover {
+    max-height: 50%;
+    width: 100%;
+}
+
+.help {
+    color: #999;
+    padding: 10px 15px;
+}
+
+.help,.panel {
+    font-size: 12px;
+}
+
+.panel {
+    background: #fff;
+    border-top: 1px solid #dfdcdc;
+    padding: 15px 10px;
+}
+
+.panel textarea {
+    min-height: 50px;
+    width: 100%;
+}
+
+.template_title,.title {
+    font-size: 15px;
+}
+
+.title {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.use-template {
+    background-color: #0c6;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    display: block;
+    height: 38px;
+    line-height: 40px;
+    margin-right: 10px;
+    padding: 0;
+    width: 150px;
+}
+
+.use-template-san {
+    background: #0a8a10;
+    border-radius: 0;
+    color: #fff;
+    display: inline-block;
+    float: right;
+    font-size: 12px;
+    padding: 0 8px;
+}
+
+.tx {
+    box-shadow: 10px 10px 30px 5px #a9a9a9;
+}

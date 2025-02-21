@@ -1,0 +1,70 @@
+page{
+    background: #141414;
+}
+.tab {
+    padding: 30rpx;
+    width: 33.33%;
+}
+
+.tab,.top {
+    background-color: #141414;
+}
+
+.top {
+    width: 100vw;
+    height: 460rpx;
+    margin-top: -250rpx;
+    padding-top: 250rpx;
+    background-image: linear-gradient(45deg,#222223,#181818,#222223);
+    position: fixed;
+    top: 0;
+}
+.top-home{
+    background-color: rgba(0, 0, 0, .94);
+    border-radius: 80rpx;
+    height: 70rpx;
+    left: 30rpx;
+  
+    top: 0;
+    width: 70rpx;
+    z-index: 9999999;
+}
+.title {
+    border-left: 6rpx solid rgba(0,0,0,.3);
+    color: #fff;
+    font-size: 30rpx;
+    font-weight: 550;
+    line-height: 30rpx;
+    padding-left: 15rpx;
+}
+
+.border-bottom {
+    border-bottom: 1rpx solid #f3f3f3;
+}
+
+.relative {
+    position: relative;
+}
+
+.bg-white {
+    background-color: #141414;
+    margin-bottom: 0;
+}
+
+.grid .tab {
+    height: 180rpx;
+    width: 33%;
+}
+
+.num {
+    font-size: 48rpx;
+}
+
+.num,.nums {
+    color: #fff;
+    font-weight: 550;
+}
+
+.nums {
+    font-size: 36rpx;
+}

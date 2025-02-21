@@ -1,0 +1,35 @@
+<!--index.wxml-->
+
+<import src="../../we-cropper/we-cropper.wxml" />
+
+<view class='wrapper' hidden='{{wrapperHidden}}'>
+  <view class="cropper-wrapper">
+    <template is="we-cropper" data="{{...cropperOpt}}" />
+  </view>
+  <view class='fl fixedBootom'>
+    <button bindtap="getCropperImage" class='save'>确定</button>
+    <button bindtap="uploadTap" class='choose-more'>选择图片</button>
+  </view>
+</view>
+
+<view class='content' hidden='{{canvasHidden}}'>
+  <view class='top'>
+    <text class='top-text'>点击粉色格子选择单张图片</text>
+    <button class='replenish' bindtap='replenishBtn'>补充</button>
+  </view>
+  <canvas class='container' bindtouchend="oneImg" canvas-id="myCanvas"></canvas>
+   <view class='fl'>
+    <button bindtap='saveImg' class='save' disabled="{{btnDis}}">保存图片</button>
+    <button bindtap='moreImg' class='choose-more'>选择多张图片</button>
+  </view> 
+ 
+<navigator url="/pagesB/set/set">
+<button type="default">设置</button>
+</navigator>
+<navigator url="/pagesB/help/help">
+<button type="default">帮助</button>
+</navigator>
+  <progress class='progress'  hidden="{{progressVis}}" percent="{{percent}}" activeColor="#FD4966" active active-mode="forwards" show-info stroke-width="12" />
+  <ad unit-id="adunit-2c019f53e6a1ee8c"></ad>
+  <canvas class='container2' canvas-id="myCanvas2"></canvas>
+</view>

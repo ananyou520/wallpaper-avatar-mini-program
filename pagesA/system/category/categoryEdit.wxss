@@ -1,0 +1,56 @@
+.btn {
+    background-image: linear-gradient(100deg,rgba(0,0,0,.3),rgba(0,0,0,.94));
+    border-radius: 40rpx;
+    color: #fff;
+    font-size: 16px;
+    line-height: 86rpx;
+    text-align: center;
+}
+
+.hover-class {
+    transform: scale(.92);
+    transition: all .2s;
+}
+
+.img {
+    position: relative;
+}
+
+.img-bg {
+    background: #f4f5f6;
+    border-radius: 10rpx;
+    height: 200rpx;
+    margin: 10rpx;
+    width: 400rpx;
+}
+
+.u-delete-icon {
+    align-items: center;
+    background-color: hsla(0,0%,100%,.35);
+    border-radius: 100rpx;
+    display: flex;
+    height: 44rpx;
+    justify-content: center;
+    position: absolute;
+    right: 20rpx;
+    top: 20rpx;
+    width: 44rpx;
+    z-index: 10;
+}
+
+.content-border {
+    border-bottom: 1rpx solid #699;
+}
+
+.content-type,.uni-list-cell {
+    align-items: center;
+    display: flex;
+}
+
+.uni-list-cell {
+    margin-right: 10px;
+}
+
+.uni-list-cell:first-child {
+    margin-left: -10rpx;
+}

@@ -1,0 +1,141 @@
+<view class="data-v-74356fc4">
+    <view class="data-v-74356fc4" hidden="{{!!loadShow}}">
+        <view class="vtop data-v-74356fc4" style="height: 68px;">
+            <view class="title u-flex u-row-left u-p-l-40 data-v-74356fc4" style="{{'margin-top:'+menuButtonInfo.top+'px'+';'}}" wx:if="{{!homeTop||scrollTop<=homeTop-menuButtonInfo.top+30+15}}">
+                <text class="data-v-74356fc4"></text>
+                <u-icon bind:__l="__l" class="u-p-l-15 fenxiang data-v-74356fc4" name="/static/icon/home.png" size="60" vueId="8dd740cc-1"></u-icon>
+                <button class="data-v-74356fc4" openType="share" style="position:absolute;top:20rpx;left:20rpx;width:50rpx;height:50rpx;opacity:0;"></button>
+                <view bindtap="__e" class="search u-flex u-row-left data-v-74356fc4" data-event-opts="{{[ [ 'tap',[ [ 'search',['$event'] ] ] ] ]}}">
+                    <u-icon bind:__l="__l" class="data-v-74356fc4" name="/static/icon/yl.png" size="36" vueId="8dd740cc-2"></u-icon>
+                    <text class="u-p-l-15 data-v-74356fc4">搜索</text>
+                </view>
+            </view>
+            <view class="data-v-74356fc4" wx:else>
+                <scroll-view class="data-v-74356fc4" scrollIntoView="{{rolldistance}}" scrollWithAnimation="{{true}}" scrollX="{{true}}" style="height:100rpx;">
+                    <view class="u-flex u-row-left u-p-t-20 u-p-b-20 data-v-74356fc4">
+                        <view class="data-v-74356fc4" id="akun1" style="padding:0 16rpx;"></view>
+                        <view bindtap="__e" class="{{['scroll-view-item','tags','data-v-74356fc4',cateStatic==item.type?'tag-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'cateClick',['$0','$1','akun'+index+2],[ [ ['cateList','',index,'type'] ],[ ['cateList','',index,'more'] ] ] ] ] ] ]}}" id="{{'akun'+index+1}}" wx:for="{{cateList}}" wx:key="index">{{''+item.name+''}}</view>
+                        <view class="data-v-74356fc4" style="width:40rpx;">ㅤ</view>
+                    </view>
+                </scroll-view>
+            </view>
+          
+        </view>
+        <view style="{{'margin-top:'+('calc('+menuButtonInfo.top+'px + 3% + 45rpx + 25rpx)')+';'}}"></view>
+   
+        <view class="u-p-t-20 banner data-v-74356fc4">
+            <u-swiper bind:__l="__l" bind:click="__e" borderRadius="16" class="data-v-74356fc4" data-event-opts="{{[ [ '^click',[ ['bannerClick'] ] ] ]}}" effect3d="{{true}}" effect3dPreviousMargin="0" height="280" list="{{bannerList}}" name="image" vueId="8dd740cc-3"></u-swiper>
+        </view>
+        <view class="data-v-74356fc4">
+            <view class="u-p-t-40 data-v-74356fc4">
+                <scroll-view class="data-v-74356fc4" scrollWithAnimation="{{true}}" scrollX="{{true}}">
+                    <view class="m-nav data-v-74356fc4">
+                        <view class="data-v-74356fc4" id="akun1" style="padding:0 10rpx;"></view>
+                        <view bindtap="__e" class="{{['scroll-view-item','dhs','data-v-74356fc4',cateStatic==item.type?'tag-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'cateClick',['$0','$1','akun'+index+2],[ [ ['indexList','',index,'type'] ],[ ['indexList','',index,'more'] ] ] ] ] ] ]}}" id="{{'akun'+index+1}}" wx:if="{{item&&item.show===true}}" wx:for="{{indexList}}" wx:key="index">
+                            <navigator class="item data-v-74356fc4" url="{{item.url}}">
+                                <view class="image-wrap data-v-74356fc4">
+                                    <image class="data-v-74356fc4" mode="widthFix" src="{{item.image}}" style="width: 112rpx; height: 145rpx; display: block; box-sizing: border-box; left: 4rpx; top: 6rpx"></image>
+                                </view>
+                                <view class="data-v-74356fc4">{{''+item.name+''}}</view>
+                            </navigator>
+                        </view>
+                    </view>
+                </scroll-view>
+                <view class="data-v-74356fc4" style="padding:0 16rpx;">
+                    <view class="u-flex u-row-center u-col-center data-v-74356fc4">
+                       
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="u-p-t-40 data-v-74356fc4">
+            <view class="u-p-l-40 u-p-r-40 data-v-74356fc4">
+                <u-section bind:__l="__l" bind:click="__e" bold="{{false}}" class="data-v-74356fc4" data-event-opts="{{[ [ '^click',[ [ 'topicClick',['category','',-1] ] ] ] ]}}" fontSize="{{48}}" showLine="{{true}}" subTitle="More +" title="壁纸专辑" vueId="8dd740cc-5"></u-section>
+                <view style="height:10rpx;"></view>
+                <view class="title2">艺术美学 幻新主题</view>
+            </view>
+            <scroll-view class="u-p-t-30 data-v-74356fc4" scrollIntoView="{{rolldistance}}" scrollWithAnimation="{{true}}" scrollX="{{true}}" style="height:320rpx;">
+                <view class="u-flex u-row-left u-p-l-40 u-p-r-40 data-v-74356fc4">
+                    <view bindtap="__e" class="topictab data-v-74356fc4" data-event-opts="{{[ [ 'tap',[ [ 'tpdetail',['$0'],[ [ ['topicList','',index,'_id'] ] ] ] ] ] ]}}" wx:for="{{topicList}}" wx:key="index">
+                        <image class="data-v-74356fc4" mode="aspectFill" src="{{item.image+'?x-oss-process=image/resize,m_lfit,w_500/quality,q_100/crop,h_300,g_center'}}" style="height:280rpx;"></image>
+                        <view class="array data-v-74356fc4">{{item.images.length}}</view>
+                        <view class="texts data-v-74356fc4">
+                            <view class="title data-v-74356fc4">{{item.name}}</view>
+                            <view class="detail data-v-74356fc4">{{item.detail}}</view>
+                            <view class="likes data-v-74356fc4" wx:if="{{item.zan&&item.zan.length>0}}">{{''+item.zan.length+'人喜欢'}}</view>
+                        </view>
+                    </view>
+                    <view class="data-v-74356fc4" style="width:40rpx;">ㅤ</view>
+                </view>
+            </scroll-view>
+        </view>
+       
+        <!-- <view class="u-p-t-40 data-v-74356fc4">
+            <view class="u-p-l-40 u-p-r-40 data-v-74356fc4">
+                <u-section bind:__l="__l" bind:click="__e" bold="{{false}}" class="data-v-74356fc4" data-event-opts="{{[ [ '^click',[ [ 'listClick',['category','',-1,3] ] ] ] ]}}" fontSize="{{48}}" showLine="{{true}}" subTitle="More +" title="电脑平板" vueId="8dd740cc-7"></u-section>
+                <view style="height:10rpx;"></view>
+                <view class="title2">打造极致全新桌面</view>
+            </view>
+            <scroll-view class="u-p-t-30 data-v-74356fc4" scrollX="{{true}}" style="height:260rpx;">
+                <view class="u-flex u-row-left u-p-l-40 u-p-r-40 data-v-74356fc4">
+                    <view bindtap="__e" class="tab1 data-v-74356fc4" data-event-opts="{{[ [ 'tap',[ [ 'detail',['$0',index,'$1'],[ [ ['pcList','',index,'_id'] ],[ ['pcList','',index,'images'] ] ] ] ] ] ]}}" style="height:210rpx;" wx:for="{{pcList}}" wx:key="index">
+                        <image class="data-v-74356fc4" mode="aspectFill" src="{{item.image+'?x-oss-process=image/resize,m_lfit,w_300,m_lfit/quality,q_80'}}" style="width:385rpx;height:215rpx;"></image>
+                    </view>
+                    <view class="data-v-74356fc4" style="width:40rpx;">ㅤ</view>
+                </view>
+            </scroll-view>
+        </view> -->
+        <view class="u-p-t-40 data-v-74356fc4">
+            <view class="u-p-l-40 u-p-r-40 data-v-74356fc4">
+                <u-section bind:__l="__l" bind:click="__e" bold="{{false}}" class="data-v-74356fc4" data-event-opts="{{[ [ '^click',[ [ 'listClick',['category','',-1,1] ] ] ] ]}}" fontSize="{{48}}" showLine="{{true}}" subTitle="More +" title="头像列表" vueId="8dd740cc-6"></u-section>
+                <view style="height:10rpx;"></view>
+                <view class="title2">精品头像专辑</view>
+            </view>
+            <scroll-view class="u-p-t-30 data-v-74356fc4" scrollX="{{true}}" style="height:260rpx;">
+                <view class="u-flex u-row-left u-p-l-40 u-p-r-40 data-v-74356fc4">
+                    <view bindtap="__e" class="tab data-v-74356fc4" data-event-opts="{{[ [ 'tap',[ [ 'detail',['$0',index],[ [ ['txList','',index,'_id'] ] ] ] ] ] ]}}" style="height:210rpx;" wx:for="{{txList}}" wx:key="index">
+                        <image class="data-v-74356fc4" mode="aspectFill" src="{{item.image+'?x-oss-process=image/resize,m_lfit,w_300,m_lfit/quality,q_80'}}" style="width:215rpx;height:215rpx;"></image>
+                    </view>
+                    <view class="data-v-74356fc4" style="width:40rpx;">ㅤ</view>
+                </view>
+            </scroll-view>
+        </view>
+        <view class="u-p-t-30 data-v-74356fc4">
+            <view class="u-p-l-40 u-p-r-40 u-p-t-20 u-p-b-20 data-v-74356fc4">
+                <u-section bind:__l="__l" bind:click="__e" bold="{{false}}" class="data-v-74356fc4" data-event-opts="{{[ [ '^click',[ [ 'listClick',['category','',-1,0] ] ] ] ]}}" fontSize="{{48}}" showLine="{{true}}" subTitle="More +" title="官方推荐" vueId="8dd740cc-8"></u-section>
+                <view style="height:10rpx;"></view>
+                <view class="title2">探索壁纸美学之境</view>
+            </view>
+            <scroll-view class="data-v-74356fc4" scrollIntoView="{{rolldistance}}" scrollWithAnimation="{{true}}" scrollX="{{true}}" style="height:80rpx;">
+                <view class="query u-m-t-10 u-m-b-10 u-m-r-30 u-flex u-row-left data-v-74356fc4">
+                    <view class="data-v-74356fc4" id="akun1" style="padding:0 18rpx;"></view>
+                    <view bindtap="__e" class="{{['scroll-view-item','tags','data-v-74356fc4',cateStatic==item.type?'tag-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'cateClick',['$0','$1','akun'+index+1],[ [ ['cateList','',index,'type'] ],[ ['cateList','',index,'more'] ] ] ] ] ] ]}}" id="{{'akun'+index+1}}" wx:for="{{cateList}}" wx:key="index">{{''+item.name+''}}</view>
+                    <view class="data-v-74356fc4" style="width:40rpx;">ㅤ</view>
+                </view>
+            </scroll-view>
+            <view class="u-flex u-row-left u-flex-wrap u-p-l-40 u-p-t-15 data-v-74356fc4">
+                <block wx:for="{{coverList}}" wx:key="index">
+                    <block wx:for="{{item.images}}" wx:for-index="index_" wx:for-item="item_" wx:key="index_">
+                
+                        <view bindtap="__e" class="tab data-v-74356fc4" data-event-opts="{{[ [ 'tap',[ [ 'detail',['$0',index_],[ [ ['coverList','',index,'_id'] ] ] ] ] ] ]}}">
+                            <image class="data-v-74356fc4" lazyLoad="{{true}}" mode="aspectFill" src="{{item_+'?x-oss-process=image/resize,m_lfit,w_300,m_lfit/quality,q_80'}}" style="width:215rpx;height:494rpx;"></image>
+                        </view>
+                    </block>
+                </block>
+            </view>
+        </view>
+        <u-loadmore bind:__l="__l" class="data-v-74356fc4" color="#B8B8B8" fontSize="{{24}}" marginBottom="{{20}}" marginTop="{{30}}" status="{{loadStatus}}" vueId="8dd740cc-10"></u-loadmore>
+        <view class="data-v-74356fc4" style="height:80rpx;"></view>
+    </view>
+    <view class="loading_page data-v-74356fc4" hidden="{{!loadShow}}">
+        <image class="data-v-74356fc4" src="/static/loading/loading.gif"></image>
+    </view>
+    <models ad="{{false}}" authorize="{{false}}" bind:__l="__l" bind:close="__e" bind:save="__e" btnText="前往查看" class="data-v-74356fc4" closeText="先不了" data-event-opts="{{[ [ '^close',[ ['e0'] ] ],[ '^save',[ ['remindClick'] ] ] ]}}" title="{{remind.content}}" vueId="8dd740cc-11" wx:if="{{remindShow}}"></models>
+    <view bindtap="__e" class="{{['back','backTop','u-flex','u-flex-col','u-row-center','u-col-center','data-v-74356fc4',backShow?'backTop_show':'backTop_hide']}}" data-event-opts="{{[ [ 'tap',[ [ 'backTop',['$event'] ] ] ] ]}}">
+        <image class="data-v-74356fc4" src="/static/backtop.png" style="width:36rpx;height:36rpx;"></image>
+    </view>
+    <view bindtap="__e" class="{{['back','backRefresh','u-flex','u-flex-col','u-row-center','u-col-center','backTop_show','data-v-74356fc4',backShow?'backTop_show':'backTop_hide']}}" data-event-opts="{{[ [ 'tap',[ [ 'refresh',['$event'] ] ] ] ]}}">
+        <image class="data-v-74356fc4" src="/static/refresh.png" style="width:30rpx;height:30rpx;"></image>
+    </view>
+    <foo-bar bind:__l="__l" bind:toIndex="__e" class="data-v-74356fc4" data-event-opts="{{[ [ '^toIndex',[ ['toIndex'] ] ] ]}}" home="{{0}}" vueId="8dd740cc-12"></foo-bar>
+</view>

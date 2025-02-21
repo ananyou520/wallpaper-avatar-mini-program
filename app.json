@@ -1,0 +1,132 @@
+{
+    "pages": [        
+        "pages/index/index",
+        "pages/center/center",
+        "pages/user/user",
+        "pages/search/search",
+        "pages/user/integral/task",
+        "pages/user/integral/record",
+        "pages/user/order/collect",
+        "pages/user/order/order",
+        "pages/user/order/detail",
+        "pages/user/write/write",
+        "pages/user/write/edit",
+        "pages/user/about/about",
+        "pages/user/about/agreement",
+        "pages/user/about/gengxin",
+        "pages/user/about/policy",
+        "pages/user/write/cate",
+        "pages/user/write/tags",
+        "pages/user/integral/charge",
+        "pages/find/find",
+        "pages/user/write/caiji",
+        "pages/user/about/feed",
+        "pages/find/design/design",
+        "pages/find/gallery/gallery",
+        "pages/find/dynamic/dynamic",
+        "pages/find/profile/profile",
+        "pages/find/photo/photo",
+        "pages/search/searchvideo",
+        "pages/user/write/color",
+        "pages/find/headimg/headimg",
+        "pages/find/headimg/saved",
+        "pages/list/searchlist",
+        "pages/user/about/notice",
+        "pages/biaoqing/biaoqing",
+        "pages/wndetail/txdetail",
+        "pages/user/userinfo/userinfo",
+        "pages/indexq/index",
+        "pages/shape/shape",
+        "pages/web/web"
+    ],
+    "subPackages": [
+        {
+          "root": "pagesA",
+          "pages": [
+            "list/list",
+            "list/topic",
+            "system/system",
+            "system/user/userList",
+            "system/config/configList",
+            "system/cover/coverList",
+            "system/category/categoryList",
+            "system/category/categoryEdit",
+            "system/banner/bannerList",
+            "system/banner/bannerEdit",
+            "system/findlist/findList",
+            "system/findlist/findEdit",
+            "system/tags/tagsList",
+            "system/design/designList",
+            "system/design/designEdit",
+            "system/color/color",
+            "system/color/colorEdit",
+            "system/indexmenu/indexmenu",
+            "system/indexmenu/menuEdit",
+            "system/notice/notice",
+            "system/notice/noticeEdit"
+          ]
+        },
+        {
+          "root": "pagesB",
+          "pages": [
+            "detail/detail",
+            "detail/dynamicdetail",
+            "detail/qwdetail",
+            "detail/tpdetail",
+            "maker/index",
+            "avatar/list",
+            "avatar/avatar",
+            "img_cj/cropper",
+            "set/set",
+            "help/help"
+          ]
+        }, {
+          "root": "pagesC",
+          "pages": [
+            "index/index",
+            "detail/detail"
+          ]
+        }
+        
+      ],
+    "window": {
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "幻想壁纸",
+        "navigationBarBackgroundColor": "#fff",
+        "backgroundColor": "#fff",
+        "backgroundTextStyle": "dark",
+        "enablePullDownRefresh": false
+    },
+    "tabBar": {
+        "color": "#909399",
+        "selectedColor": "#141414",
+        "borderStyle": "black",
+        "backgroundColor": "#141414",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "static/tabbar/bgcolor.png",
+                "selectedIconPath": "static/tabbar/bgcolor.png"
+            },
+            {
+                "pagePath": "pages/center/center",
+                "text": "分类",
+                "iconPath": "static/tabbar/bgcolor.png",
+                "selectedIconPath": "static/tabbar/bgcolor.png"
+            },
+            {
+                "pagePath": "pages/find/find",
+                "text": "发现",
+                "iconPath": "static/tabbar/bgcolor.png",
+                "selectedIconPath": "static/tabbar/bgcolor.png"
+            },
+            {
+                "pagePath": "pages/user/user",
+                "text": "我的",
+                "iconPath": "static/tabbar/bgcolor.png",
+                "selectedIconPath": "static/tabbar/bgcolor.png"
+            }
+        ]
+    }
+}

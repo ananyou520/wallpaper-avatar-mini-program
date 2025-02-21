@@ -1,0 +1,65 @@
+.top image {
+    height: 120rpx;
+    width: 120rpx;
+}
+
+.top .kapian {
+    background: linear-gradient(to bottom right,rgba(0,0,0,.94),rgba(0,0,0,.3));
+    border-radius: 36rpx;
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    color: #fff;
+    height: 240rpx;
+    margin: -60rpx 40rpx 0;
+}
+
+.top .kapian .price {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.top .kapian .shuom {
+    color: #e5e5e5;
+}
+
+.title {
+    border-left: 6rpx solid rgba(0,0,0,.3);
+    color: #fff;
+    line-height: 34rpx;
+    padding-left: 15rpx;
+}
+
+.tab .icon {
+    border-radius: 80rpx;
+    height: 80rpx;
+    width: 80rpx;
+}
+
+.tab .btn {
+    background-image: linear-gradient(90deg,rgba(0,0,0,.3),rgba(0,0,0,.94));
+    border-radius: 20px;
+    color: #fff;
+    font-size: 12px;
+    padding: 7px 15px;
+    position: relative;
+}
+
+.tab .hover-class {
+    transform: scale(.95);
+    transition: all .2s;
+}
+
+.tab:nth-child(1) .icon {
+    background-image: linear-gradient(90deg,#f5d553,#f0b347);
+}
+
+.tab:nth-child(2) .icon {
+    background-image: linear-gradient(90deg,#84d787,#5fbb92);
+}
+
+.tab:nth-child(3) .icon {
+    background-image: linear-gradient(90deg,#6cb3ff,#5476f1);
+}
+
+.tab:nth-child(4) .icon {
+    background-image: linear-gradient(90deg,#fa7a09,#ee6000);
+}

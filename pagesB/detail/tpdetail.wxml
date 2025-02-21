@@ -1,0 +1,65 @@
+<view>
+    <view hidden="{{!!loadFlag}}">
+        <view class="top-image-box" style="{{'background-image:'+'url('+detail.image+'?x-oss-process=image/resize,m_lfit,w_400/quality,q_80/crop,h_300,g_center)'+';'}}">
+            <view class="top-image-content">
+                <view class="header-title">
+                    <view class="header-left">
+                        <view class="title-box">
+                            <text class="title-text">{{detail.name}}</text>
+                            <image class="title-icon" mode="aspectFit" wx:if="{{titleIcon}}"></image>
+                        </view>
+                        <text class="sub-title" wx:if="{{detail.detail}}">{{detail.detail}}</text>
+                    </view>
+                    <button bindtap="__e" class="header-right cu-flex-center u-reset-button" data-event-opts="{{[ [ 'tap',[ [ 'zanClick',['$0'],['isZan'] ] ] ] ]}}">
+                        <image class="header-right-icon" size="{{isZan?42:40}}" src="{{isZan?'/static/icon/dz.png':'/static/icon/dz_art.png'}}"></image>
+                        <text class="header-right-text">{{zan_length}}</text>
+                    </button>
+                </view>
+            </view>
+        </view>
+     
+        <view style="width:calc(100% - 40rpx);margin:40rpx;" wx:if="{{vuex_bannerAd!=0}}">
+
+        </view>
+        <view class="u-skeleton">
+            <view>
+                <view class="u-flex u-row-left u-flex-wrap u-p-l-40 u-p-r-20 u-p-t-20">
+                    <view bindtap="__e" class="tab u-skeleton-fillet" data-event-opts="{{[ [ 'tap',[ [ 'goDetail',['$0',index,'$1'],['detail._id','detail.images'] ] ] ] ]}}" wx:for="{{detail.images}}" wx:key="index">
+                        <image mode="aspectFill" src="{{item+'?x-oss-process=image/resize,m_lfit,w_200,m_lfit/quality,q_80'}}" style="width:100%;height:210px;border-radius: 15px;"></image>
+                        <view class="array">{{item.images.length}}</view>
+                        <view class="texts">
+                            <view class="title">{{item.name}}</view>
+                            <view class="detail">{{item.detail}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view wx:if="{{!noData}}">
+            <u-loadmore bind:__l="__l" color="#B8B8B8" fontSize="{{24}}" marginBottom="{{30}}" marginTop="{{30}}" status="{{loadStatus}}" vueId="5919e464-2"></u-loadmore>
+        </view>        <ad unit-id="{{vuex_adAd}}" ad-type="video" wx:if="{{vuex_adAd}}"></ad>
+        <view style="padding-top:160rpx;"></view>
+        <view class="bottom openCss" wx:if="{{!loadFlag}}">
+            <view class="nav-box">
+                <view bindtap="__e" class="nav-tab" data-event-opts="{{[ [ 'tap',[ [ 'backClick',['$event'] ] ] ] ]}}">
+                    <u-icon bind:__l="__l" name="/static/icon/fh.png" size="{{60}}" vueId="5919e464-3"></u-icon>
+                    <text>返回</text>
+                </view>
+              
+                <view bindtap="__e" class="nav-tab" data-event-opts="{{[ [ 'tap',[ [ 'backClick',['$event'] ] ] ] ]}}">
+                    <u-icon bind:__l="__l" name="/static/icon/home4.png" size="{{60}}" vueId="5919e464-3"></u-icon>
+                    <text>主页</text>
+                </view>
+                <view class="nav-tab">
+                    <u-icon bind:__l="__l" name="/static/icon/fx.png" size="{{60}}" vueId="5919e464-4"></u-icon>
+                    <text>分享</text>
+                    <button openType="share" style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;"></button>
+                </view>
+            </view>
+        </view>
+        <models bind:__l="__l" bind:close="__e" bind:getUserInfo="__e" btnText="授权登录" data-event-opts="{{[ [ '^getUserInfo',[ ['getUserInfo'] ] ],[ '^close',[ ['e0'] ] ] ]}}" title="为了更好体验，快去授权登录吧" vueId="5919e464-5" wx:if="{{loginShow}}"></models>
+    </view>
+    <view class="loading_page" hidden="{{!loadFlag}}">
+        <image src="/static/loading/loading.gif"></image>
+    </view>
+</view>

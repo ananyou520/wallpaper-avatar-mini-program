@@ -1,0 +1,41 @@
+.u-collapse-head.data-v-57fb359c {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    font-size: 30rpx;
+    justify-content: space-between;
+    line-height: 1;
+    padding: 24rpx 0;
+    position: relative;
+    text-align: left;
+}
+
+.u-collapse-title.data-v-57fb359c {
+    flex: 1;
+    font-size: 32rpx;
+    overflow: hidden;
+}
+
+.u-arrow-down-icon.data-v-57fb359c {
+    margin-left: 14rpx;
+    margin-right: 20rpx;
+    transition: all .3s;
+}
+
+.u-arrow-down-icon-active.data-v-57fb359c {
+    transform: rotate(180deg);
+    transform-origin: center center;
+}
+
+.u-collapse-body.data-v-57fb359c {
+    overflow: hidden;
+    transition: all .3s;
+}
+
+.u-collapse-content.data-v-57fb359c {
+    color: #909399;
+    font-size: 28rpx;
+    overflow: hidden;
+    text-align: left;
+}

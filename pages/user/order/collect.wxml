@@ -1,0 +1,25 @@
+<view>
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" isBack="{{true}}" title="我的收藏" titleSize="32" titleWidth="325" vueId="43b1e6e8-1"></u-navbar>
+    <ad-custom unit-id="{{vuex_hfAd}}" ad-type="video" wx:if="{{vuex_hfAd}}"></ad-custom>
+    <view class="safe-area-inset-bottom u-skeleton">
+        <view class="u-flex u-row-left u-flex-wrap u-p-l-40 u-p-t-30">
+            <view bindtap="__e" class="tab u-skeleton-fillet" data-event-opts="{{[ [ 'tap',[ [ 'detail',['$0'],[ [ ['coverList','',index,'_id'] ] ] ] ] ] ]}}" wx:for="{{coverList}}" wx:key="index">
+                <image mode="aspectFill" src="{{item.image+'?x-oss-process=image/resize,w_600/quality,q_80'}}" style="width:215rpx;height:350rpx;"></image>
+                <view class="array">{{item.images.length}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="u-flex u-flex-col u-col-center" style="width:100vw;height:50vh;padding-top:200rpx;" wx:if="{{noData}}">
+        <view>
+            <image src="/static/nodata.png" style="width:300rpx;height:300rpx;"></image>
+        </view>
+        <view class="u-tips-color u-font-12 u-p-t-30">没有数据哦~</view>
+    </view>
+    <u-skeleton animation="{{true}}" bind:__l="__l" loading="{{skeletonLoad}}" vueId="43b1e6e8-3"></u-skeleton>
+    <view wx:if="{{!noData}}">
+        <u-loadmore bind:__l="__l" color="#B8B8B8" fontSize="{{24}}" marginBottom="{{30}}" marginTop="{{30}}" status="{{loadStatus}}" vueId="43b1e6e8-4"></u-loadmore>
+    </view>
+    <view class="safe-area-inset-bottom">
+        <view style="height:1px;"></view>
+    </view>
+</view>

@@ -1,0 +1,13 @@
+{
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "刘海壁纸",
+    "enablePullDownRefresh": false,
+    "navigationBarBackgroundColor": "#1d1d1d",
+    "backgroundColor": "#1d1d1d",
+
+    "usingComponents": {
+        "u-icon": "/uview-ui/components/u-icon/u-icon",
+        "models": "/components/model/model"
+    }
+}

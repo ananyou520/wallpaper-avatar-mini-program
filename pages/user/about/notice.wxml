@@ -1,0 +1,12 @@
+<view>
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" isBack="{{true}}" title="平台通知" titleSize="32" titleWidth="325" vueId="32cda31e-1"></u-navbar>
+    <view class="u-p-40">
+        <u-collapse bind:__l="__l" vueId="32cda31e-2" vueSlots="{{['default']}}">
+            <u-collapse-item bind:__l="__l" headStyle="{{head}}" open="{{true}}" title="{{item.title}}" vueId="{{'32cda31e-3-'+index+','+'32cda31e-2'}}" vueSlots="{{['default']}}" wx:for="{{remind}}" wx:key="index">
+                <view class="cont">{{item.content}}</view>
+            </u-collapse-item>
+        </u-collapse>
+        
+    </view>
+</view>
+<ad unitId="{{vuex_bannerAd}}" wx:if="{{vuex_bannerAd}}"></ad>

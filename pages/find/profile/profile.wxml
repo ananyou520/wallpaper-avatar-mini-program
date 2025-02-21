@@ -1,0 +1,37 @@
+<view class="data-v-6f2121d7">
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" class="data-v-6f2121d7" isBack="{{true}}" title="精选头像" titleSize="32" titleWidth="325" vueId="2b2e7160-1"></u-navbar>
+    <scroll-view class="nav-bg-color nav data-v-6f2121d7" scrollX="{{true}}" style="background: #222;">
+        <view class="flex text-center data-v-6f2121d7" style="background: #222;">
+            <view bindtap="__e" class="{{[ 'data-v-6f2121d7','cu-item flex-sub '+(item.cid==TabCur?'text-cyan cur':'') ]}}" data-cid="{{item.cid}}" data-event-opts="{{[ [ 'tap',[ [ 'tabSelect',['$event'] ] ] ] ]}}" wx:for="{{categoryList}}" wx:key="index">{{''+item.title+''}}</view>
+        </view>
+        <ad bind:__l="__l" class="data-v-3b73e478" unitId="{{vuex_bannerAd}}" vueId="{{'75d854fe-2-'+index}}" wx:if="{{vuex_bannerAd}}"></ad>
+    </scroll-view>
+
+    <view class="{{['data-v-6f2121d7','bottom',cssTran?'closeCss':'openCss']}}" wx:if="{{!loadFlag}}">
+        <view class="nav-box data-v-6f2121d7">
+            <view class="nav-tab data-v-6f2121d7">
+                <u-icon bind:__l="__l" class="data-v-6f2121d7" name="/static/icon/fh.png" size="{{60}}" vueId="2b2e7160-3"></u-icon>
+                <text class="data-v-6f2121d7">返回</text>
+                <button bindtap="__e" class="data-v-6f2121d7" data-event-opts="{{[ [ 'tap',[ [ 'fh',['$event'] ] ] ] ]}}" openType="navigateBack" style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;"></button>
+            </view>
+            <view class="nav-tab data-v-6f2121d7">
+                <u-icon bind:__l="__l" class="data-v-6f2121d7" name="/static/icon/fx.png" size="{{60}}" vueId="2b2e7160-4"></u-icon>
+                <text class="data-v-6f2121d7">分享</text>
+                <button class="data-v-6f2121d7" openType="share" style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;"></button>
+            </view>
+        </view>
+    </view>
+    <view class="cu-card no-card data-v-6f2121d7">
+        <view class="cu-item shadow data-v-6f2121d7" style="background: #141414;">
+            <view class="grid flex-sub padding-lr col-2 grid-square data-v-6f2121d7">
+                <view bindtap="__e" class="bg-img data-v-6f2121d7" data-event-opts="{{[ [ 'tap',[ [ 'info',['$event'] ] ] ] ]}}" data-src="{{item.pic}}" style="{{'background-image:url('+item.pic+');'}}" wx:for="{{photos}}" wx:key="index"></view>
+            </view>
+        </view>
+    </view>
+    <view bindtap="__e" class="{{['back','backTop','u-flex','u-flex-col','u-row-center','u-col-center','data-v-6f2121d7',backShow?'backTop_show':'backTop_hide']}}" data-event-opts="{{[ [ 'tap',[ [ 'backTop',['$event'] ] ] ] ]}}">
+        <image class="data-v-6f2121d7" src="/static/backtop.png" style="width:36rpx;height:36rpx;"></image>
+    </view>
+    <view bindtap="__e" class="{{['back','backRefresh','u-flex','u-flex-col','u-row-center','u-col-center','backTop_show','data-v-6f2121d7',backShow?'backTop_show':'backTop_hide']}}" data-event-opts="{{[ [ 'tap',[ [ 'refresh',['$event'] ] ] ] ]}}">
+        <image class="data-v-6f2121d7" src="/static/refresh.png" style="width:30rpx;height:30rpx;"></image>
+    </view>
+</view>

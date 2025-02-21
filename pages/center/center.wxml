@@ -1,0 +1,82 @@
+<view class="content data-v-583914fe">
+    <view class="data-v-583914fe" hidden="{{!!loadShow}}">
+        <view class="vtop data-v-583914fe">
+            <view class="title u-flex u-row-left u-p-l-40 data-v-583914fe" style="{{'margin-top:'+menuButtonInfo.top+'px;'+';'}}" wx:if="{{!homeTop||scrollTop<=homeTop-menuButtonInfo.top+30+15}}">
+                <text class="data-v-583914fe"></text>
+                <u-icon bind:__l="__l" class="u-p-l-15 fenxiang data-v-583914fe" name="/static/icon/home.png" size="60" vueId="6f193cc0-1"></u-icon>
+                <button class="data-v-583914fe" openType="share" style="position:absolute;top:20rpx;left:20rpx;width:50rpx;height:50rpx;opacity:0;"></button>
+                <view bindtap="__e" class="search u-flex u-row-left data-v-583914fe" data-event-opts="{{[ [ 'tap',[ [ 'search',['$event'] ] ] ] ]}}">
+                    <u-icon bind:__l="__l" class="data-v-583914fe" name="/static/icon/yl.png" size="36" vueId="6f193cc0-2"></u-icon>
+                    <text class="u-p-l-15 data-v-583914fe">搜索</text>
+                </view>
+            </view>
+            <view class="data-v-583914fe" wx:else>
+                <scroll-view class="data-v-583914fe" scrollIntoView="{{rolldistance}}" scrollWithAnimation="{{true}}" scrollX="{{true}}" style="height:100rpx;">
+                    <view class="u-flex u-row-left u-p-t-20 u-p-b-20 data-v-583914fe">
+                        <view class="data-v-583914fe" id="akun1" style="padding:0 16rpx;"></view>
+                        <view bindtap="__e" class="{{['scroll-view-item','tags','data-v-583914fe',cateStatic==item.type?'tag-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'cateClick',['$0','$1','akun'+index+2],[ [ ['cateList','',index,'type'] ],[ ['cateList','',index,'more'] ] ] ] ] ] ]}}" id="{{'akun'+index+1}}" wx:for="{{cateList}}" wx:key="index">{{''+item.name+''}}</view>
+                        <view class="data-v-583914fe" style="width:40rpx;">ㅤ</view>
+                    </view>
+                </scroll-view>
+            </view>
+          
+        </view>
+        <view class="data-v-583914fe" style="{{'margin-top:'+'calc('+menuButtonInfo.top+'px + 3% + 45rpx + 50rpx)'+';'}}"></view>
+        <view class="ranking u-p-l-30 u-p-t-20 u-p-r-30 u-flex u-row-left data-v-583914fe">
+            <view bindtap="__e" class="tab u-flex-col u-col-center u-row-center data-v-583914fe" data-event-opts="{{[ [ 'tap',[ [ 'listClick',['ranking','','hot'] ] ] ] ]}}" hoverClass="cate-active" hoverStayTime="50">
+                <view class="bold">热门榜</view>
+                <view class="u-font-10 u-p-t-10 eng">Hot download</view>
+            </view>
+            <view bindtap="__e" class="tab u-flex-col u-col-center u-row-center data-v-583914fe" data-event-opts="{{[ [ 'tap',[ [ 'listClick',['ranking','','zan'] ] ] ] ]}}" hoverClass="cate-active" hoverStayTime="50">
+                <view class="bold">点赞榜</view>
+                <view class="u-font-10 u-p-t-10 eng data-v-583914fe">Like ranking</view>
+            </view>
+            <view bindtap="__e" class="tab u-flex-col u-col-center u-row-center data-v-583914fe" data-event-opts="{{[ [ 'tap',[ [ 'listClick',['ranking','','coll'] ] ] ] ]}}" hoverClass="cate-active" hoverStayTime="50">
+                <view class="bold">收藏榜</view>
+                <view class="u-font-10 u-p-t-10 eng data-v-583914fe">Collection ranking</view>
+            </view>
+        </view>
+        <!-- <view class="u-p-l-30 u-p-t-20 u-p-r-30 data-v-583914fe" wx:if="{{vuex_bannerAd!=0}}">
+            <ad-custom bind:__l="__l" class="data-v-583914fe" unitId="{{vuex_bannerAd}}" vueId="6f193cc0-3" wx:if="{{vuex_bannerAd}}"></ad-custom>
+        </view>
+        <view class="tags u-p-l-30 u-p-t-40 u-p-r-30 data-v-583914fe" wx:if="{{zodiacList&&zodiacList.length!=0}}">
+            <u-section bind:__l="__l" bold="{{false}}" class="data-v-583914fe" fontSize="{{48}}" right="{{false}}" showLine="{{true}}" title="热门标签" vueId="6f193cc0-4"></u-section>
+            <view class="u-flex u-row-left u-flex-wrap u-p-t-30 data-v-583914fe">
+                <view bindtap="__e" class="tag data-v-583914fe" data-event-opts="{{[ [ 'tap',[ [ 'tagsClick',['tags','','$0'],[ [ ['zodiacList','',index,'name'] ] ] ] ] ] ]}}" wx:for="{{zodiacList}}" wx:key="index">{{item.name}}</view>
+                <ad class="data-v-583914fe" unitId="adunit-d9739de64697578c"></ad>
+            </view>
+        </view> -->
+        <view class="category u-p-l-30 u-p-t-40 u-p-r-30 data-v-583914fe">
+            <u-section bind:__l="__l" bold="{{false}}" class="data-v-583914fe" fontSize="{{48}}" right="{{false}}" showLine="{{true}}" title="壁纸分类" vueId="6f193cc0-5"></u-section>
+            <view class="u-flex u-row-left u-flex-wrap u-p-t-30 data-v-583914fe">
+                <view bindtap="__e" class="cate data-v-583914fe" data-event-opts="{{[ [ 'tap',[ [ 'listClick',['category',index,'$0','$1'],[ [ ['categoryList','',index,'_id'] ],[ ['categoryList','',index,'mode'] ] ] ] ] ] ]}}" wx:if="{{item.image}}" wx:for="{{categoryList}}" wx:key="index">
+                    <image class="data-v-583914fe" mode="aspectFill" src="{{item.image}}"></image>
+                    <view class="texts data-v-583914fe">{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="category u-p-l-30 u-p-t-40 u-p-r-30 data-v-583914fe">
+            <u-section bind:__l="__l" bold="{{false}}" class="data-v-583914fe" fontSize="{{48}}" right="{{false}}" showLine="{{true}}" title="头像分类" vueId="6f193cc0-6"></u-section>
+            <view class="u-flex u-row-left u-flex-wrap u-p-t-30 data-v-583914fe">
+                <view bindtap="__e" class="cate data-v-583914fe" data-event-opts="{{[ [ 'tap',[ [ 'listClick',['category',index,'$0','$1'],[ [ ['categoryListTx','',index,'_id'] ],[ ['categoryListTx','',index,'mode'] ] ] ] ] ] ]}}" wx:if="{{item.image}}" wx:for="{{categoryListTx}}" wx:key="index">
+                    <image class="data-v-583914fe" mode="aspectFill" src="{{item.image}}"></image>
+                    <view class="texts data-v-583914fe">{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="category u-p-l-30 u-p-t-40 u-p-r-30 data-v-583914fe">
+            <u-section bind:__l="__l" bold="{{false}}" class="data-v-583914fe" fontSize="{{48}}" right="{{false}}" showLine="{{true}}" title="电脑分类" vueId="6f193cc0-7"></u-section>
+            <view class="u-flex u-row-left u-flex-wrap u-p-t-30 data-v-583914fe">
+                <view bindtap="__e" class="cate data-v-583914fe" data-event-opts="{{[ [ 'tap',[ [ 'listClick',['category',index,'$0','$1'],[ [ ['categoryListPc','',index,'_id'] ],[ ['categoryListPc','',index,'mode'] ] ] ] ] ] ]}}" wx:if="{{item.image}}" wx:for="{{categoryListPc}}" wx:key="index">
+                    <image class="data-v-583914fe" mode="aspectFill" src="{{item.image}}"></image>
+                    <view class="texts data-v-583914fe">{{item.name}}</view>
+                </view>
+            </view>
+        </view><ad unit-id="{{vuex_adAd}}" ad-type="video" wx:if="{{vuex_adAd}}"></ad>
+        <view class="data-v-583914fe" style="height:180rpx;"></view>
+    </view>
+    <view class="loading_page data-v-583914fe" hidden="{{!loadShow}}">
+        <image class="data-v-583914fe" src="/static/loading/loading.gif"></image>
+    </view>
+    <foo-bar bind:__l="__l" bind:toIndex="__e" class="data-v-583914fe" data-event-opts="{{[ [ '^toIndex',[ ['toIndex'] ] ] ]}}" home="{{1}}" vueId="6f193cc0-8"></foo-bar>
+</view>

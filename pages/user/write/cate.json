@@ -1,0 +1,8 @@
+{
+    
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "选择分类",
+    "navigationBarBackgroundColor": "#fff",
+    "usingComponents": {
+    }
+}

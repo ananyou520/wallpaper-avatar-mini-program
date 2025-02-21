@@ -1,0 +1,44 @@
+<view>
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" isBack="{{true}}" title="{{title}}" titleSize="32" titleWidth="325" vueId="da568da2-1"></u-navbar>
+    <view class="query"></view>
+    <view class="u-skeleton">
+        <view>
+            <view class="u-flex u-row-left u-flex-wrap u-p-l-20 u-p-r-20">
+                <block wx:for="{{coverList}}" wx:key="index">
+                    <view class="tab u-skeleton-fillet" wx:if="{{index!=0&&index%6===0&&vuex_bannerAd!=0}}">
+                    
+                    </view>
+                    <view bindtap="__e" class="tab u-skeleton-fillet" data-event-opts="{{[ [ 'tap',[ [ 'topic',['$0',0,'$1'],[ [ ['coverList','',index,'_id'] ],[ ['coverList','',index,'images'] ] ] ] ] ] ]}}">
+                        <image mode="aspectFill" src="{{item.image+'?x-oss-process=image/resize,m_lfit,w_500/quality,q_100/crop,h_420,g_center'}}" style="width:100%;height:280rpx;border-radius: 10px;"></image>
+                        <view class="array">{{item.images.length}}</view>
+                        <view class="texts">
+                            <view class="title">{{item.name}}</view>
+                            <view class="detail">{{item.detail}}</view>
+                            <view class="tags" wx:if="{{item.zan&&item.zan.length>0}}">{{''+item.zan.length+'人喜欢'}}</view>
+                           
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <view class="u-flex u-flex-col u-col-center" style="width:100vw;height:50vh;padding-top:200rpx;" wx:if="{{noData}}">
+            <view>
+                <image src="/static/nodata.png" style="width:300rpx;height:300rpx;"></image>
+            </view>
+            <view class="u-tips-color u-font-12 u-p-t-30">没有数据哦~</view>
+        </view>
+    </view><ad unit-id="{{vuex_adAd}}" ad-type="video" wx:if="{{vuex_adAd}}"></ad>
+    <view wx:if="{{!noData}}">
+        <u-loadmore bind:__l="__l" color="#B8B8B8" fontSize="{{24}}" marginBottom="{{30}}" marginTop="{{30}}" status="{{loadStatus}}" vueId="da568da2-3"></u-loadmore>
+    </view>
+    <view class="safe-area-inset-bottom">
+        <view style="height:1px;"></view>
+    </view>
+    <u-skeleton animation="{{true}}" bgColor="#1d1d1d" bind:__l="__l" elColor="#cfcfcf" loading="{{skeletonLoad}}" vueId="da568da2-4"></u-skeleton>
+    <view bindtap="__e" class="{{['back','backTop','u-flex','u-flex-col','u-row-center','u-col-center',backShow?'backTop_show':'backTop_hide']}}" data-event-opts="{{[ [ 'tap',[ [ 'backTop',['$event'] ] ] ] ]}}">
+        <image src="/static/backtop.png" style="width:36rpx;height:36rpx;"></image>
+    </view>
+    <view bindtap="__e" class="{{['back','backSearch','u-flex','u-flex-col','u-row-center','u-col-center',backShow?'backTop_show':'backTop_hide']}}" data-event-opts="{{[ [ 'tap',[ [ 'search',['$event'] ] ] ] ]}}">
+        <image src="/static/search.png" style="width:30rpx;height:30rpx;"></image>
+    </view>
+</view>

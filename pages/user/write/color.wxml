@@ -1,0 +1,11 @@
+<view>
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" isBack="{{true}}" title="选择颜色" titleColor="#333333" titleSize="32" titleWidth="325" vueId="093eb81e-1"></u-navbar>
+    <view class="u-p-40">
+        <view class="u-flex u-row-left u-flex-wrap" wx:if="{{colorList.length>0}}">
+            <view bindtap="__e" class="tag" data-event-opts="{{[ [ 'tap',[ [ 'colorClick',['$0','$1'],[ [ ['colorList','',index,'_id'] ],[ ['colorList','',index,'name'] ] ] ] ] ] ]}}" wx:for="{{colorList}}" wx:key="index">{{item.name}}</view>
+        </view>
+        <view class="u-flex u-row-center u-col-center" wx:else>
+            <view class="u-font-12 u-tips-color">选择颜色</view>
+        </view>
+    </view>
+</view>

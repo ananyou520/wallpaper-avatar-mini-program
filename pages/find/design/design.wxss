@@ -1,0 +1,57 @@
+.canvas {
+    left: -10000rpx;
+    position: absolute;
+    top: -20000rpx;
+}
+
+.mould {
+    background-color: rgba(73,69,84,.3);
+    bottom: 0;
+    left: 0;
+    min-height: 150rpx;
+    position: fixed;
+    width: 100%;
+}
+
+.tab {
+    background-color: #fff;
+    border: 4rpx solid #fff;
+    border-radius: 16rpx;
+    height: 116rpx;
+    margin-right: 20rpx;
+    padding: 10rpx;
+    position: relative;
+    width: 116rpx;
+}
+
+.tab image {
+    border: 6rpx solid #000;
+    border-radius: 16rpx;
+    display: block;
+    height: 78rpx;
+    width: 78rpx;
+}
+
+.tab_active {
+    border: 4rpx solid #ffcc13;
+}
+
+.handle {
+    bottom: 150rpx;
+    color: #fff;
+    left: 0;
+    min-height: 120rpx;
+    position: fixed;
+    width: calc(100% - 40rpx);
+}
+
+.shoufei {
+    color: #ffc001;
+    font-size: 8px;
+    font-weight: 700;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 2px;
+    width: 100%;
+}

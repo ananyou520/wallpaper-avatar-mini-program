@@ -1,0 +1,64 @@
+<!--set.wxml-->
+<view class="section">
+  <view class="weui-cells__title">保存图片张数</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">当前选择</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker bindchange="saveChange" value="{{saveIndex}}" range="{{save}}">
+          <view class="weui-input">{{save[saveIndex]}}</view>
+        </picker>
+      </view>
+    </view>
+  </view>
+
+  <view class="weui-cells__title">补充图片类型</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">当前选择</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker bindchange="addChange" value="{{addIndex}}" range="{{add}}">
+          <view class="weui-input">{{add[addIndex]}}</view>
+        </picker>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="weui-cells__title">单选图片裁剪模式</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">当前选择</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker bindchange="tailorChange" value="{{tailorIndex}}" range="{{tailor}}">
+          <view class="weui-input">{{tailor[tailorIndex]}}</view>
+        </picker>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="weui-cells__title">拼图形状</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">当前选择</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker bindchange="shapeChange" value="{{shapeIndex}}" range="{{shapeName}}">
+          <view class="weui-input">{{shapeName[shapeIndex]}}</view>
+        </picker>
+      </view>
+      <view class="weui-cell__hd" hidden="{{isHiddenDeleteIcon}}">
+        <image class="delete" mode="aspectFit" bindtap="deleteShape" src="../images/delete.png"></image>
+      </view>
+    </view>
+  </view>
+  <ad unit-id="adunit-2c019f53e6a1ee8c"></ad>
+</view>

@@ -1,0 +1,9 @@
+{
+    "navigationStyle": "custom",
+    "navigationBarTitleText": "",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "u-navbar": "/uview-ui/components/u-navbar/u-navbar",
+        "u-action-sheet": "/uview-ui/components/u-action-sheet/u-action-sheet"
+    }
+}

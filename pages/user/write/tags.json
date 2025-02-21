@@ -1,0 +1,9 @@
+{   
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "选择标签",
+    "navigationBarBackgroundColor": "#fff",
+    "usingComponents": {
+      
+        "u-tag": "/uview-ui/components/u-tag/u-tag"
+    }
+}

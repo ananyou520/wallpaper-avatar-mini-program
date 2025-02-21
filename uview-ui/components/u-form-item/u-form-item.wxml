@@ -1,0 +1,25 @@
+<view class="{{['u-form-item','data-v-5b1ff102',elBorderBottom?'u-border-bottom':'',$root.m0?'u-form-item__border-bottom--error':'']}}">
+    <view class="u-form-item__body data-v-5b1ff102" style="{{'flex-direction:'+(elLabelPosition=='left'?'row':'column')+';'}}">
+        <view class="u-form-item--left data-v-5b1ff102" style="{{'width:'+uLabelWidth+';'+'flex:'+'0 0 '+uLabelWidth+';'+'margin-bottom:'+(elLabelPosition=='left'?0:'10rpx')+';'}}">
+            <view class="u-form-item--left__content data-v-5b1ff102" wx:if="{{required||leftIcon||label}}">
+                <text class="u-form-item--left__content--required data-v-5b1ff102" wx:if="{{required}}">*</text>
+                <view class="u-form-item--left__content__icon data-v-5b1ff102" wx:if="{{leftIcon}}">
+                    <u-icon bind:__l="__l" class="data-v-5b1ff102" customStyle="{{leftIconStyle}}" name="{{leftIcon}}" vueId="0c23f188-1"></u-icon>
+                </view>
+                <view class="u-form-item--left__content__label data-v-5b1ff102" style="{{$root.s0}}">{{''+label+''}}</view>
+            </view>
+        </view>
+        <view class="u-form-item--right u-flex data-v-5b1ff102">
+            <view class="u-form-item--right__content data-v-5b1ff102">
+                <view class="u-form-item--right__content__slot  data-v-5b1ff102">
+                    <slot></slot>
+                </view>
+                <view class="u-form-item--right__content__icon u-flex data-v-5b1ff102" wx:if="{{$slots.right||rightIcon}}">
+                    <u-icon bind:__l="__l" class="data-v-5b1ff102" customStyle="{{rightIconStyle}}" name="{{rightIcon}}" vueId="0c23f188-2" wx:if="{{rightIcon}}"></u-icon>
+                    <slot name="right"></slot>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="u-form-item__message data-v-5b1ff102" style="{{'padding-left:'+(elLabelPosition=='left'?$root.g0:'0')+';'}}" wx:if="{{$root.m1}}">{{validateMessage}}</view>
+</view>

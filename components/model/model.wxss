@@ -1,0 +1,89 @@
+.userModel {
+    background-color: rgba(0,0,0,.6);
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 9999999;
+}
+
+.userModel .cont {
+    background-color: #fff;
+    border-radius: 32rpx;
+    padding: 0 0 50rpx;
+    width: 520rpx;
+}
+
+.userModel .cont image {
+    border-radius: 30px;
+    height: 128rpx;
+    margin-bottom: 40rpx;
+    margin-top: -60rpx;
+    width: 128rpx;
+}
+
+.userModel .cont .text {
+    line-height: 46rpx;
+}
+
+.userModel .cont .btn {
+    background-image: linear-gradient(to bottom right,rgba(0,0,0,.3),rgba(0,0,0,.94));
+    border-radius: 80rpx;
+    color: #fff;
+    line-height: 80rpx;
+    margin-top: 50rpx;
+    position: relative;
+    width: 60%;
+}
+
+.userModel .cont .no {
+    color: #b8b8b8;
+}
+
+.num {
+    color: #f8c93c;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 8rpx;
+}
+
+.adClass {
+    animation: tiaobig 1.2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes tiaobig {
+    25% {
+        transform: scale(.98);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    75% {
+        transform: scale(.98);
+    }
+
+    100% {
+        transform: scale(1.08);
+    }
+}
+
+@keyframes tiaobig {
+    25% {
+        transform: scale(.98);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    75% {
+        transform: scale(.98);
+    }
+
+    100% {
+        transform: scale(1.08);
+    }
+}

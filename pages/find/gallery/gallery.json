@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "头像签名套图",
+    "enablePullDownRefresh": false,
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "u-navbar": "/uview-ui/components/u-navbar/u-navbar",
+        "u-icon": "/uview-ui/components/u-icon/u-icon"
+    }
+}

@@ -1,0 +1,12 @@
+<view class="content data-v-9af855d8">
+    <u-navbar background="hsla(0, 0%, 100%, .08)" bind:__l="__l" borderBottom="{{false}}" class="data-v-9af855d8" isBack="{{true}}" titleColor="#fff" titleSize="32" titleWidth="325" vueId="34f6ad88-1"></u-navbar>
+    <view class="image-div data-v-9af855d8">
+        <view class="icon-xiazai iconfont data-v-9af855d8"></view>
+        <view class="tip-div data-v-9af855d8">恭喜你，头像已保存到相册</view>
+        <image class="image-card data-v-9af855d8" mode="widthFix" src="{{currentImage}}"></image>
+    </view>
+    <view class="btn-card data-v-9af855d8">
+        <button bindtap="__e" class="primary-btn data-v-9af855d8" data-event-opts="{{[ [ 'tap',[ [ 'shareMPweixin',['$event'] ] ] ] ]}}" openType="share">发给朋友</button>
+        <button bindtap="__e" class="action-btn data-v-9af855d8" data-event-opts="{{[ [ 'tap',[ ['navIndex'] ] ] ]}}">再来一张</button>
+    </view>
+</view>

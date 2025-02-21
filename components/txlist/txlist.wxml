@@ -1,0 +1,5 @@
+<view class="bzWrapper">
+    <view bindtap="onItem" class="item" id="{{idx}}" style="height:{{imgH}}px" wx:for="{{dataList}}" wx:for-index="idx" wx:key="item">
+        <image mode="aspectFill" src="{{item.pic}}"></image>
+    </view>
+</view>

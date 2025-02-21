@@ -1,0 +1,187 @@
+page{
+    background: #141414;
+}
+.add_container {
+    align-items: center;
+    background: #fffacd;
+    display: flex;
+    flex-direction: row;
+    height: 6%;
+    margin-bottom: 10rpx;
+    position: relative;
+    width: 100%;
+}
+
+.add_container text {
+    color: #333;
+    font-size: 28rpx;
+    margin-left: 10rpx;
+}
+
+.img_cancel {
+    height: 45rpx;
+    position: fixed;
+    right: 30rpx;
+    width: 45rpx;
+}
+
+.scroll-body {
+    width: 100%;
+}
+
+.tab-container {
+    box-sizing: border-box;
+    flex-direction: row;
+    height: 12%;
+    padding-bottom: 10rpx;
+    padding-top: 14rpx;
+    width: 100%;
+}
+
+.tab-container,.tab-item {
+    align-items: center;
+    display: flex;
+}
+
+.tab-item {
+    flex-direction: column;
+    font-size: 25rpx;
+    font-weight: 700;
+    height: 100%;
+    margin-top: 4rpx;
+    width: 25%;
+}
+
+.img-container1 {
+    background-color: #20b2aa;
+}
+
+.img-container1,.img-container2 {
+    align-items: center;
+    border-radius: 90rpx;
+    display: flex;
+    flex-direction: column;
+    height: 80rpx;
+    justify-content: center;
+    width: 80rpx;
+}
+
+.img-container2 {
+    background-color: red;
+}
+
+.img-container3 {
+    background-color: #87cefa;
+}
+
+.img-container3,.img-container4 {
+    align-items: center;
+    border-radius: 90rpx;
+    display: flex;
+    flex-direction: column;
+    height: 80rpx;
+    justify-content: center;
+    width: 80rpx;
+}
+
+.img-container4 {
+    background-color: plum;
+}
+
+.img {
+    height: 40rpx;
+    width: 40rpx;
+}
+
+.search {
+    height: 45rpx;
+    margin-left: 30rpx;
+    width: 45rpx;
+}
+
+.grid-item {
+    float: left;
+    height: 617rpx;
+    margin: 10rpx 0 10rpx 20rpx;
+    width: 46%;
+}
+
+.grid-item-ad {
+    float: left;
+    height: 617rpx;
+    margin: 10rpx auto;
+    width: 100%;
+}
+
+.g {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.g,.photo {
+    height: 100%;
+    width: 100%;
+}
+
+.photo {
+    border-radius: 8px;
+}
+
+.info,.photo {
+    position: absolute;
+}
+
+.info {
+    bottom: 10rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10rpx;
+    padding-left: 20rpx;
+    width: 100%;
+}
+
+.title {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    color: #fff;
+    display: -webkit-box;
+    font-size: 26rpx;
+    height: 40%;
+    margin-bottom: 6rpx;
+    margin-left: 2rpx;
+    overflow: hidden;
+    text-shadow: 0 0 2px #000;
+    width: 100%;
+}
+
+.count-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+.count {
+    color: #fff;
+    font-size: 24rpx;
+    text-shadow: 0 0 2px #000;
+}
+
+.iv {
+    border-radius: 50px;
+    box-shadow: 0 0 2px #fff;
+    height: 36rpx;
+    margin-right: 5rpx;
+    width: 36rpx;
+}
+
+.adContainer {
+    box-sizing: border-box;
+    float: left;
+    padding: 10rpx;
+    width: 100%;
+}

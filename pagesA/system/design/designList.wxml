@@ -1,0 +1,39 @@
+<view>
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" isBack="{{true}}" title="刘海管理" titleSize="32" titleWidth="325" vueId="99766f80-1"></u-navbar>
+    <view>
+        <view bindtap="__e" class="u-m-l-20 u-m-r-20 u-m-t-20 u-p-30 cover" data-event-opts="{{[ [ 'tap',[ [ 'detailClick',['$0'],[ [ ['designList','',index,'_id'] ] ] ] ] ] ]}}" wx:for="{{designList}}" wx:key="index">
+            <view class="u-flex u-row-left u-col-top">
+                <view class="tab">
+                    <image mode="aspectFill" src="{{item.image}}" style="width:120rpx;height:120rpx;"></image>
+                </view>
+                <view class="btns u-flex-col u-row-between u-p-l-20 u-p-t-10">
+                    <view>
+                        <view class="title u-font-16 u-line-1">刘海设计</view>
+                        <view>
+                            <view class="u-tips-color u-p-t-10 u-font-12">{{'类型：'+(item.mode==1?'收费':'免费')+''}}</view>
+                        </view>
+                    </view>
+                    <view class="u-flex u-row-right">
+                        <view catchtap="__e" class="tags u-m-r-20" data-event-opts="{{[ [ 'tap',[ [ 'editClick',['$0'],[ [ ['designList','',index,'_id'] ] ] ] ] ] ]}}">编辑</view>
+                        <view catchtap="__e" class="tag" data-event-opts="{{[ [ 'tap',[ [ 'delClick',['$0'],[ [ ['designList','',index,'_id'] ] ] ] ] ] ]}}">删除</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="u-flex u-flex-col u-col-center" style="width:100vw;height:100vh;padding-top:200rpx;" wx:if="{{noData}}">
+        <view>
+            <image src="/static/nodata.png" style="width:300rpx;height:300rpx;"></image>
+        </view>
+        <view class="u-tips-color u-font-12 u-p-t-30">没有数据哦~</view>
+    </view>
+    <view bindtap="__e" class="add" data-event-opts="{{[ [ 'tap',[ [ 'editClick',['-1'] ] ] ] ]}}">
+        <image src="/static/icon/add.png"></image>
+    </view>
+    <view wx:if="{{!noData}}">
+        <u-loadmore bind:__l="__l" color="#B8B8B8" fontSize="{{24}}" marginBottom="{{30}}" marginTop="{{30}}" status="{{loadStatus}}" vueId="99766f80-2"></u-loadmore>
+    </view>
+    <view class="safe-area-inset-bottom">
+        <view style="height:1px;"></view>
+    </view>
+</view>

@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "通知管理",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#fff",
+    "usingComponents": {
+    
+        "u-tabs": "/uview-ui/components/u-tabs/u-tabs",
+        "u-switch": "/uview-ui/components/u-switch/u-switch",
+        "u-action-sheet": "/uview-ui/components/u-action-sheet/u-action-sheet"
+    }
+}

@@ -1,0 +1,34 @@
+<view>
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" isBack="{{true}}" title="编辑首页菜单" titleSize="32" titleWidth="325" vueId="348cb930-1"></u-navbar>
+    <view class="u-p-40">
+        <u-form bind:__l="__l" class="vue-ref" data-ref="uForm" model="{{menu}}" vueId="348cb930-2" vueSlots="{{['default']}}">
+            <view class="u-p-b-20 u-flex u-row-left u-col-top">
+                <u-upload action autoUpload="{{false}}" bind:__l="__l" class="vue-ref" data-ref="uUpload" delBgColor="#ff7c7c" delColor="#FFFFFF" delIcon="close" fileList="{{menuId!='-1'?imgList:''}}" height="200" limitType="{{['png','jpg','jpeg']}}" maxCount="1" maxSize="{{100*100}}" multiple="{{false}}" showProgress="{{false}}" sizeType="{{['compressed']}}" sourceType="{{['album']}}" uploadText="上传图片" vueId="{{'348cb930-3'+','+'348cb930-2'}}" width="200"></u-upload>
+                <view class="u-p-l-20 u-p-t-20">
+                    <view class="u-font-12">注意事项：</view>
+                    <view class="u-font-12 u-tips-color u-p-t-15">比例：90 x 90</view>
+                    <view class="u-font-12 u-tips-color u-p-t-15">大小：500kb</view>
+                </view>
+            </view>
+            <view class="content-border">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="标题" vueId="{{'348cb930-4'+','+'348cb930-2'}}" vueSlots="{{['default']}}">
+                    <u-input bind:__l="__l" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','name','$event',[] ],['menu'] ] ] ] ]}}" height="{{60}}" placeholder="菜单名称" type="textarea" value="{{menu.name}}" vueId="{{'348cb930-5'+','+'348cb930-4'}}"></u-input>
+                </u-form-item>
+            </view>
+            <view class="content-border">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="链接" vueId="{{'348cb930-6'+','+'348cb930-2'}}" vueSlots="{{['default']}}">
+                    <u-input bind:__l="__l" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','url','$event',[] ],['menu'] ] ] ] ]}}" height="{{60}}" placeholder="跳转链接（不跳转填写/）" type="textarea" value="{{menu.url}}" vueId="{{'348cb930-7'+','+'348cb930-6'}}"></u-input>
+                </u-form-item>
+            </view>
+            <view>
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="排序" vueId="{{'348cb930-8'+','+'348cb930-2'}}" vueSlots="{{['default']}}">
+                    <u-input bind:__l="__l" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','sort','$event',[] ],['menu'] ] ] ] ]}}" height="{{40}}" placeholder="排序，数字越大越靠前" type="number" value="{{menu.sort}}" vueId="{{'348cb930-9'+','+'348cb930-8'}}"></u-input>
+                </u-form-item>
+            </view>
+            <view></view>
+        </u-form>
+        <view class="u-p-t-40">
+            <view bindtap="__e" class="btn" data-event-opts="{{[ [ 'tap',[ [ 'submit',['$event'] ] ] ] ]}}" hoverClass="hover-class" hoverStayTime="50">发 布</view>
+        </view>
+    </view>
+</view>

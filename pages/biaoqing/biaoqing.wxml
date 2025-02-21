@@ -1,0 +1,9 @@
+<view class="containe">
+    <bzlist bind:onItem="onImage" dataList="{{bzList}}"></bzlist>
+    <scroll-view class="xxx" scrollLeft="{{x}}" scrollWithAnimation="{{true}}" scrollX="{{true}}">
+        <view bindtap="onItem" class="color_item {{item.cid==cid?'color_item_sel':''}}" id="{{idx}}" wx:for="{{categorys}}" wx:for-index="idx" wx:key="item">
+        {{item.name}}
+      </view>
+    </scroll-view>
+
+</view>

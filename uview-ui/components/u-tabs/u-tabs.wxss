@@ -1,0 +1,41 @@
+scroll-view.data-v-a3a955fc,view.data-v-a3a955fc {
+    background: #666;
+    box-sizing: border-box;
+}
+
+.data-v-a3a955fc::-webkit-scrollbar {
+    -webkit-appearance: none;
+    background: transparent;
+    display: none;
+    height: 0!important;
+    width: 0!important;
+}
+
+.u-scroll-box.data-v-a3a955fc {
+    position: relative;
+}
+
+.u-scroll-view.data-v-a3a955fc {
+    position: relative;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.u-tab-item.data-v-a3a955fc {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    transition-property: background-color,color;
+}
+
+.u-tab-bar.data-v-a3a955fc {
+    background-color: rgba(0,0,0,.3);
+    bottom: 0;
+    position: absolute;
+}
+
+.u-tabs-scorll-flex.data-v-a3a955fc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

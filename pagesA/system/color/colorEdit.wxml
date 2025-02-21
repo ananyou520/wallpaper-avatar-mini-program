@@ -1,0 +1,26 @@
+<view>
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" isBack="{{true}}" title="编辑颜色分类" titleSize="32" titleWidth="325" vueId="1e7036e8-1"></u-navbar>
+    <view class="u-p-40">
+        <view class="u-flex u-row-between" style="{{'width: 100%;height: 60rpx;background-color:'+color.color+';border-radius: 10rpx;'}}"></view>
+        <u-form bind:__l="__l" class="vue-ref" data-ref="uForm" model="{{color}}" vueId="1e7036e8-2" vueSlots="{{['default']}}">
+            <view>
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="颜色值" vueId="{{'1e7036e8-3'+','+'1e7036e8-2'}}" vueSlots="{{['default']}}">
+                    <u-input bind:__l="__l" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','color','$event',[] ],['color'] ] ] ] ]}}" placeholder="填写颜色值" value="{{color.color}}" vueId="{{'1e7036e8-4'+','+'1e7036e8-3'}}"></u-input>
+                </u-form-item>
+            </view>
+            <view class="content-border">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="名称" vueId="{{'1e7036e8-5'+','+'1e7036e8-2'}}" vueSlots="{{['default']}}">
+                    <u-input bind:__l="__l" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','name','$event',[] ],['color'] ] ] ] ]}}" placeholder="填写颜色名称" value="{{color.name}}" vueId="{{'1e7036e8-6'+','+'1e7036e8-5'}}"></u-input>
+                </u-form-item>
+            </view>
+            <view class="content-border">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="排序" vueId="{{'1e7036e8-7'+','+'1e7036e8-2'}}" vueSlots="{{['default']}}">
+                    <u-input bind:__l="__l" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','sort','$event',[] ],['color'] ] ] ] ]}}" height="{{40}}" placeholder="排序，数字越大越靠前" type="number" value="{{color.sort}}" vueId="{{'1e7036e8-8'+','+'1e7036e8-7'}}"></u-input>
+                </u-form-item>
+            </view>
+        </u-form>
+        <view class="u-p-t-40">
+            <view bindtap="__e" class="btn" data-event-opts="{{[ [ 'tap',[ [ 'submit',['$event'] ] ] ] ]}}" hoverClass="hover-class" hoverStayTime="50">保 存</view>
+        </view>
+    </view>
+</view>

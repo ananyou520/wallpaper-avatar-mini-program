@@ -1,0 +1,59 @@
+<view>
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" isBack="{{true}}" title="{{title}}" titleSize="32" titleWidth="325" vueId="62c45558-1"></u-navbar>
+      <ad unitId="{{vuex_bannerAd}}" wx:if="{{vuex_bannerAd}}"></ad>
+      <view class="query"></view>
+    <view class="u-skeleton">
+        <view class="menu u-m-l-30 u-m-r-30 u-p-b-20 u-p-t-20 u-flex u-row-around" wx:if="{{skeletonLoad&&modelType!='search'&&modelType!='tags'}}" style="background: #141414;">
+            <view class="tags u-skeleton-circle">加载中</view>
+            <view class="tags u-skeleton-circle">加载中</view>
+            <view class="tags u-skeleton-circle">加载中</view>
+        </view>
+        <view style="height:80rpx;" wx:if="{{modelType!='search'&&modelType!='tags'}}"></view>
+        <view>
+            <view class="u-flex u-row-left u-flex-wrap u-p-t-20" style="margin-left: 13px;">
+                <block wx:for="{{coverList}}" wx:key="index">
+                    <block wx:for="{{item.images}}" wx:for-index="index_" wx:for-item="item_" wx:key="index_">
+                        <view class="tab u-flex u-row-center u-col-center" hidden="{{!adFlag}}" wx:if="{{index!=0&&index%2===0&&index_===0&&vuex_sgridAd!=0}}">
+                            <ad-custom bind:__l="__l" bind:close="__e" bind:error="__e" bind:load="__e" data-event-opts="{{[ [ '^load',[ ['adLoad'] ] ],[ '^error',[ ['adError'] ] ],[ '^close',[ ['adClose'] ] ] ]}}" unitId="{{vuex_sgridAd}}" vueId="{{'62c45558-2-'+index+'-'+index_}}" wx:if="{{vuex_sgridAd!=0}}"></ad-custom>
+                        </view>
+                        <view bindtap="__e" class="tab u-skeleton-fillet" data-event-opts="{{[ [ 'tap',[ [ 'detail',['$0',index_,'$1'],[ [ ['coverList','',index,'_id'] ],[ ['coverList','',index,'images'] ] ] ] ] ] ]}}">
+                            <image mode="aspectFill" src="{{item_+'?x-oss-process=image/resize,m_lfit,w_200/quality,q_80'}}" style="width:215rpx;height:494rpx;"></image>
+                        </view>
+                    </block>
+                </block>
+                <block wx:if="{{imgs}}" wx:for="{{imgs}}" wx:key="index">
+                    <view bindtap="__e" class="tab u-skeleton-fillet" data-event-opts="{{[ [ 'tap',[ [ 'preview',['$0'],[ [ ['imgs','',index] ] ] ] ] ] ]}}" wx:for="{{item.image_group}}" wx:for-index="index_" wx:for-item="item_" wx:key="index_">
+                        <image mode="aspectFill" src="{{item_.img_url+'?x-oss-process=image/resize,m_lfit,w_200/quality,q_80'}}" style="width:215rpx;height:494rpx;"></image>
+                    </view>
+                    <view class="tab u-flex u-row-center u-col-center" wx:if="{{index!=0&&index%10===0&&vuex_sgridAd!=0}}">
+                        <ad-custom bind:__l="__l" bind:close="__e" bind:error="__e" bind:load="__e" data-event-opts="{{[ [ '^load',[ ['adLoad'] ] ],[ '^error',[ ['adError'] ] ],[ '^close',[ ['adClose'] ] ] ]}}" unitId="{{vuex_sgridAd}}" vueId="{{'62c45558-4-'+index}}" wx:if="{{vuex_sgridAd!=0}}"></ad-custom>
+                    </view>
+                    <view class="tab u-flex u-row-center u-col-center" wx:if="{{index!=0&&index%10===0&&vuex_sgridAd!=0}}">
+                        <ad-custom bind:__l="__l" bind:close="__e" bind:error="__e" bind:load="__e" data-event-opts="{{[ [ '^load',[ ['adLoad'] ] ],[ '^error',[ ['adError'] ] ],[ '^close',[ ['adClose'] ] ] ]}}" unitId="{{vuex_sgridAd}}" vueId="{{'62c45558-3-'+index}}" wx:if="{{vuex_sgridAd!=0}}"></ad-custom>
+                    </view>
+                    
+                </block>
+            </view>
+        </view>
+        <view class="u-flex u-flex-col u-col-center" style="width:100vw;height:50vh;padding-top:200rpx;" wx:if="{{noData}}">
+            <view>
+                <image src="/static/nodata.png" style="width:300rpx;height:494rpx;"></image>
+            </view>
+            <view bindtap="__e" class="u-tips-color u-font-12 u-p-t-30" data-event-opts="{{[ [ 'tap',[ [ 'qwsearch',['$event'] ] ] ] ]}}">没有数据哦~</view>
+        </view>
+    </view>
+    <view wx:if="{{!noData}}">
+        <u-loadmore bind:__l="__l" color="#B8B8B8" fontSize="{{24}}" marginBottom="{{30}}" marginTop="{{30}}" status="{{loadStatus}}" vueId="62c45558-4"></u-loadmore>
+    </view>
+    <view class="safe-area-inset-bottom">
+        <view style="height:1px;"></view>
+    </view>
+    <u-skeleton animation="{{true}}" bind:__l="__l" loading="{{skeletonLoad}}" vueId="62c45558-5"></u-skeleton>
+    <models authorize="{{false}}" bind:__l="__l" bind:close="__e" bind:save="__e" btnText="搜索更多" data-event-opts="{{[ [ '^save',[ ['qwsearch'] ] ],[ '^close',[ ['e0'] ] ] ]}}" title="{{moreTitle}}" vueId="62c45558-6" wx:if="{{moreShow}}"></models>
+    <view bindtap="__e" class="{{['back','backTop','u-flex','u-flex-col','u-row-center','u-col-center',backShow?'backTop_show':'backTop_hide']}}" data-event-opts="{{[ [ 'tap',[ [ 'backTop',['$event'] ] ] ] ]}}">
+        <image src="/static/backtop.png" style="width:36rpx;height:36rpx;"></image>
+    </view>
+    <view bindtap="__e" class="{{['back','backSearch','u-flex','u-flex-col','u-row-center','u-col-center',backShow?'backTop_show':'backTop_hide']}}" data-event-opts="{{[ [ 'tap',[ [ 'search',['$event'] ] ] ] ]}}">
+        <image src="/static/search.png" style="width:30rpx;height:30rpx;"></image>
+    </view>
+</view>

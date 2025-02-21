@@ -1,0 +1,44 @@
+.guide.data-v-b8c306ce {
+    animation: bounce-data-v-b8c306ce 1.6s linear infinite;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 10px 10px 5px;
+    position: fixed;
+    right: 10px;
+    top: 0;
+    z-index: 999;
+}
+
+.guide .time.data-v-b8c306ce {
+    font-size: 10px;
+    text-align: center;
+}
+
+@-webkit-keyframes bounce-data-v-b8c306ce {
+    25% {
+        transform: translateY(-4px);
+    }
+
+    100%,50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(4px);
+    }
+}
+
+@keyframes bounce-data-v-b8c306ce {
+    25% {
+        transform: translateY(-4px);
+    }
+
+    100%,50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(4px);
+    }
+}

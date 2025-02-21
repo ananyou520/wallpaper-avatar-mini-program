@@ -1,0 +1,21 @@
+<view>
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" isBack="{{true}}" title="编辑刘海" titleSize="32" titleWidth="325" vueId="e5fce358-1"></u-navbar>
+    <view class="u-p-40">
+        <u-form bind:__l="__l" class="vue-ref" data-ref="uForm" model="{{design}}" vueId="e5fce358-2" vueSlots="{{['default']}}">
+            <view class="u-p-b-20">
+                <u-upload action autoUpload="{{false}}" bind:__l="__l" class="vue-ref" data-ref="uUpload" delBgColor="#ff7c7c" delColor="#FFFFFF" delIcon="close" fileList="{{designId!='-1'?imgList:''}}" height="230" limitType="{{['png','jpg','jpeg']}}" maxCount="1" maxSize="{{1*1024*1024}}" multiple="{{true}}" showProgress="{{false}}" sizeType="{{['original']}}" sourceType="{{['album']}}" uploadText="上传刘海图片" vueId="{{'e5fce358-3'+','+'e5fce358-2'}}" width="230"></u-upload>
+            </view>
+            <view style="border-bottom:1rpx solid #F4F4F4;">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="类型" vueId="{{'e5fce358-4'+','+'e5fce358-2'}}" vueSlots="{{['default']}}">
+                    <u-radio-group bind:__l="__l" bind:change="__e" bind:input="__e" data-event-opts="{{[ [ '^change',[ ['radioGroupChange'] ] ],[ '^input',[ [ '__set_model',[ '$0','mode','$event',[] ],['design'] ] ] ] ]}}" value="{{design.mode}}" vueId="{{'e5fce358-5'+','+'e5fce358-4'}}" vueSlots="{{['default']}}">
+                        <u-radio bind:__l="__l" name="{{0}}" size="50" vueId="{{'e5fce358-6'+','+'e5fce358-5'}}" vueSlots="{{['default']}}">免费</u-radio>
+                        <u-radio bind:__l="__l" name="{{1}}" size="50" vueId="{{'e5fce358-7'+','+'e5fce358-5'}}" vueSlots="{{['default']}}">收费</u-radio>
+                    </u-radio-group>
+                </u-form-item>
+            </view>
+        </u-form>
+        <view class="u-p-t-40">
+            <view bindtap="__e" class="btn" data-event-opts="{{[ [ 'tap',[ [ 'submit',['$event'] ] ] ] ]}}" hoverClass="hover-class" hoverStayTime="50">发 布</view>
+        </view>
+    </view>
+</view>

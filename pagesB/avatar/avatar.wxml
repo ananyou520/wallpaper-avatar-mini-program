@@ -1,0 +1,37 @@
+<ad unit-id="adunit-2c019f53e6a1ee8c"></ad>
+<view style="height:100rpx"></view>
+<view style="display:flex;align-items: center;">
+    <image bindtap="left" mode="widthFix" src="/image/left.png" style=" width: 30px;  height: 30px; position: absolute;left: 40px;"></image>
+    <view style="width: 300rpx;   height: 300rpx;   border-radius: 10px;  margin: auto;background-image:url({{bg_img}});background-size:100%">
+        <image class="tx" mode="widthFix" src="{{mb_data.img1}}" style=" width: 100%; border-radius: 10px;height:128px"></image>
+    </view>
+    <image bindtap="right" mode="widthFix" src="/image/right.png" style=" width: 30px;  height: 30px; position: absolute;right: 40px;"></image>
+</view>
+<form bindsubmit="bindFormSubmit">
+    <view class="center" style="margin-top:30rpx;height:45px;">
+        <view class="itemView" style="width:50%;border:1px solid #000;padding:1%;/*text-align:center*/margin:0 auto;font-size:12px;border-radius: 5px;" wx:if="{{mb_data.font_id>0}}">
+            <input bindinput="userNameInput" class="input" name="text" placeholder="{{mb_data.input_text}}" wx:if="{{mb_data.input_text}}"></input>
+            <input bindinput="userNameInput" class="input color" name="text" placeholder="请输入文字内容" wx:else></input>
+        </view>
+    </view>
+    <view class="center">
+        <view style="height:50px;width:50%;display:inline-block;float:left">
+            <button bindtap="chooseImg" class="use-template" style="margin-right:10px;height:50px;line-height: 50px;">相册上传头像</button>
+        </view>
+        <view style="height:50px;width:49%;display:inline-block;float:right;" wx:if="{{mb_data.is_jz==0}}">
+            <button class="use-template" formType="submit" style="height:50px;line-height:50px;display:block;margin-left:5px" wx:if="{{is_gg==0}}">点击立即制作</button>
+            <button bindtap="jlgg" class="use-template" style="height:50px;line-height:50px;display:block;margin-left:5px" wx:elif="{{is_gg==1}}">获取免费次数</button>
+            <button bindtap="jlgg2" class="use-template" style="height:50px;line-height:50px;display:block;margin-left:5px" wx:elif="{{is_gg==2}}">获取免费次数</button>
+        </view>
+        <view style="height:50px;width:49%;display:inline-block;float:right;" wx:elif="{{mb_data.is_jz==1}}">
+            <button bindtap="jlgg3" class="use-template" style="height:50px;line-height:50px;display:block;margin-left:5px;">代理专属模板</button>
+        </view>
+    </view>
+    <view class="cover" wx:if="{{is_show_qrcode}}">
+        <view class="template_title center">点击图片查看/保存</view>
+        <image bindtap="tapPreview" mode="widthFix" src="{{template_qrcode}}" style="width:50%;height:auto"></image>
+    </view>
+    <view class="help">
+        <rich-text bindtap="tap" nodes="版权说明：<br/>1.部分素材来源于网络,经过创意设计后可帮助您快速美化自己的二维码，请勿用于商业用途，若用于商业用途请自行判断是否支持并承担责任！<br/>2.若模板存在侵权行为请联系我们下架，谢谢您的使用与反馈！"></rich-text>
+    </view>
+</form>

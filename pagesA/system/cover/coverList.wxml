@@ -1,0 +1,69 @@
+<view class="data-v-bd61e21a">
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" class="data-v-bd61e21a" isBack="{{true}}" title="作品管理" titleSize="32" titleWidth="325" vueId="1a1cc1d0-1"></u-navbar>
+    <view class="menu data-v-bd61e21a">
+        <u-tabs bind:__l="__l" bind:change="__e" class="data-v-bd61e21a" current="{{tagCurrent}}" data-event-opts="{{[ [ '^change',[ ['cateClick'] ] ] ]}}" isScroll="{{false}}" list="{{tagList}}" vueId="1a1cc1d0-2"></u-tabs>
+    </view>
+    <view class="data-v-bd61e21a" style="padding-top:80rpx;">
+        <view bindtap="__e" class="data-v-bd61e21a" data-event-opts="{{[ [ 'tap',[ [ 'detailClick',['$0'],[ [ ['coverList','',index,'_id'] ] ] ] ] ] ]}}" wx:for="{{coverList}}" wx:key="index">
+            <u-gap bind:__l="__l" class="data-v-bd61e21a" height="30" vueId="{{'1a1cc1d0-3-'+index}}"></u-gap>
+            <view class="card u-flex u-row-left u-col-top u-p-l-40 u-p-r-40 u-p-t-20 u-p-b-10 data-v-bd61e21a">
+                <view class="tab data-v-bd61e21a">
+                    <image class="data-v-bd61e21a" mode="aspectFill" src="{{item.image}}" style="width:180rpx;height:250rpx;"></image>
+                </view>
+                <view class="btns u-flex-col u-row-between u-p-l-20 u-p-t-10 data-v-bd61e21a">
+                    <view class="data-v-bd61e21a">
+                        <view class="title u-font-16 u-line-1 data-v-bd61e21a">{{''+item.name+''}}</view>
+                        <view class="data-v-bd61e21a">
+                            <view class="u-tips-color u-p-t-10 u-font-12 data-v-bd61e21a">{{'类型：'+(item.mode==0?'壁纸':'头像')+''}}</view>
+                            <view class="u-tips-color u-p-t-10 u-font-12 data-v-bd61e21a">{{'分类：'+item.category_name+''}}</view>
+                            <view class="u-tips-color u-p-t-10 u-font-12 data-v-bd61e21a">{{'数量：'+item.images.length+''}}</view>
+                            <view class="u-tips-color u-p-t-10 u-font-12 data-v-bd61e21a" wx:if="{{item.tags}}">{{'标签：'+item.tags+''}}</view>
+                        </view>
+                        <view class="data-v-bd61e21a" wx:if="{{item.status===2}}">
+                            <view class="bohui u-tips-color u-p-t-10 u-font-12 data-v-bd61e21a">驳回原因：<text class="data-v-bd61e21a">{{item.examine}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="u-flex u-row-right data-v-bd61e21a">
+                        <view catchtap="__e" class="tags tag-active u-m-r-20 data-v-bd61e21a" data-event-opts="{{[ [ 'tap',[ [ 'topicChange',['$0',1],[ [ ['coverList','',index,'_id'] ] ] ] ] ] ]}}" wx:if="{{item.topic==0&&item.status==1}}">设为专辑</view>
+                        <view catchtap="__e" class="tags tag-active u-m-r-20 data-v-bd61e21a" data-event-opts="{{[ [ 'tap',[ [ 'editTopic',['$0',1,'$1'],[ [ ['coverList','',index,'_id'] ],[ ['coverList','',index,'detail'] ] ] ] ] ] ]}}" wx:if="{{item.topic==2&&item.status==1}}">设为专辑</view>
+                        <view catchtap="__e" class="tags u-m-r-20 data-v-bd61e21a" data-event-opts="{{[ [ 'tap',[ [ 'topicChange',['$0',2],[ [ ['coverList','',index,'_id'] ] ] ] ] ] ]}}" wx:if="{{item.topic==1}}">取消专辑</view>
+                        <view catchtap="__e" class="tags tag-active u-m-r-20 data-v-bd61e21a" data-event-opts="{{[ [ 'tap',[ [ 'editChange',['$0',3],[ [ ['coverList','',index,'_id'] ] ] ] ] ] ]}}" wx:if="{{item.status==1}}">下架</view>
+                        <view catchtap="__e" class="tags tag-active u-m-r-20 data-v-bd61e21a" data-event-opts="{{[ [ 'tap',[ [ 'editChange',['$0',1],[ [ ['coverList','',index,'_id'] ] ] ] ] ] ]}}" wx:if="{{item.status==3}}">上架</view>
+                        <view catchtap="__e" class="tags tag-active u-m-r-20 data-v-bd61e21a" data-event-opts="{{[ [ 'tap',[ [ 'editChange',['$0',1],[ [ ['coverList','',index,'_id'] ] ] ] ] ] ]}}" wx:if="{{item.status==0}}">通过</view>
+                        <view catchtap="__e" class="tags tag-actives no_active_ u-m-r-20 data-v-bd61e21a" data-event-opts="{{[ [ 'tap',[ [ 'editChange',['$0',2],[ [ ['coverList','',index,'_id'] ] ] ] ] ] ]}}" wx:if="{{item.status==0}}">驳回</view>
+                        <view catchtap="__e" class="tags tag-actives no_active_ u-m-r-20 data-v-bd61e21a" data-event-opts="{{[ [ 'tap',[ [ 'editChange',['$0',1],[ [ ['coverList','',index,'_id'] ] ] ] ] ] ]}}" wx:if="{{item.status==2}}">取消驳回</view>
+                        <view catchtap="__e" class="tags data-v-bd61e21a" data-event-opts="{{[ [ 'tap',[ [ 'delClick',['$0'],[ [ ['coverList','',index,'_id'] ] ] ] ] ] ]}}" wx:if="{{item.status==1||item.status==2}}">删除</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="u-flex u-flex-col u-col-center data-v-bd61e21a" style="width:100vw;height:50vh;padding-top:200rpx;" wx:if="{{noData}}">
+        <view class="data-v-bd61e21a">
+            <image class="data-v-bd61e21a" src="/static/nodata.png" style="width:300rpx;height:300rpx;"></image>
+        </view>
+        <view class="u-tips-color u-font-12 u-p-t-30 data-v-bd61e21a">没有数据哦~</view>
+    </view>
+    <view class="data-v-bd61e21a" wx:if="{{!noData}}">
+        <u-loadmore bind:__l="__l" class="data-v-bd61e21a" color="#B8B8B8" fontSize="{{24}}" marginBottom="{{30}}" marginTop="{{30}}" status="{{loadStatus}}" vueId="1a1cc1d0-4"></u-loadmore>
+    </view>
+    <view class="safe-area-inset-bottom data-v-bd61e21a">
+        <view class="data-v-bd61e21a" style="height:1px;"></view>
+    </view>
+    <u-modal asyncClose="{{true}}" bind:__l="__l" bind:confirm="__e" bind:input="__e" class="data-v-bd61e21a vue-ref" confirmText="提交" content="content" data-event-opts="{{[ [ '^confirm',[ ['editChange'] ] ],[ '^input',[ [ '__set_model',[ '','editShow','$event',[] ] ] ] ] ]}}" data-ref="uModal" showCancelButton="{{true}}" title="填写驳回原因" value="{{editShow}}" vueId="1a1cc1d0-5" vueSlots="{{['default']}}">
+        <view class="u-p-40 data-v-bd61e21a">
+            <view class="data-v-bd61e21a">
+                <u-input bind:__l="__l" bind:input="__e" border="{{true}}" borderColor="#F7F7F7" class="data-v-bd61e21a" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','examine','$event',[] ] ] ] ] ]}}" height="{{80}}" type="textarea" value="{{examine}}" vueId="{{'1a1cc1d0-6'+','+'1a1cc1d0-5'}}"></u-input>
+            </view>
+        </view>
+    </u-modal>
+    <u-modal asyncClose="{{true}}" bind:__l="__l" bind:confirm="__e" bind:input="__e" class="data-v-bd61e21a vue-ref" confirmText="提交" content="content" data-event-opts="{{[ [ '^confirm',[ ['topicChange'] ] ],[ '^input',[ [ '__set_model',[ '','editTopicShow','$event',[] ] ] ] ] ]}}" data-ref="uModal" showCancelButton="{{true}}" title="填写专辑介绍" value="{{editTopicShow}}" vueId="1a1cc1d0-7" vueSlots="{{['default']}}">
+        <view class="u-p-40 data-v-bd61e21a">
+            <view class="data-v-bd61e21a">
+                <u-input bind:__l="__l" bind:input="__e" border="{{true}}" borderColor="#F7F7F7" class="data-v-bd61e21a" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','detail','$event',[] ] ] ] ] ]}}" height="{{80}}" type="textarea" value="{{detail}}" vueId="{{'1a1cc1d0-8'+','+'1a1cc1d0-7'}}"></u-input>
+            </view>
+        </view>
+    </u-modal>
+    <u-action-sheet bind:__l="__l" bind:click="__e" bind:input="__e" class="data-v-bd61e21a" data-event-opts="{{[ [ '^click',[ ['sheetClick'] ] ],[ '^input',[ [ '__set_model',[ '','sheetShow','$event',[] ] ] ] ] ]}}" list="{{sheetList}}" safeAreaInsetBottom="{{true}}" value="{{sheetShow}}" vueId="1a1cc1d0-9"></u-action-sheet>
+</view>

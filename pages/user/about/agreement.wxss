@@ -1,0 +1,11 @@
+.title.data-v-20319a35 {
+    font-size: 32rpx;
+    font-weight: 550;
+    padding-bottom: 30rpx;
+}
+
+.cont.data-v-20319a35 {
+    color: #111b22;
+    line-height: 50rpx;
+    padding-bottom: 40rpx;
+}

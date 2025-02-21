@@ -1,0 +1,101 @@
+<view class="{{showShare?'fixed':''}}">
+    <navigator class="backk" openType="redirect" url="/pagesC/index/index">继续配对</navigator>
+    <view class="head flex">
+        <view class="show-head">
+            <image class="image-show" src="{{xzList[indexNan].image}}"></image>
+            <image class="shadow" src="../res/images/shadow.png"></image>
+            <view class="name-show">{{util.replace(xzList[indexNan].name,'座','男')}}</view>
+        </view>
+        <view class="middle">
+            <image class="love" src="../res/images/match.png"></image>
+        </view>
+        <view class="show-head">
+            <image class="image-show" src="{{xzList[indexNv].image}}"></image>
+            <image class="shadow" src="../res/images/shadow.png"></image>
+            <view class="name-show">{{util.replace(xzList[indexNv].name,'座','女')}}</view>
+        </view>
+    </view>
+    <view class="comment-box">
+    {{peidui.comment}}
+    <image class="image-border" src="{{border}}"></image>
+    </view>
+    <view class="detail-container">
+        <view class="title">
+            <image class="image-point" src="../res/images/point.png"></image>
+      配对指数
+    </view>
+        <view class="flex font-size-14">
+            <view class="flex-item">
+                <view class="flex margin-bottom-10">
+                    <view class="color-6">配对指数</view>
+                    <view class="color-3 margin-left-10">{{peidui.score}}</view>
+                </view>
+                <view class="flex margin-bottom-10">
+                    <view class="color-6">配对比重</view>
+                    <view class="color-3 margin-left-10">{{peidui.rate}}</view>
+                </view>
+            </view>
+            <view class="flex-item">
+                <view class="flex margin-bottom-10">
+                    <view class="color-6">两情相悦指数</view>
+                    <view class="color-3 margin-left-10">{{peidui.num1}}</view>
+                </view>
+                <view class="flex margin-bottom-10">
+                    <view class="color-6">天长地久指数</view>
+                    <view class="color-3 margin-left-10">{{peidui.num2}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="title">
+            <image class="image-point" src="../res/images/point.png"></image>
+      恋爱建议
+    </view>
+        <view class="advice">
+      {{peidui.advice}}
+    </view>
+        <view class="title">
+            <image class="image-point" src="../res/images/point.png"></image>
+      注意事项
+    </view>
+        <view class="note">
+      {{peidui.note}}
+    </view>
+    </view>        <ad unit-id="adunit-2c019f53e6a1ee8c"></ad>
+    <view class="ad-box" wx:if="{{version==3&&showAdd&&peidui!=null}}">
+        <view class="title">
+            <image class="image-point" src="../res/images/point.png"></image>
+      相关推荐测
+    </view>
+        <view bindtap="goto" class="ad-item flex flex-center" data-id="{{item.AppId}}" data-path="{{item.Path}}" wx:for="{{adList}}" wx:key="{{item}}">
+            <view class="ad-image">
+                <image src="{{item.ImageUrl}}"></image>
+            </view>
+            <view class="ad-title">{{item.Title}}</view>
+        </view>
+    </view>
+    <navigator appId="wx04451b0db8cc0b3a" class="ad-left" target="miniProgram" version="develop" wx:if="{{version==3&&peidui!=null}}">
+        <image src="../res/images/test.png"></image>
+        <view>专业测</view>
+    </navigator>
+    
+    <view class="modal-container" wx:if="{{!auth}}">
+        <view class="modal-overlay"></view>
+        <view class="modal-modal-auth">
+            <view class="modal-title">提示</view>
+            <view class="modal-des">需要获取您的头像昵称</view>
+            <button bindgetuserinfo="bindGetUserInfo" bindtap="hideAuth" class="btn-confirm" openType="getUserInfo">确定</button>
+        </view>
+    </view>
+    <view class="modal-container {{showShare?'':'hide'}}">
+        <view class="modal-overlay"></view>
+        <view bindtap="hideShare" class="modal-close">
+            <image class="img-block" mode="widthFix" src="../res/images/wrong.png"></image>
+        </view>
+        <view class="modal-modal">
+            <canvas bindtap="viewImage" canvasId="canvas-result"></canvas>
+        </view>
+        <button class="modal-btn1" openType="share">分享</button>
+        <button bindtap="saveImage" class="modal-btn2">保存</button>
+    </view>
+</view>
+<wxs module="util" src="../../utils/util.wxs" />

@@ -1,0 +1,15 @@
+<view class="uni-searchbar">
+    <view bindtap="__e" class="uni-searchbar__box" data-event-opts="{{[ [ 'tap',[ [ 'searchClick',['$event'] ] ] ] ]}}" style="{{'border-radius:'+radius+'px'+';'+'background-color:'+bgColor+';'}}">
+        <view class="uni-searchbar__box-icon-search">
+            <slot name="searchIcon" wx:if="{{$slots.searchIcon}}"></slot>
+            <uni-icons bind:__l="__l" color="#c0c4cc" size="18" type="search" vueId="c255795c-1" wx:else></uni-icons>
+        </view>
+        <input bindblur="__e" bindconfirm="__e" bindfocus="__e" bindinput="__e" class="uni-searchbar__box-search-input" confirmType="search" data-event-opts="{{[ [ 'confirm',[ [ 'confirm',['$event'] ] ] ],[ 'blur',[ [ 'blur',['$event'] ] ] ],[ 'focus',[ [ 'emitFocus',['$event'] ] ] ],[ 'input',[ [ '__set_model',[ '','searchVal','$event',[] ] ] ] ] ]}}" disabled="{{readonly}}" focus="{{showSync}}" maxlength="{{maxlength}}" placeholder="{{placeholderText}}" type="text" value="{{searchVal}}" wx:if="{{show||searchVal}}"></input>
+        <text class="uni-searchbar__text-placeholder" wx:else>{{placeholder}}</text>
+        <view bindtap="__e" class="uni-searchbar__box-icon-clear" data-event-opts="{{[ [ 'tap',[ [ 'clear',['$event'] ] ] ] ]}}" wx:if="{{show&&(clearButton==='always'||clearButton==='auto'&&searchVal!=='')&&!readonly}}">
+            <slot name="clearIcon" wx:if="{{$slots.clearIcon}}"></slot>
+            <uni-icons bind:__l="__l" color="#c0c4cc" size="20" type="clear" vueId="c255795c-2" wx:else></uni-icons>
+        </view>
+    </view>
+    <text bindtap="__e" class="uni-searchbar__cancel" data-event-opts="{{[ [ 'tap',[ [ 'cancel',['$event'] ] ] ] ]}}" wx:if="{{cancelButton==='always'||show&&cancelButton==='auto'}}">{{cancelTextI18n}}</text>
+</view>

@@ -1,0 +1,31 @@
+/**set.wxss**/
+@import "../../lib/weui.wxss";
+page{
+  background: linear-gradient(180deg, #89f7fe 0%, #66a6ff 100%);
+}
+.section {
+  margin-bottom: 30rpx;
+}
+
+.weui-cells__title {
+  color: #000;
+}
+
+.weui-cells {
+  background-color: transparent;
+  color: #fff;
+  margin-bottom: 40rpx;
+}
+
+.weui-cells::before {
+  border: 0;
+}
+
+.weui-cells::after {
+  border: 0;
+}
+.delete{ 
+  width: 50rpx;
+  height: 50rpx;
+  margin: 10rpx 20rpx 0 0;
+}

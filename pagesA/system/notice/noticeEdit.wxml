@@ -1,0 +1,36 @@
+<view>
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" isBack="{{true}}" title="编辑通知" titleSize="32" titleWidth="325" vueId="b5a590d8-1"></u-navbar>
+    <view class="u-p-40">
+        <u-form bind:__l="__l" class="vue-ref" data-ref="uForm" model="{{notice}}" vueId="b5a590d8-2" vueSlots="{{['default']}}">
+            <view class="content-border">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="名称" vueId="{{'b5a590d8-3'+','+'b5a590d8-2'}}" vueSlots="{{['default']}}">
+                    <u-input bind:__l="__l" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','name','$event',[] ],['notice'] ] ] ] ]}}" disabled="{{true}}" height="{{60}}" placeholder="名称" type="textarea" value="{{notice.name}}" vueId="{{'b5a590d8-4'+','+'b5a590d8-3'}}"></u-input>
+                </u-form-item>
+            </view>
+            <view class="content-border" wx:if="{{noticeType===0}}">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="标题" vueId="{{'b5a590d8-5'+','+'b5a590d8-2'}}" vueSlots="{{['default']}}">
+                    <u-input bind:__l="__l" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','title','$event',[] ],['notice'] ] ] ] ]}}" height="{{60}}" placeholder="标题" type="textarea" value="{{notice.title}}" vueId="{{'b5a590d8-6'+','+'b5a590d8-5'}}"></u-input>
+                </u-form-item>
+            </view>
+            <view class="content-border">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="内容" vueId="{{'b5a590d8-7'+','+'b5a590d8-2'}}" vueSlots="{{['default']}}">
+                    <u-input autoHeight="{{true}}" bind:__l="__l" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','content','$event',[] ],['notice'] ] ] ] ]}}" maxlength="-1" placeholder="内容" type="textarea" value="{{notice.content}}" vueId="{{'b5a590d8-8'+','+'b5a590d8-7'}}"></u-input>
+                </u-form-item>
+            </view>
+            <view class="content-border" wx:if="{{noticeType===1}}">
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="链接" vueId="{{'b5a590d8-9'+','+'b5a590d8-2'}}" vueSlots="{{['default']}}">
+                    <u-input bind:__l="__l" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','url','$event',[] ],['notice'] ] ] ] ]}}" height="{{60}}" placeholder="跳转链接" type="textarea" value="{{notice.url}}" vueId="{{'b5a590d8-10'+','+'b5a590d8-9'}}"></u-input>
+                </u-form-item>
+            </view>
+            <view>
+                <u-form-item bind:__l="__l" borderBottom="{{false}}" label="排序" vueId="{{'b5a590d8-11'+','+'b5a590d8-2'}}" vueSlots="{{['default']}}" wx:if="{{noticeType===0}}">
+                    <u-input bind:__l="__l" bind:input="__e" clearable="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','sort','$event',[] ],['notice'] ] ] ] ]}}" height="{{40}}" placeholder="排序，数字越大越靠前" type="number" value="{{notice.sort}}" vueId="{{'b5a590d8-12'+','+'b5a590d8-11'}}"></u-input>
+                </u-form-item>
+            </view>
+            <view></view>
+        </u-form>
+        <view class="u-p-t-40">
+            <view bindtap="__e" class="btn" data-event-opts="{{[ [ 'tap',[ [ 'submit',['$event'] ] ] ] ]}}" hoverClass="hover-class" hoverStayTime="50">发 布</view>
+        </view>
+    </view>
+</view>

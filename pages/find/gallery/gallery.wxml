@@ -1,0 +1,49 @@
+<view class="data-v-7bfff0fa">
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" class="data-v-7bfff0fa" isBack="{{true}}" title="头像签名套图" titleSize="32" titleWidth="325" vueId="62f4f24e-1"></u-navbar>
+    <scroll-view class="nav-bg-color nav data-v-7bfff0fa" scrollX="{{true}}">
+        <view class="flex text-center data-v-7bfff0fa" style="background: #222;">
+            <view bindtap="__e" class="{{[ 'data-v-7bfff0fa','cu-item flex-sub '+(item.cid==TabCur?'text-cyan cur':'') ]}}" data-cid="{{item.cid}}" data-event-opts="{{[ [ 'tap',[ [ 'tabSelect',['$event'] ] ] ] ]}}" wx:for="{{categoryList}}" wx:key="index">{{''+item.title+''}}</view>
+        </view>
+       
+        <ad bind:__l="__l" class="data-v-3b73e478" unitId="{{vuex_bannerAd}}" vueId="{{'75d854fe-2-'+index}}" wx:if="{{vuex_bannerAd}}"></ad>
+            
+    </scroll-view>
+    <view class="{{['data-v-7bfff0fa','bottom',cssTran?'closeCss':'openCss']}}" wx:if="{{!loadFlag}}">
+        <view class="nav-box data-v-7bfff0fa">
+            <view class="nav-tab data-v-7bfff0fa">
+                <u-icon bind:__l="__l" class="data-v-7bfff0fa" data-event-opts="{{[ [ '^__l',[ ['__l'] ] ] ]}}" name="/static/icon/fh.png" size="{{60}}" vueId="3db16520-5"></u-icon>
+                <text class="data-v-7bfff0fa">返回</text>
+                <button bindtap="__e" class="data-v-7bfff0fa" data-event-opts="{{[ [ 'tap',[ [ 'fh',['$event'] ] ] ] ]}}" openType="navigateBack" style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;"></button>
+            </view>
+            <view class="nav-tab data-v-7bfff0fa">
+                <u-icon bind:__l="__l" class="data-v-7bfff0fa" data-event-opts="{{[ [ '^__l',[ ['__l'] ] ] ]}}" name="/static/icon/fx.png" size="{{60}}" vueId="3db16520-5"></u-icon>
+                <text class="data-v-7bfff0fa">分享</text>
+                <button class="data-v-7bfff0fa" openType="share" style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;"></button>
+            </view>
+        </view>
+    </view>
+    <view class="cu-card dynamic data-v-7bfff0fa">
+        <block wx:for="{{photos}}" wx:key="index">
+            <view bindtap="__e" class="cu-item shadow data-v-7bfff0fa" data-event-opts="{{[ [ 'tap',[ [ 'info',['$event'] ] ] ] ]}}" data-item="{{item}}" style="height:260px;margin:50rpx 40rpx;background: #141414;">
+                <view class="grid flex-sub col-1 data-v-7bfff0fa">
+                    <view class="bg-img only-img data-v-7bfff0fa" style="{{'background-image:url('+item.card+');text-align:center'}}">
+                        <view class="cu-avatar round lg data-v-7bfff0fa" style="{{'background-image:url('+item.avatar+');width:100px;height:100px;margin-top:100px'}}"></view>
+                        <view class="content flex-sub data-v-7bfff0fa">
+                            <view class="data-v-7bfff0fa">{{item.name}}</view>
+                        </view>
+                        <view class="text-content data-v-7bfff0fa">{{item.memo}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="data-v-7bfff0fa" style="margin:40rpx;" wx:if="{{index!=0&&(index+1)%4==0&&vuex_bannerAd!=0}}">
+                <ad-custom bind:__l="__l" class="data-v-7bfff0fa" unitId="{{vuex_bannerAd}}" vueId="{{'62f4f24e-4-'+index}}" wx:if="{{vuex_bannerAd}}"></ad-custom>
+            </view>
+        </block>
+    </view>
+    <view bindtap="__e" class="{{['back','backTop','u-flex','u-flex-col','u-row-center','u-col-center','data-v-7bfff0fa',backShow?'backTop_show':'backTop_hide']}}" data-event-opts="{{[ [ 'tap',[ [ 'backTop',['$event'] ] ] ] ]}}">
+        <image class="data-v-7bfff0fa" src="/static/backtop.png" style="width:36rpx;height:36rpx;"></image>
+    </view>
+    <view bindtap="__e" class="{{['back','backRefresh','u-flex','u-flex-col','u-row-center','u-col-center','backTop_show','data-v-7bfff0fa',backShow?'backTop_show':'backTop_hide']}}" data-event-opts="{{[ [ 'tap',[ [ 'refresh',['$event'] ] ] ] ]}}">
+        <image class="data-v-7bfff0fa" src="/static/refresh.png" style="width:30rpx;height:30rpx;"></image>
+    </view>
+</view>

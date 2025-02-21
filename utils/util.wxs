@@ -1,0 +1,12 @@
+var util = ({
+    replace: (function(str, oldchar, newchar) {
+        if (str.indexOf(oldchar) >= 0) {
+            return (str.replace(oldchar, newchar))
+        } else {
+            return (str)
+        }
+    }),
+});
+module.exports = ({
+    replace: util.replace,
+});

@@ -1,0 +1,12 @@
+<view style="height: 20px;">
+
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" isBack="{{true}}" title="关于我们" titleSize="32" titleWidth="325" vueId="82f8ec74-1"></u-navbar>
+    <view class="top u-flex-col u-col-center u-p-t-80">
+    <image src="/static/icon/home.png"></image>
+    <view class="name u-p-t-30 u-font-18">幻想壁纸</view>
+    <view class="name u-tips-color u-font-14 u-p-t-15 hh">探索壁纸美学之境·追寻极致佳作</view>
+    <view class="name u-tips-color u-font-14 u-p-t-15 hh">Version 3.1.2</view>
+    <!-- <image style="width: 80%;height:320px;margin-top:20px;border-radius: none;" src="https://imgs.ygxxzz.com/tu/00.png"></image> -->
+  </view>
+    <view class="bottom u-p-40 u-text-center u-font-12 u-tips-color">免责声明：本小程序内容来自用户投稿，如涉及版权问题，请随时联系告知我们。</view>
+</view>

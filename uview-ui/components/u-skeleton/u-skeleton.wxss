@@ -1,0 +1,38 @@
+.skeleton-fade.data-v-aab1fbea {
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: blink-data-v-aab1fbea;
+    animation-timing-function: ease-in-out;
+    background: rgba(0,0,0,.3);
+    color: rgba(0,0,0,.3);
+    height: 100%;
+    width: 100%;
+}
+
+@-webkit-keyframes blink-data-v-aab1fbea {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink-data-v-aab1fbea {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

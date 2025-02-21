@@ -1,0 +1,19 @@
+.card {
+    background-color: #fff;
+    border-radius: 16rpx;
+    box-shadow: 0 0 20px rgba(0,0,0,.3);
+}
+
+.btn {
+    background-image: linear-gradient(100deg,rgba(0,0,0,.3),rgba(0,0,0,.94));
+    border-radius: 40rpx;
+    color: #fff;
+    font-size: 16px;
+    line-height: 86rpx;
+    text-align: center;
+}
+
+.hover-class {
+    transform: scale(.92);
+    transition: all .2s;
+}

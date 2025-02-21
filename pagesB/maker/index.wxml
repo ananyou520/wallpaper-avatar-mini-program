@@ -1,0 +1,60 @@
+<view class="container">
+    <canvas canvasId="myCanvas" style="width: 300rpx;height: 300rpx;"></canvas>
+    <canvas canvasId="hiddenCanvas" hidden="{{true}}" style="width: 300rpx; height: 300rpx;"></canvas>
+    <view class="assets-container" hidden="{{currentAssets!='face'}}" id="face-container">
+        <view bindtap="chooseFace" class="item" data-item="{{item}}" wx:for="{{faceAssets}}" wx:key="id">
+            <image class="asset-icon" mode="aspectFill" src="../assets/{{item.name}}.png"></image>
+        </view>
+        <view>
+            <text class="tip">好的emoji从选择一个脸型开始</text>
+        </view>
+    </view>
+    <view class="assets-container" hidden="{{currentAssets!='eye'}}" id="eye-container">
+        <view bindtap="chooseEye" class="item" data-item="{{item}}" wx:for="{{eyeAssets}}" wx:key="id">
+            <image class="asset-icon" mode="aspectFill" src="../assets/{{item.name}}.png"></image>
+        </view>
+        <view>
+            <text class="tip">眼睛是心灵的窗户</text>
+        </view>
+    </view>
+    <view class="assets-container" hidden="{{currentAssets!='rightEye'}}" id="eye-container">
+        <view bindtap="chooseRightEye" class="item" data-item="{{item}}" wx:for="{{eyeAssets}}" wx:key="id">
+            <image class="asset-icon" mode="aspectFill" src="../assets/right/{{item.name}}.png"></image>
+        </view>
+        <view>
+            <text class="tip">双色瞳已经成为了一种萌属性</text>
+        </view>
+    </view>
+    <view class="assets-container" hidden="{{currentAssets!='mouth'}}" id="mouth-container">
+        <view bindtap="chooseMouth" class="item" data-item="{{item}}" wx:for="{{mouthAssets}}" wx:key="id">
+            <image class="asset-icon" mode="aspectFill" src="../assets/{{item.name}}.png"></image>
+        </view>
+        <view>
+            <text class="tip">笑口常开</text>
+        </view>
+    </view>
+    <view class="assets-container" hidden="{{currentAssets!='accessory'}}" id="accessory-container">
+        <view bindtap="addAccessory" class="item" data-item="{{item}}" wx:for="{{accessoryAssets}}" wx:key="id">
+            <image class="asset-icon" mode="aspectFill" src="../assets/{{item.name}}.png"></image>
+        </view>
+        <view>
+            <text class="tip">装饰当然是越多越好</text>
+        </view>
+    </view>
+    <view class="footer">
+        <button bindtap="switchAssets" class="cu-btn bg-white menu {{currentAssets=='face'?'current':''}}" data-name="face">脸型</button>
+        <button bindtap="switchAssets" class="cu-btn bg-white menu {{currentAssets=='eye'?'current':''}}" data-name="eye">眼睛</button>
+        <button bindtap="switchAssets" class="cu-btn bg-white menu {{currentAssets=='rightEye'?'current':''}}" data-name="rightEye">异瞳</button>
+        <button bindtap="switchAssets" class="cu-btn bg-white menu {{currentAssets=='mouth'?'current':''}}" data-name="mouth">嘴巴</button>
+        <button bindtap="switchAssets" class="cu-btn bg-white menu {{currentAssets=='accessory'?'current':''}}" data-name="accessory">装饰</button>
+    </view>
+    <view class="footer">
+        <button bindtap="clearCanvas" class="cu-btn bg-white menu">重置</button>
+        <button bindtap="backward" class="cu-btn bg-white menu">撤回</button>
+        <button bindtap="exportCanvas" class="cu-btn bg-white menu" style="color: red;">保存</button>
+        <button class="cu-btn bg-white menu" openType="share" style="color: red;">分享</button>
+    </view>
+    <view style="width:100%;padding:15rpx;padding-top:20rpx">
+        <ad unit-id="adunit-2c019f53e6a1ee8c"></ad>
+    </view>
+</view>

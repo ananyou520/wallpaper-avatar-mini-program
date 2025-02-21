@@ -1,0 +1,33 @@
+<view>
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" isBack="{{true}}" title="发现页" titleSize="32" titleWidth="325" vueId="0bb18284-1"></u-navbar>
+    <view class="u-p-l-20 u-p-r-20">
+        <view class="tab u-m-t-20" wx:for="{{findList}}" wx:key="index">
+            <view class="u-flex u-row-between">
+                <image class="banner_img" src="{{item.image}}"></image>
+            </view>
+            <view class="u-p-l-20 u-p-r-20 u-p-t-20 u-p-b-25 u-flex u-row-between" style="color: #000;">
+                <view>{{item.name}}</view>
+                <view>{{item.url}}</view>
+            </view>
+            <view class="u-p-l-20 u-p-r-20 u-p-t-20 u-p-b-25 u-flex u-row-between">
+                <view>
+                    <u-switch bind:__l="__l" bind:change="__e" bind:input="__e" data-event-opts="{{[ [ '^change',[ [ 'switchChange',['$0',index],[ [ ['findList','',index,'_id'] ] ] ] ] ],[ '^input',[ [ '__set_model',[ '$0','show','$event',[] ],[ [ ['findList','',index] ] ] ] ] ] ]}}" size="34" value="{{item.show}}" vueId="{{'0bb18284-2-'+index}}"></u-switch>
+                </view>
+                <view bindtap="__e" class="tags_ tag-active_" data-event-opts="{{[ [ 'tap',[ [ 'sheetClick',['$0',index],[ [ ['findList','',index,'_id'] ] ] ] ] ] ]}}">操作</view>
+            </view>
+        </view>
+    </view>
+    <view class="u-flex u-flex-col u-col-center" style="width:100vw;height:50vh;padding-top:200rpx;" wx:if="{{noData}}">
+        <view>
+            <image src="/static/nodata.png" style="width:300rpx;height:300rpx;"></image>
+        </view>
+        <view class="u-tips-color u-font-12 u-p-t-30">没有数据哦~</view>
+    </view>
+    <view bindtap="__e" class="add" data-event-opts="{{[ [ 'tap',[ [ 'addClick',['$event'] ] ] ] ]}}">
+        <image src="/static/icon/add.png"></image>
+    </view>
+    <view class="safe-area-inset-bottom">
+        <view style="height:10rpx;"></view>
+    </view>
+    <u-action-sheet bind:__l="__l" bind:click="__e" bind:input="__e" data-event-opts="{{[ [ '^click',[ ['sheetChange'] ] ],[ '^input',[ [ '__set_model',[ '','sheetShow','$event',[] ] ] ] ] ]}}" list="{{sheetList}}" safeAreaInsetBottom="{{true}}" value="{{sheetShow}}" vueId="0bb18284-3"></u-action-sheet>
+</view>

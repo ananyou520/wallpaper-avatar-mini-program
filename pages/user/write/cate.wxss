@@ -1,0 +1,17 @@
+.tag {
+    background-color: rgba(0,0,0,.3);
+    border-radius: 40rpx;
+    color: #fff;
+    font-size: 14px;
+    line-height: 52rpx;
+    margin-bottom: 20rpx;
+    margin-right: 20rpx;
+    padding: 0 42rpx;
+    text-align: center;
+}
+
+.tag-active {
+    background-image: linear-gradient(100deg,#fcfc44,#f8c93c);
+    box-shadow: 0 0 10px #fff8ab;
+    color: #333;
+}

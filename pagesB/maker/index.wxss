@@ -1,0 +1,91 @@
+.userinfo {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.userinfo-avatar {
+    border-radius: 50%;
+    height: 128rpx;
+    margin: 20rpx;
+    width: 128rpx;
+}
+
+.userinfo-nickname {
+    color: #aaa;
+}
+
+.usermotto {
+    margin-top: 200px;
+}
+
+.container {
+    align-items: center;
+    box-sizing: border-box;
+    flex-direction: column;
+    height: 100%;
+    padding: 20rpx 0;
+}
+
+.container,.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer {
+    flex-direction: row;
+    margin-top: 20rpx;
+    padding-left: 15rpx;
+    padding-right: 15rpx;
+    width: 750rpx;
+}
+
+.menu {
+    font-size: 30rpx;
+}
+
+.menu,.menu.current {
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #000;
+    height: 80rpx;
+    width: 130rpx;
+}
+
+.menu.current {
+    background-color: #0081ff;
+    color: #fff;
+}
+
+.assets-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 500rpx;
+    justify-content: center;
+    padding-left: 5rpx;
+    padding-right: 5rpx;
+    width: 100%;
+    word-break: break-all;
+}
+
+.item {
+    height: 90rpx;
+    width: 90rpx;
+}
+
+.asset-icon {
+    height: 70rpx;
+    width: 70rpx;
+}
+
+.tip {
+    align-items: center;
+    color: #6a6a6a;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 750rpx;
+}

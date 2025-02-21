@@ -1,0 +1,58 @@
+<view class="content data-v-be140f20">
+    <view class="data-v-be140f20" hidden="{{!!loadShow}}">
+        <view class="vtop data-v-be140f20" style="{{'height:'+'calc('+menuButtonInfo.height+'px + '+menuButtonInfo.bottom+'px + 40rpx);'+';'}}">
+            <view class="title u-flex u-row-left u-p-l-40 data-v-be140f20" style="{{'margin-top:'+menuButtonInfo.top+'px'+';'}}" wx:if="{{!homeTop||scrollTop<=homeTop-menuButtonInfo.top+30+15}}">
+                <text class="data-v-be140f20"></text>
+                <u-icon bind:__l="__l" class="u-p-l-15 fenxiang data-v-be140f20" name="/static/icon/home.png" size="60" vueId="5df3f5c0-1"></u-icon>
+                <button class="data-v-be140f20" openType="share" style="position:absolute;top:20rpx;left:20rpx;width:50rpx;height:50rpx;opacity:0;"></button>
+                <view bindtap="__e" class="search u-flex u-row-left data-v-be140f20" data-event-opts="{{[ [ 'tap',[ [ 'search',['$event'] ] ] ] ]}}">
+                    <u-icon bind:__l="__l" class="data-v-be140f20" name="/static/icon/yl.png" size="36" vueId="5df3f5c0-2"></u-icon>
+                    <text class="u-p-l-15 data-v-be140f20">搜索</text>
+                </view>
+            </view>
+            <view class="data-v-be140f20" wx:else>
+                <scroll-view class="data-v-be140f20" scrollIntoView="{{rolldistance}}" scrollWithAnimation="{{true}}" scrollX="{{true}}" style="height:100rpx;">
+                    <view class="u-flex u-row-left u-p-t-20 u-p-b-20 data-v-be140f20">
+                        <view class="data-v-be140f20" id="akun1" style="padding:0 16rpx;"></view>
+                        <view bindtap="__e" class="{{['scroll-view-item','tags','data-v-be140f20',cateStatic==item.type?'tag-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'cateClick',['$0','$1','akun'+index+2],[ [ ['cateList','',index,'type'] ],[ ['cateList','',index,'more'] ] ] ] ] ] ]}}" id="{{'akun'+index+1}}" wx:for="{{cateList}}" wx:key="index">{{''+item.name+''}}</view>
+                        <view class="data-v-be140f20" style="width:40rpx;">ㅤ</view>
+                    </view>
+                </scroll-view>
+            </view>
+       
+        </view>
+        <view class="data-v-be140f20" style="{{'margin-top:'+'calc('+menuButtonInfo.top+'px + 3% + 45rpx + 50rpx)'+';'}}"></view>
+        <view class="u-p-l-25 u-p-r-25 u-p-t-25 data-v-be140f20">
+            <view class="u-skeleton data-v-be140f20">
+                <view class="data-v-be140f20">
+                    <view class="u-flex u-row-left u-flex-wrap data-v-be140f20">
+                        <view bindtap="__e" class="tab u-skeleton-fillet data-v-be140f20" data-event-opts="{{[ [ 'tap',[ [ 'findClick',[index] ] ] ] ]}}" wx:if="{{item&&item.show===true}}" wx:for="{{findList}}" wx:key="index">
+                            <image class="data-v-be140f20" mode="aspectFill" src="{{item.image+'?x-oss-process=image/resize,w_350/quality,q_80'}}" style="width:100%;height:280rpx;border-radius: 13px;"></image>
+                            <view class="texts data-v-be140f20">
+                                <view class="title data-v-be140f20">{{item.name}}</view>
+                                <view class="detail data-v-be140f20">{{item.detail}}</view>
+                                <view class="tags data-v-be140f20">立即查看</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="u-flex u-flex-col u-col-center data-v-be140f20" style="width:100vw;height:50vh;padding-top:200rpx;background-color:#1d1d1d;" wx:if="{{noData}}">
+                    <view class="data-v-be140f20">
+                        <image class="data-v-be140f20" src="/static/nodata.png" style="width:300rpx;height:300rpx;"></image>
+                    </view>
+                    <view class="u-tips-color u-font-12 u-p-t-30 data-v-be140f20">没有数据哦~</view>
+                </view>
+            </view>
+            <view class="data-v-be140f20" wx:if="{{!noData}}">
+                <u-loadmore bind:__l="__l" class="data-v-be140f20" color="#B8B8B8" fontSize="{{24}}" marginBottom="{{30}}" marginTop="{{30}}" status="{{loadStatus}}" vueId="5df3f5c0-3"></u-loadmore>
+            </view>
+        </view>
+        <view class="data-v-be140f20" style="height:180rpx;"></view>
+    </view>
+    <view class="loading_page data-v-be140f20" hidden="{{!loadShow}}">
+        <image class="data-v-be140f20" src="/static/loading/loading.gif"></image>
+    </view>
+    <foo-bar bind:__l="__l" bind:toIndex="__e" class="data-v-be140f20" data-event-opts="{{[ [ '^toIndex',[ ['toIndex'] ] ] ]}}" home="{{2}}" vueId="5df3f5c0-4"></foo-bar>
+    <models bind:__l="__l" bind:close="__e" bind:getUserInfo="__e" btnText="授权登录" class="data-v-be140f20" data-event-opts="{{[ [ '^getUserInfo',[ ['getUserInfo'] ] ],[ '^close',[ ['e0'] ] ] ]}}" title="授权登录探索更多精彩内容!" vueId="5df3f5c0-5" wx:if="{{loginShow}}"></models>
+    <models authorize="{{false}}" bind:__l="__l" bind:save="__e" btnText="知道了" class="data-v-be140f20" closeText=" " data-event-opts="{{[ [ '^save',[ ['e1'] ] ] ]}}" title="{{signTitle}}" vueId="5df3f5c0-6" wx:if="{{signShow}}"></models>
+</view>

@@ -1,0 +1,25 @@
+<view>
+    <u-navbar bind:__l="__l" borderBottom="{{false}}" isBack="{{true}}" title="选择标签" titleColor="#fff" titleSize="32" titleWidth="325" vueId="3e04a262-1"></u-navbar>
+    <view class="u-p-40">
+        <view class="u-flex u-row-left u-flex-wrap" wx:if="{{tagsList.length>0}}">
+            <view bindtap="__e" class="tag" data-event-opts="{{[ [ 'tap',[ [ 'tagsClick',['$0'],[ [ ['tagsList','',index,'name'] ] ] ] ] ] ]}}" wx:for="{{tagsList}}" wx:key="index">{{item.name}}</view>
+        </view>
+        <view class="u-flex u-row-center u-col-center" wx:else>
+            <view class="u-font-12 u-tips-color">暂无标签</view>
+        </view>
+        <view style="height:300rpx;"></view>
+    </view>
+    <view class="safe-area-inset-bottom">
+        <view class="bottom u-p-40">
+            <view class="tags u-flex u-row-left u-flex-wrap" wx:if="{{tags.length>0}}">
+                <view class="u-p-r-20 u-p-b-40" wx:for="{{tags}}" wx:key="index">
+                    <u-tag bind:__l="__l" bind:close="__e" borderColor="#e9ffe4" closeColor="#fff" closeable="{{true}}" color="#fff" data-event-opts="{{[ [ '^close',[ [ 'removeClick',['$0'],[ [ ['tags','',index] ] ] ] ] ] ]}}" mode="dark" shape="circle" text="{{item}}" type="primary" vueId="{{'3e04a262-2-'+index}}"></u-tag>
+                </view>
+            </view>
+            <view class="u-flex u-row-center u-col-center u-p-b-40" wx:else>
+                <view class="u-font-12 u-tips-color">请点击上方标签选择</view>
+            </view>
+            <view bindtap="__e" class="btn" data-event-opts="{{[ [ 'tap',[ [ 'submit',['$event'] ] ] ] ]}}" hoverClass="hover-class" hoverStayTime="50">确 定</view>
+        </view>
+    </view>
+</view>

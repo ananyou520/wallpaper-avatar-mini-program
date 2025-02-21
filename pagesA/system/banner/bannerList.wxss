@@ -1,0 +1,91 @@
+page{
+    background: #f7f7f7;
+}
+.tab {
+    background-color: #fff;
+    border-radius: 12rpx;
+}
+.hhh{
+    color: #000;
+}
+.tags_ {
+    border: 1rpx solid #b8b8b8;
+    border-radius: 8rpx;
+    color: #909399;
+    font-size: 12px;
+    line-height: 46rpx;
+    padding: 0 20rpx;
+}
+
+.tag-active_ {
+    animation: tiaobig .8s ease-in-out infinite alternate;
+    animation-iteration-count: 1;
+    background-image: linear-gradient(100deg,rgba(0,0,0,.3),rgba(0,0,0,.94));
+    border: none;
+    color: #fff;
+}
+
+.banner_img {
+    border-radius: 8rpx;
+    height: 280rpx;
+    margin: 20rpx 20rpx 0;
+    width: 100%;
+}
+
+.add {
+    background-color: #fff;
+    border-radius: 120rpx;
+    bottom: 300rpx;
+    box-shadow: 0 1px 8px #c8c8c8;
+    left: 30rpx;
+    position: fixed;
+}
+
+.add,.add image {
+    height: 80rpx;
+    width: 80rpx;
+}
+
+@-webkit-keyframes tiaobig {
+    0% {
+        transform: scale(.92);
+    }
+
+    25% {
+        transform: scale(1.08);
+    }
+
+    50% {
+        transform: scale(.96);
+    }
+
+    75% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(.94);
+    }
+}
+
+@keyframes tiaobig {
+    0% {
+        transform: scale(.92);
+    }
+
+    25% {
+        transform: scale(1.08);
+    }
+
+    50% {
+        transform: scale(.96);
+    }
+
+    75% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(.94);
+    }
+}

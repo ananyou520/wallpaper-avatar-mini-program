@@ -1,0 +1,11 @@
+.title.data-v-1b64a930 {
+    font-size: 32rpx;
+    font-weight: 550;
+    padding-bottom: 30rpx;
+}
+
+.cont.data-v-1b64a930 {
+    color: #111b22;
+    line-height: 50rpx;
+    padding-bottom: 40rpx;
+}

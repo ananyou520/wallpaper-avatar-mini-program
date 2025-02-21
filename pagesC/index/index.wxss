@@ -1,0 +1,248 @@
+page {
+    background: url("https://images.shen88.cn/testStorage/storage/miniprogram/xz/pdback.png") no-repeat;
+    background-size: 750rpx 954rpx;
+    position: relative;
+}
+
+.saveBox {
+    position: fixed;
+    background-color: #fff;
+    color: #000;
+    z-index: 1;
+    width: 200rpx;
+    font-size: 18rpx;
+    top: 16rpx;
+    right: 60rpx;
+    border: 1px solid #666;
+    text-align: center;
+    padding: 8rpx 0 4rpx;
+    line-height: 1.2;
+    border-radius: 3px;
+}
+
+.saveBox::before {
+    content: "";
+    position: absolute;
+    top: -16rpx;
+    left: 90rpx;
+    border-bottom: 16rpx solid #666;
+    width: 0;
+    height: 0;
+    border-left: 10rpx solid transparent;
+    border-right: 10rpx solid transparent;
+}
+
+.saveBox::after {
+    content: "";
+    position: absolute;
+    top: -14rpx;
+    left: 90rpx;
+    border-bottom: 16rpx solid #fff;
+    width: 0;
+    height: 0;
+    border-left: 10rpx solid transparent;
+    border-right: 10rpx solid transparent;
+}
+
+.closeSave {
+    position: absolute;
+    font-size: 24rpx;
+    right: 2px;
+    top: 0;
+}
+
+.show-nan,.show-nv {
+    position: absolute;
+    top: 360rpx;
+    width: 220rpx;
+}
+
+.show-nan {
+    left: 60rpx;
+}
+
+.show-nv {
+    right: 60rpx;
+}
+
+.image-show {
+    width: 220rpx;
+    height: 220rpx;
+}
+
+.shadow {
+    width: 108rpx;
+    height: 22rpx;
+    margin: 0 56rpx;
+}
+
+.name-show {
+    background-color: rgba(255,255,255,0.5);
+    text-align: center;
+    line-height: 56rpx;
+    width: 160rpx;
+    margin: 10rpx 30rpx;
+    border-radius: 28rpx;
+    font-size: 32rpx;
+    color: #1e1459;
+}
+
+.love {
+    position: absolute;
+    top: 440rpx;
+    width: 100rpx;
+    height: 100rpx;
+    left: 325rpx;
+}
+
+.link {
+    position: absolute;
+    top: 904rpx;
+    left: 225rpx;
+    width: 300rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    border-radius: 50rpx;
+    text-align: center;
+    color: #ffffff;
+    font-size: 40rpx;
+    background-image: linear-gradient(to right,#fa5ca2,#ff90b8);
+}
+
+.model-mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    overflow: hidden;
+    z-index: 11;
+    color: #fff;
+}
+
+.choose-model {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 12;
+    background: #fff;
+}
+
+.image-title {
+    position: relative;
+    width: 100%;
+    height: 0;
+}
+
+.image-title image {
+    position: absolute;
+    top: -40rpx;
+    width: 750rpx;
+    height: 118rpx;
+    left: 0;
+    z-index: -1;
+}
+
+.popup-title {
+    line-height: 60rpx;
+    font-size: 36rpx;
+    text-align: center;
+    margin: 20rpx 0;
+    color: #333333;
+}
+
+.close-popup {
+    width: 100rpx;
+    text-align: center;
+    position: absolute;
+    line-height: 60rpx;
+    font-size: 36rpx;
+    color: #333333;
+    top: 20rpx;
+    right: 20rpx;
+}
+
+.side-title {
+    text-align: center;
+    color: #666666;
+    font-size: 36rpx;
+    margin-bottom: 20rpx;
+}
+
+.scroll-container {
+    padding: 0 100rpx;
+}
+
+.scroll-fa {
+    height: 660rpx;
+    width: 170rpx;
+    overflow: hidden;
+}
+
+.scroll-box {
+    height: 660rpx;
+    width: 190rpx;
+    text-align: center;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+.scroll-item {
+    height: 220rpx;
+    width: 170rpx;
+}
+
+.scroll-item.active .xz-image {
+    height: 150rpx;
+    width: 150rpx;
+    opacity: 1;
+    margin-top: 0rpx;
+}
+
+.xz-image {
+    height: 120rpx;
+    width: 120rpx;
+    opacity: 0.6;
+    margin-top: 30rpx;
+}
+
+.active.nan .xz-name {
+    font-size: 30rpx;
+    color: #6666ff;
+    margin-top: 10rpx;
+}
+
+.active.nv .xz-name {
+    font-size: 30rpx;
+    color: #ff73c0;
+    margin-top: 10rpx;
+}
+
+.xz-name {
+    font-size: 24rpx;
+    color: #666666;
+    margin-top: 10rpx;
+}
+
+.peidui-image {
+    height: 660rpx;
+    width: 210rpx;
+    position: relative;
+}
+
+.peidui {
+    position: absolute;
+    top: 300rpx;
+    left: -20rpx;
+    width: 250rpx;
+    height: 60rpx;
+    z-index: -1;
+}

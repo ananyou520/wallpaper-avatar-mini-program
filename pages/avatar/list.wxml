@@ -1,0 +1,15 @@
+<view class="">
+    <scroll-view bindscroll="stopNewTimer" bindscrolltoupper="stopTimer" class="nav showScroll" scrollIntoView="{{toView}}" scrollLeft="{{navScrollLeft}}" scrollWithAnimation="{{true}}" scrollX="true" style="position: fixed;height: 50px;background-color: white;z-index: 1000000;top: 0px;position:fixed;top:{{titleHeight+statusBarHeight}}px;">
+        <view bindtap="switchNav" class="nav-item navItem{{idx}} {{currentTab==idx?'active':''}}" data-current="{{idx}}" data-id="{{navItem.id}}" data-name="{{navItem.title}}" id="navItem{{idx}}" style="margin-right:{{idx==catList.length-1?'60rpx':'0rpx'}};" wx:for="{{catList}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx"> {{navItem.type_title}} </view>
+        <view class="slideLine" style="width:{{slideWidth}}px;left:{{sliedeLeft}}px;"></view>
+    </scroll-view>
+    <view class="nav_right" style="padding-top:110rpx;margin-bottom:80rpx">
+        <view class="nav_right_items" wx:for="{{dataList}}" wx:key="id">
+            <navigator url="/pages/avatar/avatar?template_id={{item.id}}&type_id={{type_id}}">
+                <image mode="widthFix" src="{{item.img}}" style="height:330rpx"></image>
+                <text>{{item.title}}</text>
+            </navigator>
+        </view>
+        <view class="nav_right_items" style="height:4px;display:block;width:70%;background: aliceblue;"></view>
+    </view>
+</view>

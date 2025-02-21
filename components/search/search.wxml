@@ -1,0 +1,21 @@
+<view class="data-v-3713b6a4">
+    <view class="search data-v-3713b6a4">
+        <input bindblur="__e" bindinput="__e" class="data-v-3713b6a4" confirmType="search" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','searchText','$event',['trim'] ] ] ] ],[ 'blur',[ ['$forceUpdate'] ] ] ]}}" focus="{{true}}" maxlength="20" placeholder="输入关键字搜索" placeholderStyle="color:#a6a7a8;font-size:14px;" type="text" value="{{searchText}}" wx:if="{{isFocus}}"></input>
+        <input bindblur="__e" bindinput="__e" class="data-v-3713b6a4" confirmType="search" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','searchText','$event',['trim'] ] ] ] ],[ 'blur',[ ['$forceUpdate'] ] ] ]}}" maxlength="20" placeholder="输入关键字搜索" placeholderStyle="color:#a6a7a8;font-size:14px;" type="text" value="{{searchText}}" wx:else></input>
+        <image bindtap="__e" class="search-icon data-v-3713b6a4" data-event-opts="{{[ [ 'tap',[ ['searchStart'] ] ] ]}}" mode="aspectFit" src="/static/icon/yl.png"></image>
+        <view class="search-se" mode="aspectFit" data-event-opts="{{[['tap',[['searchStart']]]]}}" bindtap="__e">搜索</view>
+    </view>
+    <view class="{{['data-v-3713b6a4','s-'+theme]}}" wx:if="{{hList.length>0}}">
+        <view class="header data-v-3713b6a4">搜索历史<image bindtap="__e" class="data-v-3713b6a4" data-event-opts="{{[ [ 'tap',[ [ 'delhistory',['$event'] ] ] ] ]}}" mode="aspectFit" src="/static/search/delete.png"></image>
+        </view>
+        <view class="list data-v-3713b6a4">
+            <view bindtap="__e" class="data-v-3713b6a4" data-event-opts="{{[ [ 'tap',[ [ 'keywordsClick',['$0'],[ [ ['hList','',index] ] ] ] ] ] ]}}" wx:for="{{hList}}" wx:key="index">{{item}}</view>
+        </view>
+    </view>
+    <view class="{{['data-v-3713b6a4','wanted-'+theme]}}" wx:if="{{showWant}}">
+        <view class="header data-v-3713b6a4">猜你想搜</view>
+        <view class="list data-v-3713b6a4">
+            <view bindtap="__e" class="data-v-3713b6a4" data-event-opts="{{[ [ 'tap',[ [ 'keywordsClick',['$0'],[ [ ['hotList','',index] ] ] ] ] ] ]}}" wx:for="{{hotList}}" wx:key="index">{{item}}</view>
+        </view>
+    </view>
+</view> <ad unit-id="{{vuex_adAd}}" ad-type="video" wx:if="{{vuex_adAd}}"></ad>

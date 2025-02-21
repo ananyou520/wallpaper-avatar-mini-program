@@ -1,0 +1,22 @@
+<view class="u-swiper-wrap data-v-fcdbfc5e" style="{{'border-radius:'+borderRadius+'rpx'+';'}}">
+    <swiper autoplay="{{autoplay}}" bindanimationfinish="__e" bindchange="__e" circular="{{circular}}" class="data-v-fcdbfc5e" current="{{elCurrent}}" data-event-opts="{{[ [ 'change',[ [ 'change',['$event'] ] ] ],[ 'animationfinish',[ [ 'animationfinish',['$event'] ] ] ] ]}}" duration="{{duration}}" interval="{{interval}}" nextMargin="{{effect3d?effect3dPreviousMargin+'rpx':'0'}}" previousMargin="{{effect3d?effect3dPreviousMargin+'rpx':'0'}}" style="{{'height:'+height+'rpx'+';'}}">
+        <swiper-item class="u-swiper-item data-v-fcdbfc5e" wx:for="{{$root.l0}}" wx:key="index">
+            <view catchtap="__e" class="{{['u-list-image-wrap','data-v-fcdbfc5e',uCurrent!=index?'u-list-scale':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'listClick',[index] ] ] ] ]}}" style="{{'border-radius:'+borderRadius+'rpx'+';'+'transform:'+(effect3d&&uCurrent!=index?'scaleY(0.9)':'scaleY(1)')+';'+'margin:'+(effect3d&&uCurrent!=index?'0 20rpx':0)+';'}}">
+                <image class="u-swiper-image data-v-fcdbfc5e" mode="{{imgMode}}" src="{{item.$orig[name]||item.$orig}}"></image>
+                <view class="u-swiper-title u-line-1 data-v-fcdbfc5e" style="{{item.s0}}" wx:if="{{title&&item.$orig.title}}">{{''+item.$orig.title+''}}</view>
+            </view>
+        </swiper-item>
+    </swiper>
+    <view class="u-swiper-indicator data-v-fcdbfc5e" style="{{'top:'+(indicatorPos=='topLeft'||indicatorPos=='topCenter'||indicatorPos=='topRight'?'12rpx':'auto')+';'+'bottom:'+(indicatorPos=='bottomLeft'||indicatorPos=='bottomCenter'||indicatorPos=='bottomRight'?'12rpx':'auto')+';'+'justify-content:'+justifyContent+';'+'padding:'+'0 '+(effect3d?'74rpx':'24rpx')+';'}}">
+        <block wx:if="{{mode=='rect'}}">
+            <view class="{{['u-indicator-item-rect','data-v-fcdbfc5e',index==uCurrent?'u-indicator-item-rect-active':'']}}" wx:for="{{list}}" wx:key="index"></view>
+        </block>
+        <block wx:if="{{mode=='dot'}}">
+            <view class="{{['u-indicator-item-dot','data-v-fcdbfc5e',index==uCurrent?'u-indicator-item-dot-active':'']}}" wx:for="{{list}}" wx:key="index"></view>
+        </block>
+        <block wx:if="{{mode=='round'}}">
+            <view class="{{['u-indicator-item-round','data-v-fcdbfc5e',index==uCurrent?'u-indicator-item-round-active':'']}}" wx:for="{{list}}" wx:key="index"></view>
+        </block>
+        <view class="u-indicator-item-number data-v-fcdbfc5e" wx:if="{{mode=='number'}}">{{uCurrent+1+'/'+list.length}}</view>
+    </view>
+</view>

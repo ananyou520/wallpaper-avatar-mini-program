@@ -1,0 +1,72 @@
+.top {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+
+.hint,.top {
+    color: #fff;
+    position: absolute;
+    top: 10rpx;
+    width: 100%;
+    z-index: 10;
+}
+
+.hint {
+    font-size: 33rpx;
+    text-align: center;
+}
+
+page {
+    background: #0e0d0d;
+}
+
+view {
+    font-size: 30rpx;
+}
+
+.bottom {
+    align-items: center;
+    bottom: 50rpx;
+    display: flex;
+    flex-wrap: wrap;
+    height: 210rpx;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+button {
+    font-size: 27rpx;
+    height: 60rpx;
+    margin: 0 4rpx;
+    min-width: 350rpx;
+    padding: 0 20rpx;
+    z-index: 2;
+}
+
+.input {
+    display: flex;
+    height: 50rpx;
+    width: 50%;
+}
+
+.input>.label {
+    font-size: 30rpx;
+    min-width: 150rpx;
+}
+
+.input>.label,.input>input {
+    height: 50rpx;
+    line-height: 50rpx;
+}
+
+.input>input {
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    margin-left: 10rpx;
+    max-width: 160rpx;
+    min-height: 50rpx;
+    text-align: center;
+}

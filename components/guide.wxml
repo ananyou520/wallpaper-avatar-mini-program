@@ -1,0 +1,6 @@
+<view class="guide shadow data-v-b8c306ce" wx:if="{{time>0}}">
+    <view class="data-v-b8c306ce">👆 添加到</view>
+    <view class="data-v-b8c306ce">我的小程序</view>
+    <view class="data-v-b8c306ce">可快速取图</view>
+    <view class="time data-v-b8c306ce">{{'('+time+'s)'}}</view>
+</view>

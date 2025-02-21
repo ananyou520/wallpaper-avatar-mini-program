@@ -1,0 +1,236 @@
+page {
+    background: #f5f5f5;
+}
+
+.container {
+    background-color: #fff;
+    color: #939393;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.nav_left {
+    background: #f5f5f5;
+    display: inline-block;
+    left: 0;
+    min-height: 100%;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 25%;
+}
+
+.nav_left .nav_left_items {
+    border-bottom: 1px solid #dedede;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    padding: 6px 0;
+}
+
+.nav_left .nav_left_items.active,.nav_right {
+    background: #fff;
+}
+
+.nav_right {
+    background: #f5f5f5;
+    min-height: 100%;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.nav_right .nav_right_items {
+    background: #fff;
+    border-radius: 10rpx;
+    float: left;
+    margin-bottom: 15px;
+    margin-left: 4%;
+    overflow: hidden;
+    text-align: center;
+    width: 44%;
+}
+
+.nav_right .nav_right_items image {
+    width: 100%;
+}
+
+.nav_right .nav_right_items text {
+    display: inline-block;
+    font-size: 25rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.scroll_box {
+    height: 70rpx;
+    margin-bottom: 5rpx;
+    overflow: auto;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.scroll_box scroll-view {
+    height: 100%;
+    overflow: auto;
+    width: auto;
+}
+
+.item_list {
+    border-radius: 10rpx;
+    display: inline-block;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin-left: 25rpx;
+    text-align: center;
+    width: 160rpx;
+}
+
+.xz_title {
+    background-image: url("http://pic.66ya.cn/images/66ya/2020-10-20//1603199776294133.png");
+    background-size: 100% 100%;
+}
+
+page {
+    background: #f2f2f2;
+    margin: 0;
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    margin: 20rpx;
+    overflow: hidden;
+}
+
+.left {
+    width: 31.5%;
+}
+
+.middle,.right {
+    margin-left: 2.75%;
+    width: 31.5%;
+}
+
+.pic {
+    border-radius: 10rpx;
+    margin-top: 2.75%;
+    width: 100%;
+}
+
+.nav {
+    box-sizing: border-box;
+    line-height: 100rpx;
+    opacity: 0;
+    overflow: hidden;
+    position: relative;
+    transition: all .3s cubic-bezier(.23,1,.32,1) 0ms;
+    white-space: nowrap;
+}
+
+.nav.showScroll {
+    opacity: 1;
+}
+
+.slideLine {
+    background: #e64340;
+    height: 8rpx;
+    position: absolute;
+    top: 46px;
+    transition: all .3s cubic-bezier(.23,1,.32,1) 0ms;
+}
+
+.nav-item {
+    border-bottom: none;
+    color: #666;
+    display: inline;
+    font-size: 18px;
+    margin: 0 5px;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    transition: all .5s cubic-bezier(.23,1,.32,1) 0ms;
+}
+
+.nav-item .hot {
+    height: 19rpx;
+    position: absolute;
+    right: -5rpx;
+    top: -5rpx;
+    width: 19rpx;
+}
+
+.nav-item.active {
+    color: #e64340;
+}
+
+.page-top {
+    background: #fff;
+    position: relative;
+    width: 100%;
+}
+
+.page-top.top {
+    left: 0;
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+}
+
+.search {
+    height: 60rpx;
+    right: 30rpx;
+    top: 20rpx;
+    width: 60rpx;
+}
+
+.mask-scroll,.search {
+    position: absolute;
+    z-index: 999999;
+}
+
+.mask-scroll {
+    height: 100rpx;
+    right: 120rpx;
+    top: 0;
+    width: 45rpx;
+}
+
+.title {
+    color: #000;
+    white-space: pre-wrap;
+}
+
+.mask {
+    background: #000;
+    height: 100%;
+    opacity: .7;
+    top: 0;
+    width: 100%;
+    z-index: 9000;
+}
+
+.mask,.modalDlg {
+    left: 0;
+    position: fixed;
+}
+
+.modalDlg {
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20rpx;
+    display: flex;
+    flex-direction: column;
+    height: 400rpx;
+    margin: -370rpx 20%;
+    top: 50%;
+    width: 60%;
+    z-index: 9999;
+}
+
+.view_img {
+    margin-top: 1px;
+    vertical-align: sub;
+}

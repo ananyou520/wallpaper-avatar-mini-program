@@ -1,0 +1,46 @@
+<view class="data-v-29fef08e">
+    <u-navbar background="hsla(0, 0%, 100%, .08)" bind:__l="__l" borderBottom="{{false}}" class="data-v-29fef08e" isBack="{{true}}" title="头像挂件" titleColor="#fff" titleSize="32" titleWidth="325" vueId="1f5a4b6c-1"></u-navbar>
+    <view class="content data-v-29fef08e">
+        <image class="all-back data-v-29fef08e" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-08ecbb66-149e-4d2b-93a0-fa6bc6e0e894/3da3f4b5-271b-48f5-b13f-acb0d362ed91.jpg"></image>
+        <view class="top-content data-v-29fef08e">
+            <view class="top-title data-v-29fef08e">
+                <view bindtap="__e" class="{{['title-unit','data-v-29fef08e',item.selected?'title-select':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'switchCategory',['$0'],[ [ ['categoriesList','_id',item._id] ] ] ] ] ] ]}}" wx:for="{{categoriesList}}" wx:key="_id">{{''+item.name+''}}</view>
+            </view>
+            <scroll-view class="scroll-view data-v-29fef08e" scrollX="{{true}}" showScrollbar="{{false}}">
+                <view class="image-div data-v-29fef08e">
+                    <view bindtap="__e" class="{{['data-v-29fef08e',index!==0?'image-margin':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'imageClick',['$0'],[ [ ['imageList','_id',info._id] ] ] ] ] ] ]}}" wx:for="{{imageList}}" wx:for-item="info" wx:key="_id">
+                        <image class="data-v-29fef08e" src="{{info.image_url}}"></image>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+        <view class="image-card data-v-29fef08e">
+            <view class="photo-main-view data-v-29fef08e">
+                <view class="avatar-div  data-v-29fef08e" id="avatar-container">
+                    <image class="img data-v-29fef08e" id="avatar-img" src="{{avatarImage}}"></image>
+                    <view class="empty-view  data-v-29fef08e" wx:if="{{!avatarImage}}">
+                        <image class="empty data-v-29fef08e" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-08ecbb66-149e-4d2b-93a0-fa6bc6e0e894/c33782ca-cd2f-4bfc-84eb-0713c52f522f.svg"></image>
+                    </view>
+                    <image class="avatar-default  data-v-29fef08e" src="{{currentImage.image_url}}" wx:if="{{currentImage&&currentImage.image_url}}"></image>
+                </view>
+                <view class="ctlbtn data-v-29fef08e">
+                    <view class="icon-div btn-margin data-v-29fef08e">
+                        <view bindtap="__e" class="icon-zuo iconfont data-v-29fef08e" data-event-opts="{{[ [ 'tap',[ [ 'switchAvatar',[-1] ] ] ] ]}}" wx:if="{{$root.m0}}"></view>
+                        <view bindtap="__e" class="icon-you iconfont data-v-29fef08e" data-event-opts="{{[ [ 'tap',[ [ 'switchAvatar',[1] ] ] ] ]}}" wx:if="{{$root.m1}}"></view>
+                    </view>
+                    <button bindtap="__e" class="action-btn btn-margin data-v-29fef08e" data-event-opts="{{[ [ 'tap',[ [ 'getUserProfile',['createImages'] ] ] ] ]}}" wx:if="{{userInfo}}">获取头像</button>
+                    <button bindtap="__e" class="action-btn btn-margin data-v-29fef08e" data-event-opts="{{[ [ 'tap',[ [ 'getUserProfile',['createImages'] ] ] ] ]}}" openType="getUserInfo" wx:else>获取头像</button>
+                    <button bindtap="__e" class="action-btn btn-primary data-v-29fef08e" data-event-opts="{{[ [ 'tap',[ ['shareFc'] ] ] ]}}">保存头像</button>
+                </view>
+            </view>
+        </view>
+        <view class="btn-card data-v-29fef08e">
+            <button bindtap="__e" class="primary-btn data-v-29fef08e" data-event-opts="{{[ [ 'tap',[ ['navOriginal'] ] ] ]}}" wx:if="{{userInfo}}">原头像</button>
+            <button bindtap="__e" class="primary-btn data-v-29fef08e" data-event-opts="{{[ [ 'tap',[ [ 'getUserProfile',['userLogin'] ] ] ] ]}}" openType="getUserInfo" wx:else>原头像</button>
+            <button class="share-btn data-v-29fef08e" openType="share">发给朋友</button>
+        </view>
+        <view class="hideCanvasView data-v-29fef08e">
+            <canvas canvasId="default_PosterCanvasId" class="hideCanvas data-v-29fef08e" id="default_PosterCanvasId" style="{{'width:'+(poster.width||10)+'px'+';'+'height:'+(poster.height||10)+'px'+';'}}"></canvas>
+        </view>
+    </view>
+</view>
